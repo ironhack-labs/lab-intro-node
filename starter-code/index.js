@@ -22,7 +22,8 @@ SortedList.prototype.max = function() {
     }
   }
   return result;
-}
+};
+
 SortedList.prototype.min = function() {
   var result;
   for (var i = 0; i < this.length.length ; i++) {
@@ -34,20 +35,22 @@ SortedList.prototype.min = function() {
     }
   }
   return result;
-}
+};
+
 SortedList.prototype.average = function() {
   var result = 0;
   for (var i = 0; i < this.length.length ; i++) {
     result += this.length[i];
   }
   return result / this.length.length;
-}
+};
+
 SortedList.prototype.sum = function() {
   var result = 0;
   for (var i = 0; i < this.length.length ; i++) {
     result += this.length[i];
   }
   return result;
-}
+};
 
 module.exports = SortedList;
