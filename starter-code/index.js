@@ -1,10 +1,40 @@
-var SortedList = function() {};
+// ES6
 
-SortedList.prototype.add     = function(item) {}
-SortedList.prototype.get     = function(pos) {}
-SortedList.prototype.max     = function() {}
-SortedList.prototype.min     = function() {}
-SortedList.prototype.average = function() {}
-SortedList.prototype.sum     = function() {}
+class SortedList {
+
+  constructor(){
+    this.length = 0;
+    this.list = [];
+  }
+
+  add(item){
+    this.list.push(item);
+    function sortingFunction(a, b) {
+      if (a > b)
+        return 1;
+      else if (b > a)
+        return -1;
+      else
+        return 0;
+    }
+  this.list.sort(sortingFunction);
+  this.length++;
+  }
+
+  get(pos){
+    return this.list[pos - 1];
+  }
+
+  max() {
+    return this.list.pop();
+  }
+
+  min() {}
+
+  average() {}
+
+  sum() {}
+}
+
 
 module.exports = SortedList;
