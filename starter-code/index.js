@@ -21,10 +21,7 @@ SortedList.prototype.min     = function() {
   return this.sortedList[0];
 };
 SortedList.prototype.average = function() {
-  var total = this.sortedList.reduce(function(sum, value) {
-    return sum + value;
-  }, 0);
-  return total/this.sortedList.length;
+  return this.sum()/this.sortedList.length;
 };
 SortedList.prototype.sum     = function() {
   var total = this.sortedList.reduce(function(sum, value) {
