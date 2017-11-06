@@ -4,10 +4,11 @@ SortedList.prototype = Object.create(Array.prototype);
 
 SortedList.prototype.add = function(item) {
   this.push(item);
+  this.sort((a,b)=>a-b);
 };
 
 SortedList.prototype.get = function(pos) {
-  return this.sort((a,b)=>a-b)[pos-1]
+  return this[pos-1];
 };
 
 SortedList.prototype.max  = function() {
