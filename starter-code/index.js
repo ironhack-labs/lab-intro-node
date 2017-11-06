@@ -24,9 +24,11 @@ SortedList.prototype.min = function() {
   return Math.min.apply(null, this['length']);
 }
 SortedList.prototype.average = function() {
-
+  return this['length'].reduce(function(a,x){ return a +x;},0)/this['length'].length;
 }
-SortedList.prototype.sum     = function() {}
+SortedList.prototype.sum     = function() {
+  return this['length'].reduce(function(a,x){ return a +x;},0);
+}
 SortedList.prototype.size    = function() {
   return this.size();
 }
