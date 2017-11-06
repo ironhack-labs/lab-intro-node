@@ -1,13 +1,16 @@
 function SortedList() {
   this.list = [];
-  this.length = 0;
-  this.length = this.list.length;
 }
+
+Object.defineProperty(SortedList.prototype, "length", {
+  get: function() {
+    return this.list.length;
+  },
+});
 
 SortedList.prototype.add = function(item) {
   this.list.push(item);
   this.list.sort((a, b) => a - b);
-  this.length += 1;
 };
 SortedList.prototype.get = function(pos) {
   return this.list[pos - 1];
