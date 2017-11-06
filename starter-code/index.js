@@ -7,7 +7,7 @@ SortedList.prototype.add     = function(item) {
 }
 
 SortedList.prototype.get     = function(pos) {
-  var asc = this.length.sort();
+  var asc = this.length.sort(function(a, b){return a-b});
   return asc[pos - 1];
 }
 
@@ -24,17 +24,19 @@ SortedList.prototype.min     = function() {
 }
 
 SortedList.prototype.average = function() {
-  // for(var i=0; i < this.length.length; i++) {
-  //   var sum += this.length[i];
-  //   var avg = sum / this.length.length;
-  // }
-  // return avg;
+  var sum = 0;
+  for(var i = 0; i < this.length.length; i++) {
+    sum += this.length[i];
+  }
+  var average = sum / this.length.length;
+  return average;
 }
 SortedList.prototype.sum     = function() {
-  // for(var i=0; i < this.length.length; i++) {
-  //   var sum += this.length[i];
-  // }
-  // return sum;
+  var sum = 0;
+  for(var i = 0; i < this.length.length; i++) {
+    sum += this.length[i];
+  }
+  return sum;
 }
 
 module.exports = SortedList;
