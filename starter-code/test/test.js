@@ -8,7 +8,7 @@ describe('SortedList', function() {
   describe('Constructor', function() {
     it('should create an empty SortedList', function() {
       var sl = new SortedList();
-      assert.equal(sl.length, 0);
+      assert.equal(sl.list.length, 0);
       assert.equal(sl instanceof SortedList, true);
     });
   });
@@ -19,9 +19,9 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
     it('should add a single value to SortedList', function() {
-      assert.equal(sl.length, 0);
+      assert.equal(sl.list.length, 0);
       sl.add(1);
-      assert.equal(sl.length, 1);
+      assert.equal(sl.list.length, 1);
     });
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
