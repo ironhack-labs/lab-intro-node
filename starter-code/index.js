@@ -4,27 +4,37 @@ this.length = [];
 };
 
 
-SortedList.prototype.add     = function(a, b) {
-  this.length.push(a);
-
-  for(i=0; i < this.length; i++){
-  this.length.sort(function(a,b) {
-    if (a > b) {
-      return -1;
-    };
-    if (a < b) {
-      return 1;
-    };
-    return 0;
-
-  });
- };
+SortedList.prototype.add     = function(item) {
+  this.length.push(item);
+  this.length.sort();
  };
 
-SortedList.prototype.get     = function(pos) {};
-SortedList.prototype.max     = function() {};
-SortedList.prototype.min     = function() {};
-SortedList.prototype.average = function() {};
-SortedList.prototype.sum     = function() {};
+SortedList.prototype.get     = function(pos) {
+  return this.length[pos-1];
+};
+
+SortedList.prototype.max     = function() {
+ return this.length[(this.length.length-1)];
+};
+
+SortedList.prototype.min     = function() {
+  return this.length[0];
+};
+
+SortedList.prototype.average = function() {
+
+  var total = 0;
+   for (var i=0; i < this.length.length; i++) {
+    total += this.length[i];
+}
+var average = total / this.length.length;
+return average;
+};
+
+
+SortedList.prototype.sum     = function() {
+
+
+};
 
 module.exports = SortedList;
