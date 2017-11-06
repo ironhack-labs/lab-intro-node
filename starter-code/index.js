@@ -11,19 +11,31 @@ SortedList.prototype.get     = function(pos) {
 }
 
 SortedList.prototype.max     = function() {
+  if (this.length == 0){
+    throw Error('EmptySortedList')
+  }
   return this[this.length - 1];
-  return Error ;
 }
+
 SortedList.prototype.min     = function() {
+  if (this.length == 0) {
+    throw Error('EmptySortedList')
+  }
   return this[0];
-  return Error ;
 }
+
 SortedList.prototype.average = function() {
-  return this.length == 0 ? Error : this.reduce((a, b) => a + b)/this.length;
+  if (this.length == 0){
+    throw Error('EmptySortedList')
+  }
+  return this.reduce((a, b) => a + b)/this.length;
 }
 
 SortedList.prototype.sum     = function() {
-  return this.length == 0 ? Error : this.reduce((a, b) => a + b);
+  if (this.length == 0 ){
+    throw Error('EmptySortedList')
+  }
+ return this.reduce((a, b) => a + b);
 }
 
 module.exports = SortedList;
