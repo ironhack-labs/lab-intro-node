@@ -48,6 +48,7 @@ describe('SortedList', function() {
     it('should return an OutOfBounds exception if there is no element in that position', function() {
       try {
         sl.get(20);
+        console.log(this.length[19])
       } catch (e) {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "OutOfBounds")
