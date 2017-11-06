@@ -1,35 +1,33 @@
-function SortedList () {
-  this.length = [];
-};
+function SortedList () {};
+
+SortedList.prototype = Object.create(Array.prototype);
 
 SortedList.prototype.add = function(item) {
-  this.length.push(item);
-  this.length.sort(function(a,b){return a-b});
+  this.push(item);
 };
 
 SortedList.prototype.get = function(pos) {
-  if(this.length.length < pos) return "OutOfBounds"
-  return this.length[pos-1];
+  return this.sort((a,b)=>a-b)[pos-1]
 };
 
 SortedList.prototype.max  = function() {
-  if(this.length.length == 0) return 'EmptySortedList';
-  return Math.max(...this.length);
+  if(this.length == 0) return Error;
+  return this[this.length-1];
 };
 
 SortedList.prototype.min = function() {
-  if(this.length.length == 0) return 'EmptySortedList';
-  return Math.min(...this.length);
+  if(this.length == 0) return Error;
+  return this[0];
 };
 
 SortedList.prototype.average = function() {
-  if(this.length.length == 0) return 'EmptySortedList';
-  return (this.length.reduce((prev,next) => prev+next) / this.length.length);
+  if(this.length == 0) return Error;
+  return this.reduce((prev,next)=>prev+next)/this.length;
 };
 
 SortedList.prototype.sum = function() {
-  if(this.length.length == 0) return 'EmptySortedList';
-  return this.length.reduce((prev,next) => prev+next);
+  if(this.length == 0) return Error;
+  return this.reduce((prev,next)=>prev+next);
 };
 
 module.exports = SortedList;
