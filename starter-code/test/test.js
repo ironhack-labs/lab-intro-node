@@ -49,8 +49,8 @@ describe('SortedList', function() {
       try {
         sl.get(20);
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, "OutOfBounds");
         assert.throws(sl.get, Error, '/OutOfBounds/');
       }
     });
@@ -120,17 +120,17 @@ describe('SortedList', function() {
       try {
         sl.average();
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "EmptySortedList")
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, "EmptySortedList");
       }
-    })
+    });
 
     it('should return the average of elements in the array', function() {
       for(i=0; i<101; i++){
         sl.add(i*2);
       }
       assert.equal(sl.average(), 100);
-    })
+    });
   });
 
   describe('sum()', function(){
@@ -141,12 +141,12 @@ describe('SortedList', function() {
 
     it('should return a EmptySortedList exception if there are no elements in the list', function() {
       try {
-        sl.sum()
+        sl.sum();
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, "EmptySortedList");
       }
-    })
+    });
 
     it('should add(sum) all elements of the array if there are elements in the list', function() {
       sl.add(1);
