@@ -8,9 +8,7 @@ SortedList.prototype.size = function() {
 
 SortedList.prototype.add = function(item) {
     this.list.push(item);
-    this.list = this.list.sort(function(a, b) {
-        return a - b;
-    });
+    this.list = this.list.sort((a, b) => a - b);
 };
 
 SortedList.prototype.get = function(pos) {
@@ -26,13 +24,19 @@ SortedList.prototype.min = function() {
 };
 
 SortedList.prototype.average = function() {
-    return this.sum() / this.size();
+    if (this.size() === 0) {
+        throw new Error('EmptySortedList');
+    } else {
+        return this.sum() / this.size();
+    }
 };
 
 SortedList.prototype.sum = function() {
-    return this.list.reduce(function(current, next) {
-        return current + next;
-    });
+    if (this.size() === 0) {
+        throw new Error('EmptySortedList');
+    } else {
+        return this.list.reduce((current, next) => current + next);
+    }
 };
 
 module.exports = SortedList;
