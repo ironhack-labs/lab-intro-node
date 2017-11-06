@@ -23,7 +23,12 @@ SortedList.prototype.average = function() {
     return ((this.max() + this.min())/2);
 }
 SortedList.prototype.sum     = function() {
+ var count = 0;
 
+ for(var i = 0; i < this.length.length; i++) {
+     count = count + this.length[i];
+ }
+ return count;
 }
 module.exports = SortedList;
 
