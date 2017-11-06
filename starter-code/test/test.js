@@ -38,7 +38,7 @@ describe('SortedList', function() {
       assert.equal(sl.get(3), 30);
     });
   });
-/*
+
   describe('#get(i)', function() {
     var sl;
     beforeEach(function(){
@@ -155,5 +155,5 @@ describe('SortedList', function() {
       assert.equal(sl.sum(), 6);
     });
   });
-  */
+
 });
