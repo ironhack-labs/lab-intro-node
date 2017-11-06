@@ -4,7 +4,7 @@ var SortedList = function() {
 
 SortedList.prototype.add = function(item) {
   this.length.push(item)
-  this.length.sort();
+  this.length.sort(function(a,b){return a - b;});
 }
 SortedList.prototype.get = function(pos) {
   if (this.length.length === 0){
