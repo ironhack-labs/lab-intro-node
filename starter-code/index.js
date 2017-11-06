@@ -17,11 +17,11 @@ SortedList.prototype.max = function() {
   if (this.length.length === 0){
     return [];
   } else{
-  return Math.max(this.length);
+  return Math.max.apply(null, this['length']);
   }
 }
 SortedList.prototype.min = function() {
-  return Math.min(this.length);
+  return Math.min.apply(null, this['length']);
 }
 SortedList.prototype.average = function() {
 
