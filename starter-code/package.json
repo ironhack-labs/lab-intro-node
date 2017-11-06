@@ -4,7 +4,7 @@
   "description": "Intro Node Lab for Students",
   "main": "index.js",
   "scripts": {
-    "test": "mocha" 
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
