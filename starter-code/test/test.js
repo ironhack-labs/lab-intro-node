@@ -15,7 +15,7 @@ describe('SortedList', function() {
 
   describe('#add(x)', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
     it('should add a single value to SortedList', function() {
@@ -41,7 +41,7 @@ describe('SortedList', function() {
 
   describe('#get(i)', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
@@ -57,9 +57,9 @@ describe('SortedList', function() {
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(i=1; i<200; i++) {
-        sl.add(foo*i);
-        assert.equal(sl.get(i), foo*i);
+      for (i = 1; i < 200; i++) {
+        sl.add(foo * i);
+        assert.equal(sl.get(i), foo * i);
       }
     });
   });
@@ -112,7 +112,7 @@ describe('SortedList', function() {
 
   describe('#average()', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
@@ -126,16 +126,16 @@ describe('SortedList', function() {
     })
 
     it('should return the average of elements in the array', function() {
-      for(i=0; i<101; i++){
-        sl.add(i*2);
+      for (i = 0; i < 101; i++) {
+        sl.add(i * 2);
       }
       assert.equal(sl.average(), 100);
     })
   });
 
-  describe('sum()', function(){
+  describe('sum()', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
