@@ -58,6 +58,7 @@ describe('SortedList', function() {
     it('should return the element in that position', function() {
       var foo = 10;
       for(i=1; i<200; i++) {
+
         sl.add(foo*i);
         assert.equal(sl.get(i), foo*i);
       }
@@ -133,26 +134,26 @@ describe('SortedList', function() {
     })
   });
 
-  describe('sum()', function(){
-    var sl;
-    beforeEach(function(){
-      sl = new SortedList();
-    });
-
-    it('should return a EmptySortedList exception if there are no elements in the list', function() {
-      try {
-        sl.sum()
-      } catch (e) {
-        assert.equal(e instanceof Error, true);
-        assert.equal(e.message, "EmptySortedList");
-      }
-    })
-
-    it('should add(sum) all elements of the array if there are elements in the list', function() {
-      sl.add(1);
-      sl.add(2);
-      sl.add(3);
-      assert.equal(sl.sum(), 6);
-    });
-  });
+  // describe('sum()', function(){
+  //   var sl;
+  //   beforeEach(function(){
+  //     sl = new SortedList();
+  //   });
+  //
+  //   it('should return a EmptySortedList exception if there are no elements in the list', function() {
+  //     try {
+  //       sl.sum()
+  //     } catch (e) {
+  //       assert.equal(e instanceof Error, true);
+  //       assert.equal(e.message, "EmptySortedList");
+  //     }
+  //   })
+  //
+  //   it('should add(sum) all elements of the array if there are elements in the list', function() {
+  //     sl.add(1);
+  //     sl.add(2);
+  //     sl.add(3);
+  //     assert.equal(sl.sum(), 6);
+  //   });
+  // });
 });
