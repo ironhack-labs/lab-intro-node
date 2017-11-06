@@ -1,14 +1,18 @@
 var SortedList = function() {
+ this.newlist = [];
 
 };
 
 SortedList.prototype = function () {
-  var newlist = [];
+
 };
 
+SortedList.prototype.add     = function(item) {
+  this.newlist.push(item);
 
 
-SortedList.prototype.add     = function(item) {};
+};
+
 SortedList.prototype.get     = function(pos) {};
 SortedList.prototype.max     = function() {};
 SortedList.prototype.min     = function() {};

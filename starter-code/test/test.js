@@ -1,5 +1,5 @@
 // Require the file to be tested
-var SortedList = require('../index.js')
+var SortedList = require('../index.js');
 
 // Load the Chai Assertion Library
 var assert = require('assert');
