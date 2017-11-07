@@ -131,7 +131,10 @@ The class will have the following methods:
 
 `new SortedList` should create a new object from the `SortedList` class. 
 
-The object should have a `items` and `length` property. `items` should be an array, and length the quantity of elements in the array.
+The object should have a `items` and `length` property. 
+
+- `items` should be an array.
+- `length` should be the number of elements in the array.
 
 ### Add
 
