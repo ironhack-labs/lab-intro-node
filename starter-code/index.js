@@ -10,6 +10,7 @@ SortedList.prototype.add     = function(item) {
  };
 
 SortedList.prototype.get     = function(pos) {
+  if(this.length.length < pos) return "OutOfBounds";
   return this.length[pos-1];
 };
 

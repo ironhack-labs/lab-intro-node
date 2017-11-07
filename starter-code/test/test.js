@@ -59,6 +59,7 @@ describe('SortedList', function() {
       var foo = 10;
       for(i=1; i<200; i++) {
         sl.add(foo*i);
+        console.log(sl.length);
         assert.equal(sl.get(i), foo*i);
       }
     });
