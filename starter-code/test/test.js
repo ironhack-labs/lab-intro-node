@@ -116,12 +116,12 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    it('should return an EmptySortedList exception if there are no elements', function() {
+    it('should return an Reduce of empty array with no initial value exception if there are no elements', function() {
       try {
         sl.average();
       } catch (e) {
         assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "EmptySortedList")
+        assert.equal(e.message, "Reduce of empty array with no initial value")
       }
     })
 
