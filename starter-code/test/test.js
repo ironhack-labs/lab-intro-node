@@ -49,8 +49,8 @@ describe('SortedList', function() {
       try {
         sl.get(20);
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, "OutOfBounds");
         assert.throws(sl.get, Error, '/OutOfBounds/');
       }
     });
