@@ -19,7 +19,7 @@ SortedList.prototype.get     = function(pos) {
   }
 }
 SortedList.prototype.max     = function() {
-  return this.items[this.length-1];
+  return Math.max(...this.items);
 }
 
 SortedList.prototype.min     = function() {
