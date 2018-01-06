@@ -18,9 +18,29 @@ SortedList.prototype.get     = function(pos) {
     return this.items[pos-1];
   }
 }
-SortedList.prototype.max     = function() {}
-SortedList.prototype.min     = function() {}
-SortedList.prototype.average = function() {}
-SortedList.prototype.sum     = function() {}
+SortedList.prototype.max     = function() {
+  return this.items[this.length-1];
+}
+
+SortedList.prototype.min     = function() {
+  return Math.min.apply(null, this.items)
+}
+
+SortedList.prototype.average = function() {
+  if(this.length === 0) {
+    return "EmptySortedList";
+  } else {
+  let sum = this.items.reduce((previous, current) => current += previous);
+  return sum / this.items.length;
+  }
+}
+
+SortedList.prototype.sum     = function() {
+  if(this.length === 0) {
+    return "EmptySortedList";
+  } else {
+  return this.items.reduce((previous, current) => current += previous);
+}
+}
 
 module.exports = SortedList;
