@@ -4,6 +4,7 @@ var SortedList = require('../index.js')
 // Load the Chai Assertion Library
 var assert = require('assert');
 
+// TEST ONE
 describe('SortedList', function() {
   describe('Constructor', function() {
     it('should create an empty SortedList', function() {
@@ -13,6 +14,7 @@ describe('SortedList', function() {
     });
   });
 
+// TEST TWO adds number
   describe('#add(x)', function() {
     var sl;
     beforeEach(function(){
@@ -39,6 +41,9 @@ describe('SortedList', function() {
     });
   });
 
+
+
+// NEXT TEST
   describe('#get(i)', function() {
     var sl;
     beforeEach(function(){
