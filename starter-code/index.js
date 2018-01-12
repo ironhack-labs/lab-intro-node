@@ -2,7 +2,6 @@ var SortedList = function() {
     this.items = [];
     this.length = this.items.length;
 }
-
 SortedList.prototype.add = function(item) {
     //hay que meterlo ordenado en el array
     if(this.length === 0) {
@@ -24,7 +23,6 @@ SortedList.prototype.get = function(pos) {
     return this.items[pos-1];
     
 }
-
 SortedList.prototype.max = function() {
     return this.get(this.length);
 }
