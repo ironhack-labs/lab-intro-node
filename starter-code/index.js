@@ -5,13 +5,15 @@ this.length = this.items.length;
 
 SortedList.prototype.add = function(x) {
   this.items.push(x);
-  this.items.sort();
+  this.items.sort(function(a, b){
+    return a-b;
+  });
   this.length++;
 };
 
 SortedList.prototype.get = function(a) {
-  this.getItem = this.items[a - 1];
-  return this.getItem;
+  return this.items[a - 1];
+
 };
 
 SortedList.prototype.max = function() {
@@ -24,19 +26,16 @@ SortedList.prototype.min = function() {
 };
 
 SortedList.prototype.average = function() {
-  if (this.length === 0){
-    return false;
-  } else { this.itemSum = this.items.reduce(function(a, b){ return a + b; })
-  this.average = this.itemSum/this.length;
-  return this.average;
-  };
+  return this.sum()/this.length;
 };
 
 SortedList.prototype.sum = function() {
   if (this.length === 0){
     return false;
   } else {
-  this.itemSum = this.items.reduce(function(a, b){ return a + b; })
+  this.itemSum = this.items.reduce(function(a, b){
+    return a + b;
+  });
   return this.itemSum;
   };
 };
