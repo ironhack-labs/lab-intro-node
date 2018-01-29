@@ -38,17 +38,21 @@ class SortedList {
     if(this.length===0){
         return "EmptySortedList";
   } 
-  else{
-    return (this.items[0]);
+    else{
+        return (this.items[0]);
 }
-}     
+  }    
   average(){
+    let av= this.items.reduce ((a,b)=> a+b, 0)/this.length;
+    return av;
 
   }
-  sum(){
+  sum(){ 
+    let suma= this.items.reduce ((a,b)=> a+b, 0);
+    return suma;
 
   }
-}
+  }
 module.exports = SortedList;
 
 
