@@ -23,6 +23,7 @@ describe('SortedList', function() {
       sl.add(1);
       assert.equal(sl.length, 1);
     });
+    //Este test no debería requerir get para pasar los tests de add
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
       sl.add(10);
