@@ -24,26 +24,24 @@ class SortedList {
       return this.items[x-1]; 
   }
   max(){
-    if(this.length==0){
+    if(this.length===0){
           return "EmptySortedList";
     } 
     else{
-     this.items.reduce (function (a,b){
-       return Math.max(a,b);
-     })
+    //  this.items.reduce (function (a,b){
+    //    return Math.max(a-b);
+    return (this.items[this.length-1]);
+     }
  }     
-  }
+  
   min(){
-    if(this.length==0){
+    if(this.length===0){
         return "EmptySortedList";
   } 
   else{
-   this.items.reduce (function (a,b){
-     return Math.min(a,b);
-   })
+    return (this.items[0]);
+}
 }     
-
-  }
   average(){
 
   }
