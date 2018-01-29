@@ -7,4 +7,5 @@ SortedList.prototype.min     = function() {}
 SortedList.prototype.average = function() {}
 SortedList.prototype.sum     = function() {}
 
+
 module.exports = SortedList;
