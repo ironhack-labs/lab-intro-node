@@ -1,6 +1,6 @@
 var SortedList = function() {
 this.items = [];
-this.length = 0;
+this.length = this.items.length;
 };
 
 SortedList.prototype.add     = function(item) {
@@ -11,7 +11,10 @@ SortedList.prototype.add     = function(item) {
     this.length = this.items.length
 }
 SortedList.prototype.get     = function(pos) {
-    this.items[pos]
+    if (pos < 1 || pos > this.length) {
+        throw Error("OutOfBounds");
+    }
+    return this.items[pos-1];
 
 }
 SortedList.prototype.max     = function() {
