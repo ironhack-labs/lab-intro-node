@@ -1,10 +1,10 @@
 ![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
 
-# JS | Introduction to Node
+# Introduction to NodeJS
 
 ## Introduction
 
-Today will be our first day using Node, and to practice we will create a Sorted List class. Ready to start?
+Today is our first day using NodeJS, so we will practice doing some basic operations. **Ready to start?**
 
 ## Requirements
 
@@ -138,29 +138,29 @@ The object should have a `items` and `length` property.
 
 ### Add
 
-`add(x)` will add x to the items array
+The `add(x)` methdo will add `x` to the items array.
 
 ### Get
 
-The method will get the `ith` value in the list
+The method will get the `nth` value in the list.
 
 You should also provide a length property that gives the length of the list.
 
 ### Max
 
-Should return the max value of the array
+The `max()` method should return the highest value of the array.
 
 ### Min
 
-Should return the max value of the array
+The `min()` method should return the lowest value of the array.
 
 ### Average
 
-Should return the average value of the array
+The `average()` method should return the average value of the array.
 
 ### Sum
 
-Should return the sum value of the array
+The `sum()` method should return the sum value of the array.
 
 
 /Happy Coding
