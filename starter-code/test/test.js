@@ -1,5 +1,5 @@
 // Require the file to be tested
-var SortedList = require('../index.js')
+var SortedList = require('../index.js');
 
 // Load the Chai Assertion Library
 var assert = require('assert');
@@ -15,7 +15,7 @@ describe('SortedList', function() {
 
   describe('#add(x)', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
     it('should add a single value to SortedList', function() {
@@ -41,7 +41,7 @@ describe('SortedList', function() {
 
   describe('#get(i)', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
@@ -49,17 +49,17 @@ describe('SortedList', function() {
       try {
         sl.get(20);
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'OutOfBounds');
         assert.throws(sl.get, Error, '/OutOfBounds/');
       }
     });
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(i=1; i<200; i++) {
-        sl.add(foo*i);
-        assert.equal(sl.get(i), foo*i);
+      for (i = 1; i < 200; i++) {
+        sl.add(foo * i);
+        assert.equal(sl.get(i), foo * i);
       }
     });
   });
@@ -112,7 +112,7 @@ describe('SortedList', function() {
 
   describe('#average()', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
@@ -120,33 +120,33 @@ describe('SortedList', function() {
       try {
         sl.average();
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "EmptySortedList")
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'EmptySortedList');
       }
-    })
+    });
 
     it('should return the average of elements in the array', function() {
-      for(i=0; i<101; i++){
-        sl.add(i*2);
+      for (i = 0; i < 101; i++) {
+        sl.add(i * 2);
       }
       assert.equal(sl.average(), 100);
-    })
+    });
   });
 
-  describe('sum()', function(){
+  describe('sum()', function() {
     var sl;
-    beforeEach(function(){
+    beforeEach(function() {
       sl = new SortedList();
     });
 
     it('should return a EmptySortedList exception if there are no elements in the list', function() {
       try {
-        sl.sum()
+        sl.sum();
       } catch (e) {
         assert.equal(e instanceof Error, true);
-        assert.equal(e.message, "EmptySortedList");
+        assert.equal(e.message, 'EmptySortedList');
       }
-    })
+    });
 
     it('should add(sum) all elements of the array if there are elements in the list', function() {
       sl.add(1);
