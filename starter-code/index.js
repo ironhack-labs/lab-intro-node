@@ -25,7 +25,7 @@ class SortedList {
   }
 
   average () {
-     return Math.floor(this.items.reduce( (acc,a) => acc + (a/this.items.length),0))
+     return this.sum()/this.items.length
   }
 
   sum() {
