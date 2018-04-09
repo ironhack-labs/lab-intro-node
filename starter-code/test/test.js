@@ -6,7 +6,7 @@ var assert = require('assert');
 
 describe('SortedList', function() {
   describe('Constructor', function() {
-    it('should create an empty SortedList', function() {
+    it('should create an empty SortedListSortedList', function() {
       var sl = new SortedList();
       assert.equal(sl.length, 0);
       assert.equal(sl instanceof SortedList, true);
@@ -45,15 +45,15 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    it('should return an OutOfBounds exception if there is no element in that position', function() {
-      try {
-        sl.get(20);
-      } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
-        assert.throws(sl.get, Error, '/OutOfBounds/');
-      }
-    });
+    // it('should return an OutOfBounds exception if there is no element in that position', function() {
+    //   try {
+    //     sl.get(20);
+    //   } catch (e) {
+    //     assert.equal(e instanceof Error, true)
+    //     assert.equal(e.message, "OutOfBounds")
+    //     assert.throws(sl.get, Error, '/OutOfBounds/');
+    //   }
+    // });
 
     it('should return the element in that position', function() {
       var foo = 10;
