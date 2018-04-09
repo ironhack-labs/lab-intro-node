@@ -9,7 +9,7 @@ class SortedList {
 
   add(x) {
     this.items.push(x)
-    this.items.sort(function(a,b){
+    this.items.sort((a,b)=>{
     return a-b
     });
     this.length++;
