@@ -1,8 +1,8 @@
 class SortedList {
 
-  constructor(items, length){
+  constructor(){
     this.items = [];
-    this.length = this.items.length;
+    this.length = 0;
   };
 
   
@@ -10,16 +10,16 @@ class SortedList {
   add(x) {
     this.items.push(x)
     this.items.sort(function(a,b){
-      return a-b
+    return a-b
     });
-
+    this.length++;
   };
 
   get(pos) {
       if(pos < 0 && pos > this.items.length){
         return "Out of bounds";
       } else {
-      return (this.items[pos]);
+      return (this.items[pos-1]);
       }
   }
 
