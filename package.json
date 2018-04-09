@@ -1,0 +1,19 @@
+{
+  "name": "lab-intro-node",
+  "version": "1.0.0",
+  "description": "![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muflonex/lab-intro-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muflonex/lab-intro-node/issues"
+  },
+  "homepage": "https://github.com/muflonex/lab-intro-node#readme"
+}
