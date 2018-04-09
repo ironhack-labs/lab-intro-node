@@ -26,8 +26,8 @@ describe('SortedList', function() {
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
       sl.add(10);
-      assert.equal(sl.get(2), 20);
       assert.equal(sl.get(1), 10);
+      assert.equal(sl.get(2), 20);
     });
     it('should add a third value to SortedList, sorted', function() {
       sl.add(30);
@@ -45,15 +45,15 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    // it('should return an OutOfBounds exception if there is no element in that position', function() {
-    //   try {
-    //     sl.get(20);
-    //   } catch (e) {
-    //     assert.equal(e instanceof Error, true)
-    //     assert.equal(e.message, "OutOfBounds")
-    //     assert.throws(sl.get, Error, '/OutOfBounds/');
-    //   }
-    // });
+    it('should return an OutOfBounds exception if there is no element in that position', function() {
+      try {
+        sl.get(20);
+      } catch (e) {
+        assert.equal(e instanceof Error, true)
+        assert.equal(e.message, "OutOfBounds")
+        assert.throws(sl.get, Error, '/OutOfBounds/');
+      }
+    });
 
     it('should return the element in that position', function() {
       var foo = 10;
@@ -70,14 +70,14 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    // it('should return an EmptyList exception if there is no element in the list', function() {
-    //   try {
-    //     sl.max();
-    //   } catch (e) {
-    //     assert.equal(e instanceof Error, true);
-    //     assert.equal(e.message, 'EmptySortedList');
-    //   }
-    // });
+    it('should return an EmptyList exception if there is no element in the list', function() {
+      try {
+        sl.max();
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'EmptySortedList');
+      }
+    });
 
     it('should return the max element in the list', function() {
       sl.add(10);
@@ -93,14 +93,14 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    // it('should return an EmptyList exception if there is no element in the list', function() {
-    //   try {
-    //     sl.min();
-    //   } catch (e) {
-    //     assert.equal(e instanceof Error, true);
-    //     assert.equal(e.message, 'EmptySortedList');
-    //   }
-    // });
+    it('should return an EmptyList exception if there is no element in the list', function() {
+      try {
+        sl.min();
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, 'EmptySortedList');
+      }
+    });
 
     it('should return the min element in the list', function() {
       sl.add(10);
@@ -116,14 +116,14 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    // it('should return an EmptySortedList exception if there are no elements', function() {
-    //   try {
-    //     sl.average();
-    //   } catch (e) {
-    //     assert.equal(e instanceof Error, true)
-    //     assert.equal(e.message, "EmptySortedList")
-    //   }
-    // })
+    it('should return an EmptySortedList exception if there are no elements', function() {
+      try {
+        sl.average();
+      } catch (e) {
+        assert.equal(e instanceof Error, true)
+        assert.equal(e.message, "EmptySortedList")
+      }
+    })
 
     it('should return the average of elements in the array', function() {
       for(i=0; i<101; i++){
@@ -139,14 +139,14 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    // it('should return a EmptySortedList exception if there are no elements in the list', function() {
-    //   try {
-    //     sl.sum()
-    //   } catch (e) {
-    //     assert.equal(e instanceof Error, true);
-    //     assert.equal(e.message, "EmptySortedList");
-    //   }
-    // })
+    it('should return a EmptySortedList exception if there are no elements in the list', function() {
+      try {
+        sl.sum()
+      } catch (e) {
+        assert.equal(e instanceof Error, true);
+        assert.equal(e.message, "EmptySortedList");
+      }
+    })
 
     it('should add(sum) all elements of the array if there are elements in the list', function() {
       sl.add(1);
