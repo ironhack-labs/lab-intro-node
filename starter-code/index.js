@@ -1,3 +1,6 @@
+var chalk=require("chalk");
+console.log(chalk.green("Hello, world!"));
+
 var SortedList = function() {};
 
 SortedList.prototype.add     = function(item) {}
