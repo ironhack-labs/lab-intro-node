@@ -24,7 +24,7 @@ SortedList.prototype.min = function() {
 };
 SortedList.prototype.average = function() {
 	if (this.length > 0)
-	return this.items.reduce(function(total, current){return total + current;}) / this.length;
+	return this.sum() / this.length;
 };
 
 SortedList.prototype.sum = function() {
