@@ -1,10 +1,31 @@
-var SortedList = function() {};
+var SortedList = function() {
+  this.length = 0;
+  this.list = [];
+};
 
-SortedList.prototype.add     = function(item) {}
-SortedList.prototype.get     = function(pos) {}
-SortedList.prototype.max     = function() {}
-SortedList.prototype.min     = function() {}
-SortedList.prototype.average = function() {}
-SortedList.prototype.sum     = function() {}
+SortedList.prototype.add     = function(item) {
+  this.list.push(item);
+  this.length++;
+  if(this.length >1){
+    this.list.sort(function(a,b){
+      return a-b;
+    });
+  }
+};
+SortedList.prototype.get     = function(pos) {
+  return this.list[pos-1];
+};
+SortedList.prototype.max     = function() {
+  return this.list[this.length -1];
+};
+SortedList.prototype.min     = function() {
+  return this.list[0];
+};
+SortedList.prototype.average = function() {
+  return this.sum() / this.length;
+};
+SortedList.prototype.sum     = function() {
+  return this.list.reduce((prev,curr) => prev + curr ,0);
+};
 
 module.exports = SortedList;
