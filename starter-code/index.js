@@ -13,10 +13,10 @@ SortedList.prototype.get     = function(pos) {
   return this.length[pos - 1];
 }
 SortedList.prototype.max     = function() {
-  return Math.max.apply(null, this.length);
+  return Math.max(...this.length);
 }
 SortedList.prototype.min     = function() {
-  return Math.min.apply(null, this.length);
+  return Math.min(...this.length);
 }
 SortedList.prototype.average = function() {
   let sum = this.length.reduce(function(a,b){
