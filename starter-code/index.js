@@ -29,6 +29,3 @@ SortedList.prototype.sum     = function() {
 }
 
 module.exports = SortedList;
-
-
-sl = new SortedList;
