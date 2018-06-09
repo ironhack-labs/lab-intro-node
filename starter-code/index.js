@@ -15,7 +15,7 @@ SortedList.prototype.add = function (item) {
 SortedList.prototype.get = function (pos) { 
   this.pos = pos-1;
   return this.items[this.pos];
-};
+}
 
 SortedList.prototype.max = function () {
   this.items.sort(function (a, b) {
