@@ -16,7 +16,7 @@ class SortedList {
         return this.items[this.items.length - 1];
     }
 
-    min() { }
+    min() { return this.items[0]; }
 
     average() { }
 
