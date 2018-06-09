@@ -20,7 +20,12 @@ class SortedList {
 
     average() { }
 
-    sum() { }
+    sum() {
+
+        if (this.items.length < 1) { throw Error("EmptySortedList"); }
+        var reducer = (acc, item) => acc + item;
+        return this.items.reduce(reducer);
+    }
 
     sort() {
         this.items.sort(function (number1, number2) {
