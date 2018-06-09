@@ -1,10 +1,15 @@
-var SortedList = function () { };
+class SortedList {
+    constructor() {
 
-SortedList.prototype.add = function (item) { }
-SortedList.prototype.get = function (pos) { }
-SortedList.prototype.max = function () { }
-SortedList.prototype.min = function () { }
-SortedList.prototype.average = function () { }
-SortedList.prototype.sum = function () { }
+    }
+
+    add(item) { }
+    get(pos) { }
+    max() { }
+    min() { }
+    average() { }
+    sum() { }
+
+}
 
 module.exports = SortedList;
