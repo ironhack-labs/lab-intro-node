@@ -12,7 +12,9 @@ class SortedList {
 
     get(pos) { return this.items[pos - 1]; }
 
-    max() { }
+    max() {
+        return this.items[this.items.length - 1];
+    }
 
     min() { }
 
