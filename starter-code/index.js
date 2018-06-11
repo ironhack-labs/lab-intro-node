@@ -17,18 +17,17 @@ SortedList.prototype.get     = function(pos) {
     return this.items[pos-1];
 }
 SortedList.prototype.max     = function() {
-    return this.items[this.items.length - 1];
+    return this.items[this.length - 1];
 }
 SortedList.prototype.min     = function() {
     return this.items[0];
 }
 SortedList.prototype.average = function() {
-    return this.sum()/this.items.length;
+    return this.sum()/this.length;
 }
 SortedList.prototype.sum     = function() {
     if (this.items.length === 0) {
         var e = new Error('EmptySortedList'); 
-        // e.message is 'Could not parse input'
         throw e;
     }
     return this.items.reduce(function (sum,curr) {
