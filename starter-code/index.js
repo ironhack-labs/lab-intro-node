@@ -6,7 +6,8 @@ let SortedList = function() {
 SortedList.prototype.add = function(item) {
     
     this.items.push(item)
-    this.items.sort();
+    this.items.sort(function(i1, i2){
+        return i1-i2});
     
     this.length++;
 }
@@ -46,7 +47,7 @@ SortedList.prototype.average = function() {
     if (this.items.length === 0) {
         return this.EmptySortedList();
     } else {
-        this.items.reduce(function(avg, e, i, arr) {
+        return this.items.reduce(function(avg, e, i, arr) {
             var average = 0;
             if (i === this.items.length - 1) {
                 return average = ((avg + e) / this.items.length);
@@ -64,10 +65,12 @@ SortedList.prototype.sum = function() {
         return this.EmptySortedList();
     } else {
         return this.items.reduce(function(sum, e) {
-            sum += e;
+          return sum += e;
         }.bind(this), 0);
     }
 }
+
+
 
 
 SortedList.prototype.OutOfBounds = function(){
