@@ -13,77 +13,49 @@ SortedList.prototype.add = function(item) {
 }
 SortedList.prototype.get = function(pos) {
     if(pos > this.items.length){
-        return this.OutOfBounds();
+        return "Sorry, the position is out of bounds";
     }
     return this.items[pos-1];
 }
 SortedList.prototype.max = function() {
-    if (this.items === 0) {
-        return this.EmptyList();
+    if (this.items.length === 0) {
+        return "The list is empty";
     } else {
-        var max = this.items[0];
-        this.items.forEach(function(e) {
-            if(e > max){
-                max = e;
-            }
-        }.bind(this));
-    }
-    return max; 
+        return this.items[this.items.length - 1];
+    } 
 }
 SortedList.prototype.min = function() {
     if (this.items.length === 0) {
-        return this.EmptyList();
+        return "The list is empty";
     } else {
-        var min = this.items[0];
-        this.items.forEach(function(e) {
-            if(e < min){
-                min = e;
-            }
-        }.bind(this));
+        return this.items[0];
     }
-    return min;
+
 }
 SortedList.prototype.average = function() {
     if (this.items.length === 0) {
-        return this.EmptySortedList();
+        return "The sorted list is empty";
     } else {
         return this.items.reduce(function(avg, e, i, arr) {
-            var average = 0;
+
             if (i === this.items.length - 1) {
-                return average = ((avg + e) / this.items.length);
+                return ((avg + e) / this.items.length);
             } else {
-                return average = avg + e;
+                return (avg + e);
             }
         }.bind(this), 0);
-        return average;
     }
 }
 
 
 SortedList.prototype.sum = function() {
     if (this.items.length === 0) {
-        return this.EmptySortedList();
+        return "The sorted list is empty";
     } else {
         return this.items.reduce(function(sum, e) {
-          return sum += e;
+          return sum + e;
         }.bind(this), 0);
     }
-}
-
-
-
-
-SortedList.prototype.OutOfBounds = function(){
-    return "Sorry, the position is out of bounds";
-}
-
-SortedList.prototype.EmptyList = function() {
-    return "The list is empty";
-
-}
-
-SortedList.prototype.EmptySortedList = function() {
-    return "The sorted list is empty";
 }
 
 module.exports = SortedList;
