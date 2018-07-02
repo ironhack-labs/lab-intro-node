@@ -28,7 +28,7 @@ SortedList.prototype.max = function () {
     if (this.items.length === 0){
         return this.items = [];
     }else{
-        return Math.max(...this.items);
+        return Math.max(...this.items); //saca cosas de un array de forma anónima
     }
 }
 
@@ -36,7 +36,7 @@ SortedList.prototype.min = function () {
     if (this.items.length === 0) {
         return this.items = [];
     } else {
-        return Math.min(...this.items);
+        return Math.min(...this.items); //spread operator
     }
 }
 
