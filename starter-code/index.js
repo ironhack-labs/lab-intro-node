@@ -18,15 +18,15 @@ class SortedList {
     return this.items[this.items.length-1];
   }
 
-  min(){
+  min() {
     return this.items[0];
   }
 
-  average(){
+  average() {
     return this.sum()/this.length;
   }
 
-  sum(){
+  sum() {
     return this.items.reduce((acc,e) => acc + e ,0);
   }
 
