@@ -16,23 +16,29 @@ length should be the number of elements in the array.
 
 
 class SortedList {
-  constructor(list = []){
+  constructor() {
     this.items = [];
     this.length = this.items.length;     
   }
 
+
+  //Need help with both add and get methods.
 add(x) {
-  let i = 0;
-
-while(x > this.items[i] && i < this.length){
-  i++;
-}
-  this.length++;
-  this.items.splice(i, 0, x);
-}
+  this.items.push(x);
+  this.items.sort();
+  this.length = this.items.length;
 }
 
-//let blah = new SortedList();
+get(x) {
+  return this.items[x - 1];
+}
+
+
+
+
+} //END Sorted List Class
+
+let blah = new SortedList();
 
 // blah.add(y);
 
