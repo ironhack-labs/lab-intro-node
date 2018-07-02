@@ -6,12 +6,10 @@ var SortedList = function() {
 SortedList.prototype.add = function(item) {
   this.items.push(item);
   this.length++;
-  this.items = this.items.sort();
+  this.items = this.sortNumeric(this.items);
 };
 SortedList.prototype.get = function(pos) {
-  console.log(this.items, pos);
   this.length = this.items.length;
-  console.log(this.items[pos - 1]);
   return this.items[pos - 1];
 };
 SortedList.prototype.max = function() {
@@ -33,6 +31,12 @@ SortedList.prototype.sum = function() {
     return (acc += curr);
   }, 0);
   return sum;
+};
+
+SortedList.prototype.sortNumeric = function(array) {
+  return array.sort(function(a, b) {
+    return a - b;
+  });
 };
 
 module.exports = SortedList;
