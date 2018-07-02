@@ -9,7 +9,6 @@ SortedList.prototype.add = function(item) {
   this.items = this.sortNumeric(this.items);
 };
 SortedList.prototype.get = function(pos) {
-  this.length = this.items.length;
   return this.items[pos - 1];
 };
 SortedList.prototype.max = function() {
