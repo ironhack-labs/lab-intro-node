@@ -13,11 +13,11 @@ SortedList.prototype.get = function(pos) {
   return this.items[pos - 1];
 };
 SortedList.prototype.max = function() {
-  var sortedItems = this.items.sort();
+  var sortedItems = this.sortNumeric(this.items);
   return sortedItems[this.items.length - 1];
 };
 SortedList.prototype.min = function() {
-  var sortedItems = this.items.sort();
+  var sortedItems = this.sortNumeric(this.items);
   return sortedItems[0];
 };
 SortedList.prototype.average = function() {
