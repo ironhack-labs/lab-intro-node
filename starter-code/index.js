@@ -23,12 +23,11 @@ SortedList.prototype.min     = function() {
   return Math.min(...this.items);
 }
 SortedList.prototype.average = function() {
-  return this.sum/this.items.length;
+  return this.sum()/this.items.length;
 }
+
 SortedList.prototype.sum     = function() {
-  this.items.reduce(function (accumulator, current){
-    return accumulator + current;
-  }, 0);
+  return this.items.reduce((accumulator, current)=>accumulator + current,0)
 }
 
 module.exports = SortedList;
