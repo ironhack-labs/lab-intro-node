@@ -46,7 +46,7 @@ class SortedList {
       return sum
     }, 0)
     return avrg
-  }
+  };
 };
 
 module.exports = SortedList;
