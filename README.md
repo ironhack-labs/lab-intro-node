@@ -97,29 +97,30 @@ SortedList
     1) should create an empty SortedList
   #add(x)
     2) should add a single value to SortedList
-    3) should add a second value to SortedList, sorted
-    4) should add a third value to SortedList, sorted
+    3) should add a third value to SortedList
   #get(i)
     ✓ should return an OutOfBounds exception if there is no element in that position
-    5) should return the element in that position
+    4) should return the element in that position
+  #add(x) and get(i)
+    5) should add a second value to SortedList, sorted
+    6) should add a third value to SortedList, sorted
   #max()
     ✓ should return an EmptyList exception if there is no element in the list
-    6) should return the max element in the list
+    7) should return the max element in the list
   #min()
-    ✓ should return an EmptyList exception if there is no element in the list
-    7) should return the min element in the list
+    8) should return an EmptyList exception if there is no element in the list
+    9) should return the min element in the list
+  #sum()
+    10) should return 0 for an empty sorted list
+    11) should add(sum) all elements of the array if there are elements in the list
   #average()
-    ✓ should return an EmptySortedList exception if there are no elements
-    8) should return the average of elements in the array
-  sum()
-    ✓ should return a EmptySortedList exception if there are no elements in the list
-    9) should add(sum) all elements of the array if there are elements in the list
+    12) should return an EmptySortedList exception if there are no elements
+    13) should return the average of elements in the array
 
-
-5 passing (17ms)
-9 failing
+2 passing (16ms)
+13 failing
 ```
-Don't worry if these 5 tests are passing... your goal is to make them ALL PASS!! :)
+Don't worry if these 2 tests are passing... your goal is to make them ALL PASS!! :)
 
 ## SortedList Class
 
@@ -138,7 +139,7 @@ The object should have a `items` and `length` property.
 
 ### Add
 
-The `add(x)` methdo will add `x` to the items array.
+The `add(x)` method will add `x` to the items array.
 
 ### Get
 
@@ -150,17 +151,30 @@ You should also provide a length property that gives the length of the list.
 
 The `max()` method should return the highest value of the array.
 
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
+
+```js
+throw new Error("EmptySortedList")
+```
+
+If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
+
 ### Min
 
 The `min()` method should return the lowest value of the array.
+
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". 
+
+### Sum
+
+The `sum()` method should return the sum value of the array.
 
 ### Average
 
 The `average()` method should return the average value of the array.
 
-### Sum
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". 
 
-The `sum()` method should return the sum value of the array.
 
 
 /Happy Coding
