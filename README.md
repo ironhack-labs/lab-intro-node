@@ -56,7 +56,7 @@ To start using mocha, you have to install it as a **global package** in your sys
 We will do so by running:
 
 ```
-$ npm install -g mocha
+$ mom
 ```
 
 We can check that Mocha is correctly installed by running:
@@ -119,6 +119,7 @@ SortedList
 5 passing (17ms)
 9 failing
 ```
+
 Don't worry if these 5 tests are passing... your goal is to make them ALL PASS!! :)
 
 ## SortedList Class
@@ -129,9 +130,9 @@ The class will have the following methods:
 
 ### Constructor
 
-`new SortedList` should create a new object from the `SortedList` class. 
+`new SortedList` should create a new object from the `SortedList` class.
 
-The object should have a `items` and `length` property. 
+The object should have a `items` and `length` property.
 
 - `items` should be an array.
 - `length` should be the number of elements in the array.
@@ -161,6 +162,5 @@ The `average()` method should return the average value of the array.
 ### Sum
 
 The `sum()` method should return the sum value of the array.
-
 
 /Happy Coding
