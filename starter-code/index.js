@@ -16,22 +16,15 @@ class SortedList {
         return this.items[pos - 1];
     }
     max() {
-        if (this.length === 0) {
-            return this.items
-        }
-        let max = Math.max(...this.items)
-        return max
+       
+        return this.items[this.length-1]
     }
     min() {
-        if (this.length === 0) {
-            return this.items
-        }
-        let min = Math.min(...this.items)
-        return min;
-
+        return this.items[0]
     }
     average() {
         if (this.length === 0) {
+            throw new Error("EmptySortedList") 
             return this.items
         }
 
@@ -39,9 +32,7 @@ class SortedList {
     }
 
     sum() {
-        if (this.length === 0) {
-            return this.items
-        }
+
         let av = this.items.reduce((acc, num) => {
             var sum = acc + num;
             return sum

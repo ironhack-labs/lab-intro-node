@@ -119,6 +119,8 @@ describe('SortedList', function() {
     it('should return an EmptySortedList exception if there are no elements', function() {
       try {
         sl.average();
+        // We should not go here
+        assert.equal(false, true)
       } catch (e) {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "EmptySortedList")
