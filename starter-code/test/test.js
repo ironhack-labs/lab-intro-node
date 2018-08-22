@@ -83,9 +83,11 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    it('should return an EmptyList exception if there is no element in the list', function() {
+    it('should return an EmptySortedList exception if there is no element in the list', function() {
       try {
         sl.max();
+        // The next line should not be executed
+        assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
@@ -106,10 +108,10 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
-    it('should return an EmptyList exception if there is no element in the list', function() {
+    it('should return an EmptySortedList exception if there is no element in the list', function() {
       try {
         sl.min();
-        // The next line should not be executer
+        // The next line should not be executed
         assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true);
@@ -152,7 +154,7 @@ describe('SortedList', function() {
     it('should return an EmptySortedList exception if there are no elements', function() {
       try {
         sl.average();
-        // The next line should not be executer
+        // The next line should not be executed
         assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true)
