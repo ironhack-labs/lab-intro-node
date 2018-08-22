@@ -4,8 +4,8 @@ class SortedList {
     this.length = 0;
   };
 
-  add(x) {
-    this.items.push(x);
+  add(item) {
+    this.items.push(item);
     this.items.sort((a, b) => a - b)
     this.length++;
   };
@@ -16,37 +16,28 @@ class SortedList {
 
   max() {
     if (this.length === 0) {
-      return this.items
+      throw new Error("EmptySortedList")
     }
-    let max = Math.max(...this.items)
-    return max
+    //return Math.max(...this.items)
+    //return this.items[this.length -1]
+    return this.get(this.length) // is better bc faster on computer
   };
 
   min() {
-    if (this.length === 0) {
-      return this.items
-    }
-    let min = Math.min(...this.items)
-    return min;
-  };
-
-  average() {
-    if (this.length === 0) {
-      return this.items
-    }
-    return this.sum() / this.length;
+    if (this.length === 0)
+      throw new Error("EmptySortedList")
+    return this.items[0]
   };
 
   sum() {
-    if (this.length === 0) {
-      return this.items
-    }
-    let avrg = this.items.reduce((accelerator, number) => {
-      var sum = accelerator + number;
-      return sum
-    }, 0)
-    return avrg
+    return this.items.reduce((acc, x) => { acc + x, 0})
+  }
+  average() {
+    if (this.length === 0)
+      throw new Error("EmptySortedList")
+    return this.sum() / this.length
   };
-};
+}
+
 
 module.exports = SortedList;
