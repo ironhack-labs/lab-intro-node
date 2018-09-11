@@ -12,38 +12,41 @@ class SortedList {
   }
   get(pos) {
     let element;
-    if (this.items[pos] === undefined) {
-      return "OutOfBounds";
-    } else {
-      element = this.items[pos-1];
-      return element;
-    }
+    element = this.items[pos - 1];
+    return element;
   }
   max() {
-    try {
-      if (this.items.length === 0) throw ("EmptySortedList");
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
       this.items.sort((a, b) => {
         return b - a;
       });
       return this.items[0];
-    } catch (e) {
-      return;
     }
   }
   min() {
-    this.items.sort((a, b) => {
-      return a - b;
-    });
-    return this.items[0];
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      this.items.sort((a, b) => {
+        return a - b;
+      });
+      return this.items[0];
+    }
   }
   average() {
-    return this.sum()/this.items.length;
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.sum() / this.items.length;
+    }
   }
   sum() {
     let sumElem = 0;
-    sumElem = this.items.reduce((acc, ele) =>{
-      return acc += ele;
-    },0);
+    sumElem = this.items.reduce((acc, ele) => {
+      return (acc += ele);
+    }, 0);
     return sumElem;
   }
 }
