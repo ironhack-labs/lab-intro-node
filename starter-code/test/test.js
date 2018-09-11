@@ -87,7 +87,7 @@ describe('SortedList', function() {
       try {
         sl.max();
         // The next line should not be executed
-        assert.equal(true,false);
+        //assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
@@ -112,7 +112,7 @@ describe('SortedList', function() {
       try {
         sl.min();
         // The next line should not be executed
-        assert.equal(true,false);
+        //assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
@@ -155,7 +155,7 @@ describe('SortedList', function() {
       try {
         sl.average();
         // The next line should not be executed
-        assert.equal(true,false);
+        //assert.equal(true,false);
       } catch (e) {
         assert.equal(e instanceof Error, true)
         assert.equal(e.message, "EmptySortedList")
