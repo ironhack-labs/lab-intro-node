@@ -168,7 +168,5 @@ describe('SortedList', function() {
       }
       assert.equal(sl.average(), 100);
     })
-  });
-
-  
+  }); 
 });
