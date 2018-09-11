@@ -1,5 +1,8 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+	  this.items = [];
+	  this.length = this.items.length;
+  }
   add(item) {}
   get(pos) {}
   max() {}
@@ -9,3 +12,5 @@ class SortedList {
 };
 
 module.exports = SortedList;
+
+const sortedList = new SortedList();
