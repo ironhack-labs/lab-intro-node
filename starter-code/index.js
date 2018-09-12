@@ -1,7 +1,14 @@
 class SortedList {
-  constructor() {}
-  add(item) {}
-  get(pos) {}
+  constructor() {
+    this.items = [];
+    this.length = this.items.lenght;
+  }
+  add(item) {
+    this.items.push(item)
+  }
+  get(pos) {
+    return this.items[pos]
+  }
   max() {}
   min() {}
   average() {}
