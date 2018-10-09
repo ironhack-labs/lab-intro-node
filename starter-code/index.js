@@ -26,15 +26,10 @@ class SortedList {
     if (this.items.length === 0){
       throw new Error("EmptySortedList");
     }
-    let max = 0;
-    
-    this.items.forEach((item, index) => {
-      if (item > max) {
-        max = item;
-      }
-    })
-    return max;
+
+    return this.items[this.items.length-1];
   }
+
 
 
   min() {
