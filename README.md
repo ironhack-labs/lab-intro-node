@@ -1,6 +1,6 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Introduction to NodeJS
+# Intro to NodeJS
 
 ## Introduction
 
@@ -8,22 +8,21 @@ Today is our first day using NodeJS, so we will practice doing some basic operat
 
 ## Requirements
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Clone this repo into your `~/code/labs`
-- Make sure you use objects and prototypal inheritance during the exercise
-- We should follow good object oriented principles
+- Fork this repo
+- Clone this repo
 
 ## Submission
 
-- Upon completion, run the following commands
+- Upon completion, run the following commands:
 
-```
-git add .
-git commit -m "done"
-git push origin master
-```
+  ```
+  git add .
+  git commit -m "done"
+  git push origin master
+  ```
 
-- Navigate to your repo and [create a Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+- Create Pull Request so your TAs can check up your work.
+
 
 ## Testing Introduction
 
