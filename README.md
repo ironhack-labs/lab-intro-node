@@ -1,4 +1,4 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
 # Introduction to NodeJS
 
@@ -130,9 +130,9 @@ The class will have the following methods:
 
 ### Constructor
 
-`new SortedList` should create a new object from the `SortedList` class. 
+`new SortedList` should create a new object from the `SortedList` class.
 
-The object should have a `items` and `length` property. 
+The object should have a `items` and `length` property.
 
 - `items` should be an array.
 - `length` should be the number of elements in the array.
@@ -163,7 +163,7 @@ If you want more information about `try...catch`, you can go on the [Mozilla doc
 
 The `min()` method should return the lowest value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". 
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
 
 ### Sum
 
@@ -173,8 +173,8 @@ The `sum()` method should return the sum value of the array.
 
 The `average()` method should return the average value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". 
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
 
 
 
-/Happy Coding
+Happy Coding! :heart:
