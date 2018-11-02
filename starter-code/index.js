@@ -36,20 +36,25 @@ class SortedList {
     
   }
 
-  average() {
-
-    if (this.length === 0) {
-      throw new Error("EmptySortedList");
-    } else return this.sum() / this.length;
-  }
   
   sum() {
     if (this.length === 0) {
       return 0;
     }
-    let sum = this.items.reduce((a, b) => a + b);
-    return a;
+    return this.array.reduce((a, b) => a + b);
+
   }
+
+  average() {
+
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } 
+    else {
+    return this.sum() / this.length;
+    }
+  }
+
  
 }
 
