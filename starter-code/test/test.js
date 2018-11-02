@@ -1,3 +1,4 @@
+console.log('test');
 // Require the file to be tested
 var SortedList = require('../index.js')
 
@@ -126,7 +127,7 @@ describe('SortedList', function() {
       assert.equal(sl.min(), 10);
     });
   });
-
+/*
   describe('#sum()', function(){
     var sl;
     beforeEach(function(){
@@ -170,5 +171,5 @@ describe('SortedList', function() {
     })
   });
 
-  
+  */
 });
