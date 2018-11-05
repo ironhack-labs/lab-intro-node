@@ -42,6 +42,7 @@ class SortedList {
       return 0;
     }
     return this.array.reduce((a, b) => a + b);
+    
 
   }
 
