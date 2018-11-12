@@ -1,3 +1,14 @@
+/* eslint-disable padded-blocks */
+/* eslint-disable comma-spacing */
+/* eslint-disable semi */
+/* eslint-disable space-infix-ops */
+/* eslint-disable keyword-spacing */
+/* eslint-disable quotes */
+/* eslint-disable space-before-blocks */
+/* eslint-disable space-before-function-paren */
+/* eslint-disable import/order */
+/* eslint-disable no-var */
+/* eslint-disable prefer-arrow-callback */
 // Require the file to be tested
 var SortedList = require('../index.js')
 
@@ -169,6 +180,4 @@ describe('SortedList', function() {
       assert.equal(sl.average(), 100);
     })
   });
-
-  
 });
