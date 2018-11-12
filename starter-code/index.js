@@ -17,7 +17,11 @@ class SortedList {
   }
 
   max() {
-    
+    if (this.length === 0){
+      throw new Error("EmptySortedList")
+    } else {
+      return this.items[this.length - 1];
+    }
   }
   min() {}
   average() {}
