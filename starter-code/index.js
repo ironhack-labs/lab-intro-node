@@ -1,7 +1,7 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.length = 0;
+    this.length = this.items.length;
   }
 
   add(item) {
@@ -9,7 +9,7 @@ class SortedList {
     this.items.sort(function (a, b) {
       return a - b;
     });
-    this.length++;
+    this.length = this.items.length;
   }
 
   get(pos) {
@@ -43,7 +43,7 @@ class SortedList {
   }
 
   average() {
-
+    
   }
 
 };
