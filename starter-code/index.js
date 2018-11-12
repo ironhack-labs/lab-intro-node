@@ -43,7 +43,11 @@ class SortedList {
   }
 
   average() {
-    
+    if (this.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      return this.sum() / this.items.length;
+    }
   }
 
 };
