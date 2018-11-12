@@ -27,7 +27,7 @@ class SortedList {
     throw new Error("EmptySortedList")
   }
   sum() {
-    return this.length ? this.items.reduce((a, b = 0) => a + b) : 0;
+    return this.length ? this.items.reduce((val, acc) => val + acc) : 0;
   }
 };
 
