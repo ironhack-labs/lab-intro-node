@@ -6,26 +6,46 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
-    this.items.sort(function(a,b){
+    this.items.sort(function (a, b) {
       return a - b;
     });
     this.length++;
   }
 
   get(pos) {
-    return this.items[pos-1];
+    return this.items[pos - 1];
   }
 
   max() {
-    if (this.length === 0){
+    if (this.length === 0) {
       throw new Error("EmptySortedList")
     } else {
       return this.items[this.length - 1];
     }
   }
-  min() {}
-  average() {}
-  sum() {}
+
+  min() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      return this.items[0];
+    }
+  }
+
+  sum() {
+    if (this.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce(function(ac,current){
+        return ac + current;
+      },0);
+    }
+  }
+
+  average() {
+
+  }
+
 };
 
 module.exports = SortedList;
