@@ -2,14 +2,30 @@ class SortedList {
   constructor() {
     this.items =[];
     this.length = this.items.length;
+
+
   }
+
+
+  // Object.defineProperty(this, 'length', {
+  //   get: function() {
+  //     return this.items.length;
+  //   },
+  // });
+
+
   add(item) {
     this.items.push(item);
     this.length++;
     this.sortList();
   }
   get(pos) {
-      return this.items[pos-1];
+      try{
+        return this.items[pos-1];
+      }catch(e){
+        throw new Error("EmptySortedList");
+      }
+      
   }
   max() {
     if(this.items.length <=0){

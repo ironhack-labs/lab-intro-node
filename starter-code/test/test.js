@@ -50,7 +50,7 @@ describe('SortedList', function() {
     it('should return the element in that position', function() {
       var foo = 10;
       for(i=1; i<200; i++) {
-        sl.add(foo*i);
+        sl.add(foo*i  );
         assert.equal(sl.get(i), foo*i);
       }
     });
