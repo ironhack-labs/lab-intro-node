@@ -1,0 +1,19 @@
+{   
+    "name1":{
+        "name": "Amsterdam",
+        "age": "14",
+        "location": "Amsterdam"
+    },
+    "name2":{
+        "name": "Juan",
+        "age": "112",
+        "location": "Barcelona"
+    
+    },
+    "name3":{
+        "name": "Carles",
+        "age": "174",
+        "location": "Lavida"
+    
+    }
+}
