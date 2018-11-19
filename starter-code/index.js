@@ -21,7 +21,7 @@ SortedList.prototype.max = function(){
   if(this.items.length>0) {
       return Math.max.apply(null, this.items)
   }else{
-
+      throw new Error("EmptySortedList")
   }
 }
 
@@ -29,7 +29,7 @@ SortedList.prototype.min = function(){
   if(this.items.length>0) {
       return Math.min.apply(null, this.items)
   }else{
-
+      throw new Error("EmptySortedList")
   }
 }
 
@@ -39,16 +39,17 @@ SortedList.prototype.average = function (){
           return acc + element
       })) / this.items.length
   }else{
-
+      throw new Error("EmptySortedList")
   }
 }
-SortedList.prototype.sum = function(){
+SortedList.prototype.sum = function() {
+    console.log(this.items)
   if(this.items.length>0) {
       return this.items.reduce(function (acc, element) {
           return acc + element
       })
   }else {
-
+    return 0
   }
 }
  /* get(pos) {}
