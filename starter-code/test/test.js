@@ -20,14 +20,20 @@ describe('SortedList', function() {
     });
     it('should add a single value to SortedList', function() {
       assert.equal(sl.length, 0);
+
       sl.add(1);
+
       assert.equal(sl.length, 1);
     });
     it('should add a third value to SortedList', function() {
       sl.add(30);
+      console.log(sl)
       sl.add(20);
+      console.log(sl)
       sl.add(10);
+      console.log(sl)
       assert.equal(sl.length, 3);
+
     });
   });
 
