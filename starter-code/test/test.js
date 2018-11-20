@@ -27,11 +27,8 @@ describe('SortedList', function() {
     });
     it('should add a third value to SortedList', function() {
       sl.add(30);
-      console.log(sl)
       sl.add(20);
-      console.log(sl)
       sl.add(10);
-      console.log(sl)
       assert.equal(sl.length, 3);
 
     });

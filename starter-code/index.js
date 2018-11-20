@@ -5,11 +5,8 @@ class SortedList {
   }
   add(item) {
     this.length++
-    this.items.push(item)
+    item < this.items[this.items.length-1]?this.items.unshift(item):this.items.push(item)
    
-    this.items.sort((a,b)=>{ return a-b })
-
-
   }
   get(pos) {
     return this.items[pos-1]
