@@ -6,6 +6,7 @@ class SortedList {
   min() {}
   average() {}
   sum() {}
+  //Hola
 };
 
 module.exports = SortedList;
