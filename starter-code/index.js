@@ -32,13 +32,9 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList")
     } else{
-      var tot = 0;
-      for (var index = 0; index < this.items.length; index++) {
-        tot += this.items[index];
-        var avg = tot / this.items.length
-        return avg
-      }
-      
+     let sum = this.items.reduce((previous, current) => previous + current);
+     let average = sum / this.items.length
+     return average
     }
   }
 
