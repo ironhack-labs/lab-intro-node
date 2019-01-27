@@ -84,6 +84,8 @@ describe('SortedList', function() {
     });
 
     it('should return an EmptySortedList exception if there is no element in the list', function() {
+      assert.throws(() => sl.max(), { name: 'Error', message: 'EmptySortedList' })
+      
       try {
         sl.max();
         // The next line should not be executed
