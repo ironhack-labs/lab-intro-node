@@ -1,36 +1,41 @@
 class SortedList {
   constructor() {
     this.length = 0;
-    this.array = [];
+    this.items = [];
   }
   add(item) {
-    this.array.push(item);
+    this.items.push(item);
+    this.items.sort((a, b)=>{ return a - b })
     this.length++;
-    this.array.sort((a, b)=>{ return a+b })
+    
   }
   get(pos) {
     if (pos > this.length) {
       return new Error("OutOfBounds");
     }
-    return this.array[pos - 1];
+    return this.items[pos - 1];
   }
   max() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
-    return Math.max.apply(Math, this.array);
+    return Math.max.apply(Math, this.items);
   }
   min() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
-    return Math.min.apply(Math, this.array);
+    return Math.min.apply(Math, this.items);
   }
 
   average() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     }
+    return this.items.reduce((total,currentNum)=>{
+         return total + currentNum
+         
+    })/ this.length
     
     
     
@@ -40,9 +45,10 @@ class SortedList {
       return 0;
     }
     
-    return this.array.forEach(element => {
-       let sumatory = sumatory + element
-     });
+    return this.items.reduce((total,currentNum)=>{
+      return (total + currentNum);
+
+  })
   }
 }
 
