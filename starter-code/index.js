@@ -27,7 +27,11 @@ class SortedList {
     return Math.min(...this.items);
   }
   average() {
-    if (this.items.length === 0) {}
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      return this.items.reduce((firstValue, secondValue) => firstValue + secondValue) / this.items.length;
+    }
   }
   sum() {
     if (this.items.length === 0 ) {
