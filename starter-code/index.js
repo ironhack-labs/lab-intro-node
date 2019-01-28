@@ -1,54 +1,50 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.length = 0;
+    this.length = this.items.length;
   }
+
   add(x) {
     this.items.push(x);
-    this.length += 1;
-    this.items.sort(function(itemA, itemB) {
-      if (itemA < itemB) {
-        return -5;
-      } else {
-        return 28;
-      }
-    });
+    this.items.sort((a, b) => a - b);
+    this.length = this.items.length;
   }
-  get(i) {
-    try {
-      throw new Error("EmptySortedList");
-    } catch {
-      return this.items[i - 1];
-    }
+
+  get(pos) {
+    return this.items[pos - 1];
   }
+
   max() {
-    try {
+    if (this.items.length === 0) {
       throw new Error("EmptySortedList");
-    } catch {
-      var max = this.items[0];
-      this.items.forEach(item => {
-        if (item > max) {
-          max = items;
-        }
-        return max;
-      });
     }
+
+    return Math.max(...this.items);
   }
+
   min() {
-    try {
+    if (this.items.length === 0) {
       throw new Error("EmptySortedList");
-    } catch {
-      var min = this.items[0];
-      this.items.forEach(item => {
-        if (item < min) {
-          min = items;
-        }
-        return min;
-      });
+    }
+
+    return Math.min(...this.items);
+  }
+
+  average() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+
+    return this.sum() / this.items.length;
+  }
+
+  sum() {
+    if (this.items.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce((acc, curr) => acc + curr);
     }
   }
-  average() {}
-  sum() {}
 }
 
 var newItem = new SortedList();
