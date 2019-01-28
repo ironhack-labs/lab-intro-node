@@ -54,12 +54,3 @@ class SortedList {
 };
 
 module.exports = SortedList;
-
-
-let sl = new SortedList ();
-sl.add(10);
-sl.add(5);
-sl.add(15);
-console.log(sl);
-console.log(sl.min())
-console.log(sl.sortedList[0])
