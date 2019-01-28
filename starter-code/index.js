@@ -22,12 +22,20 @@ class SortedList {
   }
   min() {
     if (this.items.length === 0) {
-      throw new Error("EmptySortedList")
+      throw new Error("EmptySortedList");
     }
     return Math.min(...this.items);
   }
-  average() {}
-  sum() {}
+  average() {
+    if (this.items.length === 0) {}
+  }
+  sum() {
+    if (this.items.length === 0 ) {
+      return 0;
+    } else {
+      return this.items.reduce((firstValue, secondValue) => firstValue + secondValue);
+    }
+  }
 };
 
 module.exports = SortedList;
