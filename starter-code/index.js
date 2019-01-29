@@ -38,10 +38,7 @@ class SortedList {
       throw new Error("EmptySortedList");
     }
     return (
-      this.items.reduce((total, currentNum) => {
-        return total + currentNum;
-      }) / this.length
-    );
+      this.items.reduce((total, currentNum) => total + currentNum) / this.length);
   }
 
   sum() {
@@ -49,9 +46,8 @@ class SortedList {
       return 0;
     }
 
-    return this.items.reduce((total, currentNum) => {
-      return total + currentNum;
-    });
+    return this.items.reduce((total, currentNum) => total + currentNum);
+  
   }
 }
 
