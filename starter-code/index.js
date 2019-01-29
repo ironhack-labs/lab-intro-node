@@ -35,14 +35,6 @@ class SortedList {
     }
   }
 
-  average() {
-    if (this.sortedList.length > 0) {
-      return this.sortedList.reduce((acc, val) => acc + val) / this.sortedList.length;
-    } else {
-      throw new Error('EmptySortedList');
-    }
-  }
-  
   sum() {
     if (this.sortedList.length > 0) {
       return this.sortedList.reduce((acc, val) => {
@@ -51,6 +43,15 @@ class SortedList {
     }
     return 0;
   }
+
+  average() {
+    if (this.sortedList.length > 0) {
+      return this.sum() / this.length;
+    } else {
+      throw new Error('EmptySortedList');
+    }
+  }
+  
 };
 
 module.exports = SortedList;
