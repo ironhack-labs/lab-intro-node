@@ -60,6 +60,7 @@ describe('SortedList', function() {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
+      sl.add(0);
     });
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
@@ -170,5 +171,4 @@ describe('SortedList', function() {
     })
   });
 
-  
 });
