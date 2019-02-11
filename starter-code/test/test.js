@@ -60,6 +60,7 @@ describe('SortedList', function() {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
+      sl.add(0);
     });
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
@@ -91,6 +92,7 @@ describe('SortedList', function() {
       } catch (e) {
         assert.equal(e instanceof Error, true);
         assert.equal(e.message, 'EmptySortedList');
+        
       }
     });
 
@@ -100,6 +102,8 @@ describe('SortedList', function() {
 
       assert.equal(sl.max(), 20);
     });
+
+    
   });
 
   describe('#min()', function() {
