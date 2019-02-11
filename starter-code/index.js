@@ -9,6 +9,9 @@ class SortedList {
     this.length++;
   }
   get(pos) {
+    this.items.sort((a, b) => {
+      return a - b;
+    });
     return this.items[pos];
   }
   max() {
