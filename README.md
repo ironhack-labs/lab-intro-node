@@ -87,7 +87,7 @@ Run the tests with Mocha is super easy, you just have to run `npm test`.
 ```
 $ npm test
 
-> lab-intro-node@1.0.0 test ~~/lab-intro-node/starter-code
+> lab-intro-node@1.0.0 test ~~/lab-intro-node
 > mocha
 
 SortedList
