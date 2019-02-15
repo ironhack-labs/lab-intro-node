@@ -70,7 +70,6 @@ $ mocha --version
 Before start coding, we will explain the provided project structure:
 
 ```
-starter-code/
 ├── test
 │   └── test.js
 └─ package.json
@@ -139,10 +138,13 @@ The object should have a `items` and `length` property.
 ### Add
 
 The `add(x)` method will add `x` to the items array.
+In order to pass the first test `add(x)` you need to implement the `get(i)` method.
 
 ### Get
 
 The method will get the `nth` value in the list.
+
+In `get(i)` method it starts counting position as if 1 were 0.
 
 You should also provide a length property that gives the length of the list.
 
