@@ -13,23 +13,11 @@ class SortedList {
   }
   max() {
     if(this.length===0) throw new Error("EmptySortedList")
-    else {
-      let max = this.items[0]
-      this.items.forEach(element => {
-        if (element>=max) max=element
-      })
-      return max
-    }
+    else return Math.max(...this.items)
   }
   min() {
     if(this.length===0) throw new Error("EmptySortedList")
-    else {
-      let min = this.items[0]
-      this.items.forEach(element => {
-        if (element<=min) min=element
-      })
-      return min
-    }
+    else return Math.min(...this.items)
   }
   average() {
     if(this.length===0) throw new Error("EmptySortedList")
