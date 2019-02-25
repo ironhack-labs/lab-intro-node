@@ -7,10 +7,9 @@ class SortedList {
   add(item) {
   this.items.push(item)
   this.length = this.items.length
-  this.items.sort(function(a,b){
-    return a - b
-  })
+  this.items.sort((a,b) => a - b)
   }
+  
   get(pos) {
     return this.items[pos -1]
   }
@@ -45,9 +44,7 @@ class SortedList {
 if(this.length === 0){
   return 0
   }
-return this.items.reduce(function(a,b){
-return a + b
-})
+return this.items.reduce((a,b) => a + b)
   }
 };
 new SortedList
