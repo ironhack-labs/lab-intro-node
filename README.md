@@ -93,12 +93,12 @@ $ npm test
 SortedList
   Constructor
     1) should create an empty SortedList
+  #add(x)
+    2) should add a single value to SortedList
+    3) should add a third value to SortedList
   #get(i)
     ✓ should return an OutOfBounds exception if there is no element in that position
-    2) should return the element in that position
-  #add(x)
-    3) should add a single value to SortedList
-    4) should add a third value to SortedList
+    4) should return the element in that position
   #add(x) and get(i)
     5) should add a second value to SortedList, sorted
     6) should add a third value to SortedList, sorted
@@ -135,6 +135,11 @@ The object should have a `items` and `length` property.
 - `items` should be an array.
 - `length` should be the number of elements in the array.
 
+### Add
+
+The `add(x)` method will add `x` to the items array.
+In order to pass the first test `add(x)` you need to implement the `get(i)` method.
+
 ### Get
 
 The method will get the `nth` value in the list.
@@ -142,11 +147,6 @@ The method will get the `nth` value in the list.
 In `get(i)` method it starts counting position as if 1 were 0.
 
 You should also provide a length property that gives the length of the list.
-
-### Add
-
-The `add(x)` method will add `x` to the items array.
-In order to pass the first test `add(x)` you need to implement the `get(i)` method.
 
 
 ### Max
