@@ -93,12 +93,12 @@ $ npm test
 SortedList
   Constructor
     1) should create an empty SortedList
-  #add(x)
-    2) should add a single value to SortedList
-    3) should add a third value to SortedList
   #get(i)
     ✓ should return an OutOfBounds exception if there is no element in that position
-    4) should return the element in that position
+    2) should return the element in that position
+  #add(x)
+    3) should add a single value to SortedList
+    4) should add a third value to SortedList
   #add(x) and get(i)
     5) should add a second value to SortedList, sorted
     6) should add a third value to SortedList, sorted
