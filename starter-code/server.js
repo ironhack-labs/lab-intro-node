@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {  // create server
   let reg = /([^/]+$)/g; // after last "/"
   let value = parseInt(req.url.match(reg)); // parseint, otherwise interpreted as string values
 
-  if (req.url == "/stats") {   // length 
+  if (req.url == "/stats") { // stats 
     // when no items are set 
     if (ls.length == 0) {
       res.write("First add items by visiting /add/number"); 
