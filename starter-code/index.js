@@ -35,8 +35,8 @@ class SortedList {
       throw new Error("EmptySortedList");
     } else {
       return this.sum() / this.length;
-    }
-  }
+    } 
+  }  
   sum() {
     if (this.length == 0) {
       return 0;
@@ -48,11 +48,12 @@ class SortedList {
   };
 };
 
-var test = new SortedList;
-test.add(20);
-test.add(10);
-test.add(21);
-test.add(11);
-console.log(test);
-console.log(test.max());
+// var test = new SortedList; 
+// test.add(20);
+// test.add(10);
+// test.add(21);
+// test.add(11); 
+// console.log(test.max());
+// console.log(test.sum());
+
 module.exports = SortedList; 
