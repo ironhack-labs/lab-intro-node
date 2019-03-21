@@ -1,5 +1,11 @@
 class SortedList {
-  constructor() {}
+
+  constructor() {
+    this.item=[];
+    this.length=this.item.length;
+  }
+
+  
   add(item) {}
   get(pos) {}
   max() {}
