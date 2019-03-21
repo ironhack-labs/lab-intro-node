@@ -26,8 +26,6 @@ class SortedList {
       return Math.min(...this.items);
     }
   }
-  average() {}
-
   sum() {
     if(this.items.length === 0){
       return 0;
@@ -36,11 +34,12 @@ class SortedList {
     } 
   }
 
-  //this.items.reduce(add);
-/* const sum = [1, 2, 3].reduce(add);
-
-function add(accumulator, a) {
-    return accumulator + a;
-} */
+  average() {
+    if(this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.items.reduce((acc, a) => acc + a) / this.items.length;
+    }
+  }
 };
 module.exports = SortedList;
