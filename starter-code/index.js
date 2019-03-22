@@ -9,7 +9,7 @@ class SortedList {
     this.length = this.items.length
   }
   get(pos) {
-    if (this.items[0] != 0) this.items = [0, ...this.items]
+    if (this.items[0] != 0) return this.items[pos-1]
     return this.items[pos]    
   }
   max() {
