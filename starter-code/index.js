@@ -4,20 +4,20 @@ class SortedList {
     this.length = this.items.length;
   }
   add(item) {
-    this.items.push(item);
-    this.length = this.items.length;
+    this.items.push(item); 
+    this.items.sort((a,b)=> a-b);
+    this.length++;
   }
   get(pos) {
-    if (this.length >= pos) {
-    return this.items[pos];
-    }
+    this.length = this.items.length;
+    return this.items[pos -1];
   }
   max() {
     if (this.length === 0){ 
       throw new Error("EmptySortedList");
     }
     else{
-      return Math.max(...this.items);
+      return Math.max(...this.items)
     }
   }
   min() {
@@ -25,14 +25,15 @@ class SortedList {
       throw new Error("EmptySortedList");
     }
     else{
-      return Math.min(...this.items);
+      return Math.min(...this.items)
     }
   }
   sum() {
-    if (this.length === 0){
+    if (this.items.length==0){
       return 0;
-    } else{
-      return this.items.reduce((acc, cur) => acc + cur);
+    }
+    else{
+      return this.items.reduce((a,b)=>a+b);
     }
   }
   average() {
