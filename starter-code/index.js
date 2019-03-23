@@ -6,11 +6,10 @@ class SortedList {
   add(item) {
     this.items.push(item); 
     this.items.sort((a,b)=> a-b);
-    this.length++;
+    this.length = this.items.length;
   }
   get(pos) {
-    this.length = this.items.length;
-    return this.items[pos -1];
+    return this.items[pos- 1];
   }
   max() {
     if (this.length === 0){ 
@@ -33,7 +32,7 @@ class SortedList {
       return 0;
     }
     else{
-      return this.items.reduce((a,b)=>a+b);
+      return this.items.reduce((acc,curr)=>acc+curr);
     }
   }
   average() {
