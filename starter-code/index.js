@@ -26,18 +26,14 @@ class SortedList {
     }
   }
   average() {
-    if(this.length === 0) {
-      return 0;
+    if (this.items == 0) {
+      throw new Error("EmptySortedList")
+
     } else {
-      return this.items.reduce((acum, elm) => acum + elm);
+      return this.sum() / this.items.length;  
     }
   }
   sum() {
-    // if(this.length === 0) {
-    //   throw new Error("EmptySortedList");
-    // } else {
-    //   return this.sum() / this.length;
-    // }
     return this.length ? this.items.reduce((val, acc) => val + acc) : 0;
   }
 };
