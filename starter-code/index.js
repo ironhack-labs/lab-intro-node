@@ -4,48 +4,46 @@ class SortedList {
     this.length = this.items.length;
   }
   add(item) {
-    this.item = item;
     this.items.push(item);
+    this.items.sort((item1,item2)=> item1 -item2);
     this.length++;
   }
   get(pos) {
-    this.pos = this.items.indexOf(pos);
-    return this.items[this.length -1];
-  
-//    
-//    add(item) {
-//      this.item = item;
-//      if (this.items === []) {
-//        this.items.push(item);
-//      }
-//      else {
-//        if (this.items[this.length - 1] > this.item) {
-//          this.items.sort((a, b) => a - b)
-//        }
-//        else {
-//          this.items.push(item);
-//        }
-//      }
-//      this.length++;
-//    }
-//    get(pos) {
-//      pos = this.items.indexOf(this.item);
-//      this.pos = pos;
-//      
-//      
-//      return this.items[this.pos];    
-//  //let pos = this.items.indexOf(item);
-  //this.pos = pos; 
-
-  //this.pos = this.length - 1;
-  //return this.items[this.pos]
-
-  //this.pos = this.items.indexOf(item)
+    return this.items[pos - 1];
   }
-  max() {}
-  min() {}
-  average() {}
-  sum() {}
+
+  max() {
+    if (this.length == 0) {
+      throw new Error("EmptySortedList")
+    }
+    else {
+    return Math.max(...this.items);
+    }
+  }
+  min() {
+    if (this.length == 0) {
+      throw new Error("EmptySortedList")
+    }
+    else {
+    return Math.min(...this.items);
+    }
+  }
+  average() {
+    if (this.length == 0) {
+      throw new Error("EmptySortedList")
+    }
+    else {
+      return this.sum()/this.length;
+    }
+  }
+  sum() {
+    if (this.length == 0) {
+      return 0;
+    }
+    else {
+      return this.items.reduce((item1,item2) => item1 + item2);
+    }
+  }
 };
 
 module.exports = SortedList;
