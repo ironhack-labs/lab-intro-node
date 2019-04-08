@@ -12,7 +12,7 @@ class SortedList {
     this._update();
   }
   get(pos) {
-    if(typeof this.items[pos-1] === 'undefined') throw new Error('OutOfBounds');
+    if(this.items[pos-1] === undefined) throw new Error('OutOfBounds');
     return this.items[pos-1];
   }
   max() {
