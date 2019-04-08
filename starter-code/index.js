@@ -29,13 +29,13 @@ class SortedList {
   }
 
   average() {
-    if(this.items.length > 0) return  (this.sum()/this.items.length)
+    if(this.items.length > 0) return  (this.sum()/this.length)
     else throw new Error("EmptySortedList")
   }
 
 
   sum() {
-    if(this.items.length > 0) return this.items.reduce(((acc,a)=>acc + a),0)
+    if(this.items.length > 0) return this.items.reduce((acc,a)=>acc + a)
     else return 0
   }
 };
