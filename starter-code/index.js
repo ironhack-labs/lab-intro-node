@@ -42,16 +42,5 @@ class SortedList {
     }
   }
 }
-let parker = new SortedList();
-// let empty = new SortedList([]);
-// parker.add(5);
-// console.log("length", parker.length);
-// console.log("6th item", parker.get(6)); //should return 5
-// console.log(parker);
-// // console.log(empty.max());
-// console.log("max of list", parker.max());
-// console.log("min of list", parker.min());
-
-// console.log("sum", parker.sum());
 
 module.exports = SortedList;
