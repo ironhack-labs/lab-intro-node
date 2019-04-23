@@ -28,7 +28,6 @@ class SortedList {
     return Math.min(...this.items)
   }
 
-
   average() {
     if (this.items.length === 0) {
       throw new Error('EmptySortedList');
