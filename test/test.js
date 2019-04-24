@@ -51,7 +51,7 @@ describe('SortedList', function() {
       var foo = 10;
       for(let i=0; i<200; i++) {
         sl.add(foo*i);
-        assert.equal(sl.get(i), foo*i);
+        assert.equal(sl.get(i+1), foo*i);
       }
     });
   });
