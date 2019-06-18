@@ -6,12 +6,21 @@ class SortedList {
 
   add(x) {
     this.items.push(x);
-    this.items.sort();
+    console.log("items before sort", this.items);
+
+    this.items.sort(function(a, b) {
+      return a - b;
+    });
+    console.log("items after sort", this.items);
     this.length = this.items.length;
   }
 
   get(i) {
-    return this.items[i - 1];
+    if (this.items[i - 1] == undefined) {
+      throw new Error("OutOfBounds");
+    } else {
+      return this.items[i - 1];
+    }
   }
 
   max() {
