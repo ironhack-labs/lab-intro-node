@@ -5,26 +5,12 @@ class SortedList {
   }
  
   add(item) {  
-    
-    /*if(this.length==0){this.items.push(item)}
-    else{
-        var pos=0;
-        for (let i=0; i<this.length; i++){
-            if(this.items[i]<item){pos++}
-            else{
-              this.items.splice(pos, 0, item)}
-            }
-      }
-      */
      this.items.push(item);
      this.length= this.items.length;
      this.items.sort( (a,b)=>{return a-b})
   }
 
   get(pos) {
-    //if(pos < this.length){return items[pos]}
-    //else if (typeof array[pos] == 'undefined') {alert ('out of bounds');}
-    
     try {return this.items[pos-1]}
     catch(error) {console.log(error)}
   }
@@ -33,12 +19,6 @@ class SortedList {
   
     if(this.items.length===0){throw new Error('EmptySortedList');}
     else { return this.items[this.length-1]
-      /*var max=0;
-      for (let i=0; i<this.length; i++){
-        if(this.items[i]>=max){max=this.items[i]}
-      }
-      return max 
-      */  
      }
   }
 
@@ -46,13 +26,6 @@ class SortedList {
   min() {
     if(this.items.length===0){throw new Error('EmptySortedList');}
     else{ return this.items[0]
-      /*{
-        var min=0;
-        for (let i=0; i<this.length; i++){
-          if(this.items[i]<min){min=this.items[i]}
-        }
-        return min   
-        }*/
     } 
   }
 
