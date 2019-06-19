@@ -49,9 +49,10 @@ describe('SortedList', function() {
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(let i=0; i<200; i++) {
-        sl.add(foo*i);
-        assert.equal(sl.get(i), foo*i);
+      for(let i=1; i<200; i++) {
+        const valor=foo*i;
+        sl.add(valor);
+        assert.equal(sl.get(i), valor , 'este valor no esta ' + valor.toString() + ' se encotnro ' + sl.get(i) );
       }
     });
   });
@@ -170,5 +171,5 @@ describe('SortedList', function() {
     })
   });
 
-  
+
 });
