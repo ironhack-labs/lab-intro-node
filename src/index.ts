@@ -1,4 +1,7 @@
 class SortedList {
+
+    lista: number[];
+
     constructor() {
         this.lista = [];
     }
@@ -7,15 +10,15 @@ class SortedList {
         return this.lista.length;
     }
 
-    get(pos) {
+    get(pos: number) {
         if (pos > this.lista.length) {
-            return 'OutOfBounds';
+            throw new Error("OutOfBounds");
         }
-        return this.lista[pos-1];
+        return this.lista[pos - 1];
 
     }
 
-    max() {
+    max(): number {
         if (this.length === 0) {
             throw new Error("EmptySortedList");
         }
@@ -23,7 +26,7 @@ class SortedList {
         return this.lista[this.length - 1];
     }
 
-    min() {
+    min(): number {
         if (this.length === 0) {
             throw new Error("EmptySortedList");
         }
@@ -31,7 +34,7 @@ class SortedList {
         return this.lista[0];
     }
 
-    average() {
+    average(): number {
 
         if (this.length === 0) {
             throw new Error("EmptySortedList");
@@ -42,23 +45,22 @@ class SortedList {
         return suma / this.length;
     }
 
-    sum() {
+    sum(): number {
 
         if (this.length === 0) {
             return 0;
         }
 
-
-        let suma = this.lista.reduce((total, item) => {
+        const suma = this.lista.reduce((total, item) => {
             return total + item;
         }, 0);
 
         return suma;
     }
 
-    add(item) {
+    add(valor: number) {
 
-        this.lista.push(item);
+        this.lista.push(valor);
 
         this.lista.sort((a, b) => {
 
@@ -73,10 +75,7 @@ class SortedList {
                 }
             }
         );
-
-
-
     }
 }
 
-module.exports = SortedList;
+export default SortedList;
