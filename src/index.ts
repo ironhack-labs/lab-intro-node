@@ -1,81 +1,91 @@
 class SortedList {
 
-    lista: number[];
+   lista: number[];
 
-    constructor() {
-        this.lista = [];
-    }
+   constructor() {
+      this.lista = [];
+   }
 
-    get length() {
-        return this.lista.length;
-    }
+   get length() {
+      return this.lista.length;
+   }
 
-    get(pos: number) {
-        if (pos > this.lista.length) {
-            throw new Error("OutOfBounds");
-        }
-        return this.lista[pos - 1];
+   get(pos: number) {
+      if (pos > this.lista.length) {
+         throw new Error("OutOfBounds");
+      }
+      return this.lista[pos - 1];
 
-    }
+   }
 
-    max(): number {
-        if (this.length === 0) {
-            throw new Error("EmptySortedList");
-        }
+   max(): number {
+      if (this.length === 0) {
+         throw new Error("EmptySortedList");
+      }
 
-        return this.lista[this.length - 1];
-    }
+      return this.lista[this.length - 1];
+   }
 
-    min(): number {
-        if (this.length === 0) {
-            throw new Error("EmptySortedList");
-        }
+   min(): number {
+      if (this.length === 0) {
+         throw new Error("EmptySortedList");
+      }
 
-        return this.lista[0];
-    }
+      return this.lista[0];
+   }
 
-    average(): number {
+   average(): number {
 
-        if (this.length === 0) {
-            throw new Error("EmptySortedList");
-        }
+      if (this.length === 0) {
+         throw new Error("EmptySortedList");
+      }
 
 
-        const suma = this.sum();
-        return suma / this.length;
-    }
+      const suma = this.sum();
+      return suma / this.length;
+   }
 
-    sum(): number {
+   sum(): number {
 
-        if (this.length === 0) {
-            return 0;
-        }
+      if (this.length === 0) {
+         return 0;
+      }
 
-        const suma = this.lista.reduce((total, item) => {
-            return total + item;
-        }, 0);
+      const suma = this.lista.reduce((total, item) => {
+         return total + item;
+      }, 0);
 
-        return suma;
-    }
+      return suma;
+   }
 
-    add(valor: number) {
+   add(valor: number) {
 
-        this.lista.push(valor);
+      this.lista.push(valor);
 
-        this.lista.sort((a, b) => {
+      this.lista.sort((a, b) => {
 
-                if (a === b) {
-                    return 0;
-                }
-                if (a > b) {
+             if (a === b) {
+                return 0;
+             }
+             if (a > b) {
 
-                    return 1;
-                } else {
-                    return -1;
-                }
-            }
-        );
-    }
+                return 1;
+             } else {
+                return -1;
+             }
+          }
+      );
+   }
+
+   toString(): string {
+      return JSON.stringify(this.lista);
+   }
+
+   print():void{
+      console.log(this.toString());
+   }
 }
+
+
 
 export default SortedList;

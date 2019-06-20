@@ -55,6 +55,12 @@ class SortedList {
             }
         });
     }
+    toString() {
+        return JSON.stringify(this.lista);
+    }
+    print() {
+        console.log(this.toString());
+    }
 }
 exports.default = SortedList;
 //# sourceMappingURL=index.js.map
