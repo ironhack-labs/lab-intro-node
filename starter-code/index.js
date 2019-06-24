@@ -33,12 +33,7 @@ class SortedList {
     }
   }
   sum() {
-    if (!this.length == 0) {
-      let suma = (a, b) => a + b;
-      return this.items.reduce(suma);
-    } else {
-      return 0;
-    }
+    return this.items.reduce((a, b) => a + b, 0);
   }
 }
 
