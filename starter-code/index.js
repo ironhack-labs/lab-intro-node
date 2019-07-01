@@ -8,4 +8,5 @@ class SortedList {
   sum() {}
 };
 
+
 module.exports = SortedList;
