@@ -1,11 +1,11 @@
 // Require the file to be tested
-var SortedList = require('../index.js')
+const SortedList = require('../index.js');
 
 // Load the Chai Assertion Library
-var assert = require('assert');
+const assert = require('assert');
 
-describe('SortedList', function() {
-  describe('Constructor', function() {
+describe('SortedList', () => {
+  describe('Constructor', () => {
     it('should create an empty SortedList', function() {
       var sl = new SortedList();
       assert.equal(sl.length, 0);
@@ -13,7 +13,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#add(x)', function() {
+  describe('#add(x)', () => {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
@@ -31,7 +31,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#get(i)', function() {
+  describe('#get(i)', () => {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
@@ -49,14 +49,14 @@ describe('SortedList', function() {
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(let i=0; i<200; i++) {
+      for(let i=1; i<200; i++) {
         sl.add(foo*i);
         assert.equal(sl.get(i), foo*i);
       }
     });
   });
 
-  describe('#add(x) and get(i)', function() {
+  describe('#add(x) and get(i)', () => {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
@@ -77,7 +77,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#max()', function() {
+  describe('#max()', () => {
     var sl;
     beforeEach(function() {
       sl = new SortedList();
@@ -102,7 +102,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#min()', function() {
+  describe('#min()', () => {
     var sl;
     beforeEach(function() {
       sl = new SortedList();
@@ -127,7 +127,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#sum()', function(){
+  describe('#sum()', () => {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
@@ -145,7 +145,7 @@ describe('SortedList', function() {
     });
   });
 
-  describe('#average()', function() {
+  describe('#average()', () => {
     var sl;
     beforeEach(function(){
       sl = new SortedList();
@@ -169,6 +169,4 @@ describe('SortedList', function() {
       assert.equal(sl.average(), 100);
     })
   });
-
-  
 });
