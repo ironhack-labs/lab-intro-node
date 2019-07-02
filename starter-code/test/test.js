@@ -63,7 +63,10 @@ describe('SortedList', function() {
     });
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
+      console.log(`Added 20: ${sl.items}`);
+      
       sl.add(10);
+      console.log(`Added 10: ${sl.items}`);
       assert.equal(sl.get(1), 10);
       assert.equal(sl.get(2), 20);
     });
@@ -71,6 +74,8 @@ describe('SortedList', function() {
       sl.add(30);
       sl.add(20);
       sl.add(10);
+      console.log(`Added 30: ${sl.items}`);
+      
       assert.equal(sl.get(1), 10);
       assert.equal(sl.get(2), 20);
       assert.equal(sl.get(3), 30);
