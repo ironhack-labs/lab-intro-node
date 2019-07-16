@@ -144,9 +144,9 @@ Remember to change the length property to pass the tests after the item is added
 
 ### Get
 
-The method will get the `nth` value in the list.
+The method will get the value in the list 'itmes' for a given position.
 
-In `get(i)` method it starts counting position as if 1 were 0.
+In `get(i)` method it starts counting position as 1. That means it doesn't give the index but the position.
 
 You should also provide a length property that gives the length of the list.
 
