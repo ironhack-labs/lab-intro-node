@@ -153,7 +153,7 @@ You should also provide a length property that gives the length of the list.
 
 The `max()` method should return the highest value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
+In the case you have an empty `items` array, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
 throw new Error("EmptySortedList")
