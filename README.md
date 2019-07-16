@@ -140,6 +140,8 @@ The object should have a `items` and `length` property.
 The `add(x)` method will add `x` to the items array.
 In order to pass the first test `add(x)` you need to implement the `get(i)` method.
 
+Remember to change the length property to pass the tests after the item is added.
+
 ### Get
 
 The method will get the `nth` value in the list.
