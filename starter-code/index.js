@@ -4,8 +4,6 @@ class SortedList {
       this.length = 0;
       return this;
     }
-
-
     add(item) {
       this.items.push(item)
       this.items.sort();
@@ -39,13 +37,6 @@ class SortedList {
       return  this.length ? this.items.reduce((total,current)=> total + current):0;
     }
   };
-
-//   let test = new SortedList()
-// test.add(1);
-// test.add(2);
-// test.add(3);
-//   console.log(test.items)
-//   console.log(test.length)
   
   module.exports = SortedList;
 
