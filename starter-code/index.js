@@ -7,13 +7,14 @@ class SortedList {
 
   add(item) {
     this.items.push(item)
+    this.items.sort((a, b) => a - b)
+    this.length++
   }
 
   get(pos) {
+    return this.items[pos]
     if (pos > this.length) {
       throw new Error("OutOfBounds")
-    } else {
-      return this.items[pos]
     }
   }
 
@@ -35,11 +36,19 @@ class SortedList {
   }
 
   average() {
-    return this.items.reduce((total, currentNum) => total + currentNum) / this.items.length
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      return this.items.reduce((total, currentNum) => total + currentNum) / this.items.length
+    }
   }
 
   sum() {
-    return this.items.reduce((total, currentNum) => total + currentNum)
+    if (this.items.length === 0) {
+      return 0
+    } else {
+      return this.items.reduce((total, currentNum) => total + currentNum)
+    }
   }
 
 };
