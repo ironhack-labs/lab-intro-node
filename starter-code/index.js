@@ -1,7 +1,7 @@
 class SortedList {
     constructor() {
       this.items = [];
-      this.length = 0;
+      this.length = this.items.length;
 
 
     }
@@ -12,20 +12,18 @@ class SortedList {
     }
 
     get(pos) {
-      if (this.length = 0) {
+      if ((pos > this.length - 1) || (this.length === 0) ) {
         throw new Error('OutOfBounds');
       } else {
-      return this.items[pos];
-      } 
+        return this.items[pos];
+      }
     }
 
     max() {
       if (this.length == 0) {
         throw new Error("EmptySortedList");
       } else {
-        return this.items.reduce(function(a,b) {
-        Math.max(a,b)
-        });
+        return Math.max(...this.items);
       }
     }
 
@@ -33,9 +31,7 @@ class SortedList {
       if (this.length == 0) {
         throw new Error("EmptySortedList");
       } else {
-        return this.items.reduce(function(a,b) {
-        Math.min(a,b)
-        });
+        return Math.min(...this.items);
       }
       
     }
@@ -43,9 +39,8 @@ class SortedList {
       if (this.length == 0) {
         throw new Error("EmptySortedList");
       } else {
-        return this.items.reduce(function(a,b){
-          return a + b 
-        }, 0) / this.items.length;
+        return (this.items.reduce(function(a,b){
+          return (a + b)}, 0) / this.length);
       }
 
     }
