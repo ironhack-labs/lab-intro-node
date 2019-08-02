@@ -8,7 +8,7 @@ class SortedList {
     add(item) {
       this.items.push(item);
       this.length++;
-      this.items.sort();
+      this.items.sort(function(a, b){return a - b});
     }
 
     get(pos) {
