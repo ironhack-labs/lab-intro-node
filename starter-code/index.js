@@ -13,6 +13,7 @@ class SortedList {
         return new Error("The position is Out of Bounds")
         
       } else{
+        this.items.sort((a, b) => a - b);
         return this.items[pos];
       }
       
@@ -32,8 +33,21 @@ class SortedList {
         return Math.min(...this.items)
       }
     }
-    average() {}
-    sum() {}
+    average(){
+      if(this.length ===0){
+        throw new Error("EmptySortedList")
+      } else{
+        return this.sum()/this.length
+      }
+    }
+    sum(){
+      if(this.length === 0){
+        return 0
+      } else{
+        const sum = this.items.reduce((accumulator, currentValue) => {return  accumulator + currentValue})
+        return sum
+      }
+    }
   };
   
   module.exports = SortedList;
