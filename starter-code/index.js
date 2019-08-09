@@ -5,14 +5,15 @@ class SortedList {
     }
     add(item) {
       this.items.push(item);
-      this.length = this.items.length;
-      this.items.sort((a,b) => a - b);
+      this.length = this.items.length; 
     }
     get(pos) {
-      if(pos > this.items.length){
+
+      if(pos > this.length){
         throw new Error("OutOfBounds");
       }else{
-      return this.items[pos];
+        this.items.sort((a, b) => a - b);
+        return this.items[pos];
       }
     }
     max() {
@@ -40,5 +41,4 @@ class SortedList {
       return this.length == 0 ? 0 : this.items.reduce((accum, curr) => accum + curr)
     }
   };
-  
   module.exports = SortedList;
