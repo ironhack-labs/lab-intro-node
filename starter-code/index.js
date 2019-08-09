@@ -30,7 +30,6 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     }
-    console.log(...this.items);
     return Math.min(...this.items);
   }
 
