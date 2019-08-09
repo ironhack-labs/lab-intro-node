@@ -41,14 +41,3 @@ class SortedList {
   };
   
   module.exports = SortedList;
-
-  const teste = new SortedList();
-  console.log(teste.items)
-  teste.add(10)
-  console.log(teste.items)
-  teste.add(30)
-  teste.add(80)
-  console.log(teste.items)
-  console.log(teste.average())
-
-  // console.log(teste.max())
