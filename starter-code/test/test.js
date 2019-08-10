@@ -38,22 +38,25 @@ describe('SortedList', function() {
     });
 
     it('should return an OutOfBounds exception if there is no element in that position', function() {
+      let error = false;
       try {
         sl.get(20);
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
+        error = e;
+      } finally {
+        assert.equal(error instanceof Error, true);
+        assert.equal(error.message, "OutOfBounds");
         assert.throws(sl.get, Error, '/OutOfBounds/');
       }
     });
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(let i=0; i<200; i++) {
-        sl.add(foo*i);
-        assert.equal(sl.get(i), foo*i);
+      for(i=1; i<200; i++) {
+       sl.add(foo*i);
+       assert.equal(sl.get(i), foo*i);
       }
-    });
+     });
   });
 
   describe('#add(x) and get(i)', function() {
@@ -64,16 +67,16 @@ describe('SortedList', function() {
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
       sl.add(10);
-      assert.equal(sl.get(0), 10);
-      assert.equal(sl.get(1), 20);
+      assert.equal(sl.get(1), 10);
+      assert.equal(sl.get(2), 20);
     });
     it('should add a third value to SortedList, sorted', function() {
       sl.add(30);
       sl.add(20);
       sl.add(10);
-      assert.equal(sl.get(0), 10);
-      assert.equal(sl.get(1), 20);
-      assert.equal(sl.get(2), 30);
+      assert.equal(sl.get(1), 10);
+      assert.equal(sl.get(2), 20);
+      assert.equal(sl.get(3), 30);
     });
   });
 
