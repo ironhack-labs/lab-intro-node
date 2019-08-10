@@ -1,13 +1,13 @@
 class SortedList {
-  constructor(itens, length) {
-    this.itens = [];
-    this.length = this.itens.length;
+  constructor(items, length) {
+    this.items = [];
+    this.length = this.items.length;
   }
 
   add(item) {
-    this.itens.push(item);
-    this.length = this.itens.length;
-    this.itens.sort((a, b) => a - b);
+    this.items.push(item);
+    this.length = this.items.length;
+    this.items.sort((a, b) => a - b);
   }
 
   get(pos) {
@@ -15,7 +15,7 @@ class SortedList {
       throw new Error("OutOfBounds")
     }
 
-    return this.itens[pos]
+    return this.items[pos - 1]
   }
 
   max() {
@@ -23,7 +23,7 @@ class SortedList {
       throw new Error("EmptySortedList")
     }
 
-    return Math.max(...this.itens);
+    return Math.max(...this.items);
   }
 
   min() {
@@ -31,7 +31,7 @@ class SortedList {
       throw new Error("EmptySortedList")
     }
 
-    return Math.min(...this.itens);
+    return Math.min(...this.items);
   }
 
   average() {
@@ -47,7 +47,7 @@ class SortedList {
       return 0;
     }
   
-    return this.itens.reduce((value, sum) => value + sum);
+    return this.items.reduce((value, sum) => value + sum);
   }
 };
 
