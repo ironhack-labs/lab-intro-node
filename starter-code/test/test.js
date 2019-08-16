@@ -37,19 +37,33 @@ describe('SortedList', function() {
       sl = new SortedList();
     });
 
+    // it('should return an OutOfBounds exception if there is no element in that position', function() {
+    //   try {
+    //     sl.get(20) === undefined;
+    //   }
+    //   catch(e) {
+    //     assert.equal(e instanceof Error, true)
+    //     assert.equal(e.message, "OutOfBounds")
+    //     assert.throws(sl.get, Error, '/OutOfBounds/');
+    //   }
+    // });
+
     it('should return an OutOfBounds exception if there is no element in that position', function() {
+      let error = false;
       try {
         sl.get(20);
       } catch (e) {
-        assert.equal(e instanceof Error, true)
-        assert.equal(e.message, "OutOfBounds")
+        error = e;
+      } finally {
+        assert.equal(error instanceof Error, true);
+        assert.equal(error.message, "OutOfBounds");
         assert.throws(sl.get, Error, '/OutOfBounds/');
       }
     });
 
     it('should return the element in that position', function() {
       var foo = 10;
-      for(let i=0; i<200; i++) {
+      for(let i=1; i<200; i++) {
         sl.add(foo*i);
         assert.equal(sl.get(i), foo*i);
       }
