@@ -28,8 +28,7 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList")
     } else {
-      const reducer = (accumulator, currentValue) => accumulator + currentValue;
-      return this.items.reduce(reducer) / this.items.length
+      return this.sum() / this.items.length
     }
   }
 
