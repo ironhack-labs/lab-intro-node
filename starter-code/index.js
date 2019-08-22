@@ -18,7 +18,7 @@ class SortedList {
 
   max() {
     if (this.length === 0) {
-      return 0 //??
+      throw new Error("EmptySortedList");
     } else {
       return this.items[this.items.length - 1];
     }
@@ -26,7 +26,7 @@ class SortedList {
 
   min() {
     if (this.length === 0) {
-      return 0 //??
+      throw new Error("EmptySortedList");
     } else {
       return this.items[0];
     }
@@ -34,7 +34,7 @@ class SortedList {
 
   average() {
     if (this.length === 0) {
-      return 0 //??
+      throw new Error("EmptySortedList");
     } else {
       let total = (acc, curr) => acc + curr;
       return this.items.reduce(total) / this.length;
