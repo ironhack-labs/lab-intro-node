@@ -6,19 +6,26 @@ class SortedList {
 
     add(x) {
       this.items.push(x);
-      this.items.sort(function(x, y) {return 
-      x - y})
-
+      this.items.sort((x, y) => {
+        if (x > y) {
+          return 1
+        } else if ( x < y) {
+          return -1
+        } else {
+          return 0
+        };
+      })
       this.length = this.items.length
 
     }
+    
 
     get(pos) {
       
       if (pos > this.items.length) {
         throw new Error('OutOfBounds')
       } 
-      this.items.sort()
+     
       return this.items[pos]; 
       
     }
