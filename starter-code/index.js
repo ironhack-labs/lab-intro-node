@@ -5,14 +5,14 @@ class SortedList {
   }
   add(item) {
     this.items.push(item);
-    this.items.sort();
+      this.items.sort((a,b) => a-b);
     this.length = this.items.length;
   }
   get(pos) {
     if (pos > this.items.lenght || pos < -1) throw new Error("OutOfBounds");
     else {
       this.items.sort((a,b) => a-b);
-      return this.items[pos];;
+      return this.items[pos];
     }
   }
   max() {
@@ -30,9 +30,8 @@ class SortedList {
   }
   average() {
     if (this.items.length === 0) throw new Error("EmptySortedList")
-    else return this.sum()/this.items.length
+    else return this.sum()/this.items.length;
   }
-  
 }
 
 module.exports = SortedList;
