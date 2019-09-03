@@ -16,11 +16,11 @@ class SortedList {
     }
     max() {
       this.isListEmpty();
-      return Math.max(...this.items);
+      return this.items[this.length - 1];
     }
     min() {
       this.isListEmpty();
-      return Math.min(...this.items);
+      return this.items[0];
     }
     average() {
       this.isListEmpty();
