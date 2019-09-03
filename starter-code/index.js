@@ -22,7 +22,7 @@ class SortedList {
   }
   average() {
     if (this.items.length === 0) throw new Error("EmptySortedList");
-    return this.items.reduce((acc, value) => acc + value, 0) / this.items.length;
+    return this.sum() / this.items.length;
   }
   sum() {
     if (this.items.length === 0) return 0;
