@@ -13,19 +13,19 @@ class SortedList {
     return this.items[pos];
   }
   max() {
-    if (this.items.length === 0) throw new Error("EmptySortedList");
-    return this.items[this.items.length - 1];
+    if (!this.items.length) throw new Error("EmptySortedList");
+    return Math.max(...this.items);
   }
   min() {
-    if (this.items.length === 0) throw new Error("EmptySortedList");
-    return this.items[0];
+    if (!this.items.length) throw new Error("EmptySortedList");
+    return Math.min(...this.items);
   }
   average() {
-    if (this.items.length === 0) throw new Error("EmptySortedList");
+    if (!this.items.length) throw new Error("EmptySortedList");
     return this.sum() / this.items.length;
   }
   sum() {
-    if (this.items.length === 0) return 0;
+    if (!this.items.length) return 0;
     return this.items.reduce((acc, value) => acc + value, 0);
   }
 };
