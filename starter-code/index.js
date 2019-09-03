@@ -36,9 +36,7 @@ class SortedList {
     if (this.length === 0) {
       return 0
     } else {
-      return this.items.reduce(function (accumulator, value) {
-        return accumulator + value;
-      }, 0)
+      return this.items.reduce((accumulator, value) => accumulator + value)
     }
   }
 };
