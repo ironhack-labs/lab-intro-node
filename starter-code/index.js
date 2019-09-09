@@ -31,14 +31,14 @@ class SortedList {
       }
     }
     average() {
-      if (this.items.length === 0) {
+      if (this.length === 0) {
         throw new Error("EmptySortedList");
       } else {
-        return this.sum() / this.items.length;
+        return this.sum() / this.length;
       }
     }
     sum() {
-      return (this.items.length === 0) ? 0 : this.items.reduce((acc, num) => acc + num, 0);
+      return (this.length === 0) ? 0 : this.items.reduce((acc, num) => acc + num, 0);
     }
   };
   
