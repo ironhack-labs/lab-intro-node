@@ -1,11 +1,14 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.length = 0;
+    this.length = this.items.length;
   }
   add(item) {
     this.items.push(item);
     this.length = this.items.length;
+    this.items.sort(function(a, b) {
+      return a - b;
+    });
   }
   get(pos) {
     if (pos > this.items.length || this.items.length == 0) {
@@ -39,7 +42,8 @@ class SortedList {
     if (this.items == 0) {
       throw new Error("EmptySortedList");
     } else {
-      return this.sum / this.length;
+      this.length = this.items.length;
+      return this.sum() / this.length;
     }
   }
 }
