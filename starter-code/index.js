@@ -1,12 +1,12 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.length = this.items.length;
+    this.length = 0;
   }
   add(item) {
     this.items.push(item);
     this.items.sort();
-    this.length = this.items.length;
+    this.length += 1;
   }
   get(pos) {
     // this.items.sort();
@@ -28,7 +28,7 @@ class SortedList {
   }
   average() {
     if (this.length !==0){
-      return this.items.reduce((acc,item) => acc += item) / this.length;
+      return this.sum() / this.length;
     } else {
       throw new Error("EmptySortedList");
     }
