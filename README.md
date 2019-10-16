@@ -62,7 +62,7 @@ We can check that Mocha is correctly installed by running:
 
 ```
 $ mocha --version
-3.4.2
+6.2.1
 ```
 
 ## Project Structure
