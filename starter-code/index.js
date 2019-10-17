@@ -34,8 +34,19 @@ class SortedList {
       throw new Error("EmptySortedList");
       };
   };
-    average() {}
-    sum() {}
+    average() {
+      if(!this.length == 0){
+        return this.sum() / this.length;
+      }else {
+        throw new Error("EmptySortedList");  
+      }
+    }
+    sum() {
+      let sum =  this.items.reduce((accumulator, currentValue)=>{
+        return accumulator + currentValue;
+      }, 0);
+      return sum;
+    }
   };
   
   module.exports = SortedList;
