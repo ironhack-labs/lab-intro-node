@@ -1,5 +1,5 @@
 // Require the file to be tested
-var SortedList = require('../index.js')
+var SortedList = require('../index.js');
 
 // Load the Chai Assertion Library
 var assert = require('assert');
@@ -21,6 +21,7 @@ describe('SortedList', function() {
     it('should add a single value to SortedList', function() {
       assert.equal(sl.length, 0);
       sl.add(1);
+      //console.log(sl.length);
       assert.equal(sl.length, 1);
     });
     it('should add a third value to SortedList', function() {
