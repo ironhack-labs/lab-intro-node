@@ -64,6 +64,7 @@ describe('SortedList', function() {
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
       sl.add(10);
+      // sl.items.sort()
       assert.equal(sl.get(0), 10);
       assert.equal(sl.get(1), 20);
     });
