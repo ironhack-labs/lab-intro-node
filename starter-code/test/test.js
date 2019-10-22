@@ -94,7 +94,7 @@ describe('SortedList', function() {
       }
     });
 
-    it('should return the max element in the list', function() {
+      ('should return the max element in the list', function() {
       sl.add(10);
       sl.add(20);
 
