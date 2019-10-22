@@ -3,7 +3,7 @@ class SortedList {
       this.items = []
     }
     add(item) {
-      this.items = [...this.items, item].sort()
+      this.items = [...this.items, item].sort((a,b) => a-b)
       // this.items = [...this.items, item]
     }
     get length() {
@@ -39,9 +39,6 @@ class SortedList {
     }
     sum() {
       return this.items.reduce((acc, item) => acc + item,0)
-    }
-    sort(){
-      return this.items.sort((a,b) => a-b)
     }
   };
   
