@@ -3,8 +3,8 @@ class SortedList {
       this.items = []
     }
     add(item) {
-      // this.items = [...this.items, item].sort()
-      this.items = [...this.items, item]
+      this.items = [...this.items, item].sort()
+      // this.items = [...this.items, item]
     }
     get length() {
       return this.items.length
@@ -12,8 +12,7 @@ class SortedList {
     get(pos) {
       if (pos >= this.items.length){
         throw new Error("OutOfBounds")
-      }else{
-        
+      }else{        
         return this.items[pos]
       }
     }
@@ -42,7 +41,7 @@ class SortedList {
       return this.items.reduce((acc, item) => acc + item,0)
     }
     sort(){
-      return this.items.sort((a,b) => a-b)[0]
+      return this.items.sort((a,b) => a-b)
     }
   };
   
