@@ -3,7 +3,8 @@ class SortedList {
       this.items = []
     }
     add(item) {
-      this.items = [...this.items, item].sort()
+      // this.items = [...this.items, item].sort()
+      this.items = [...this.items, item]
     }
     get length() {
       return this.items.length

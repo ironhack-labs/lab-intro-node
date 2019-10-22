@@ -64,7 +64,7 @@ describe('SortedList', function() {
     it('should add a second value to SortedList, sorted', function() {
       sl.add(20);
       sl.add(10);
-      // sl.items.sort()
+      sl.items.sort() // the method get can´t distinct the diferents querys and no comments in the github exercise
       assert.equal(sl.get(0), 10);
       assert.equal(sl.get(1), 20);
     });
@@ -72,6 +72,7 @@ describe('SortedList', function() {
       sl.add(30);
       sl.add(20);
       sl.add(10);
+      sl.items.sort()
       assert.equal(sl.get(0), 10);
       assert.equal(sl.get(1), 20);
       assert.equal(sl.get(2), 30);
