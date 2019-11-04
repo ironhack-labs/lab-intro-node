@@ -50,24 +50,17 @@ We have already included Mocha in the project you just forked, so let's see how 
 
 ### Usage
 
-To start using mocha, you have to install it as a **global package** in your system. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
+To start using mocha, you have to install it in your current working folder. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
 
-We will do so by running:
-
-```
-$ npm install -g mocha
-```
-
-We can check that Mocha is correctly installed by running:
+Since it is listed in the dependencies in the `package.json`, we will do so by running the following command inside the `starter-code` folder, where the `package.json` is located:
 
 ```
-$ mocha --version
-6.1.4
+$ npm install 
 ```
 
 ## Project Structure
 
-Before start coding, we will explain the provided project structure:
+Before starting to code, we will explain the provided project structure:
 
 ```
 starter-code/
@@ -83,7 +76,7 @@ The `test` folder contains all the tests we will execute with Mocha.
 
 ### Running the tests
 
-Run the tests with Mocha is super easy, you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
+Running the tests with Mocha is super easy, you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
 
 ```
 $ npm test
@@ -98,29 +91,29 @@ SortedList
     2) should add a single value to SortedList
     3) should add a third value to SortedList
   #get(i)
-    ✓ should return an OutOfBounds exception if there is no element in that position
-    4) should return the element in that position
+    4) should return an OutOfBounds exception if there is no element in that position
+    5) should return the element in that position
   #add(x) and get(i)
-    5) should add a second value to SortedList, sorted
-    6) should add a third value to SortedList, sorted
+    6) should add a second value to SortedList, sorted
+    7) should add a third value to SortedList, sorted
   #max()
-    7) should return an EmptySortedList exception if there is no element in the list
-    8) should return the max element in the list
+    8) should return an EmptySortedList exception if there is no element in the list
+    9) should return the max element in the list
   #min()
-    9) should return an EmptySortedList exception if there is no element in the list
-    10) should return the min element in the list
+    10) should return an EmptySortedList exception if there is no element in the list
+    11) should return the min element in the list
   #sum()
-    11) should return 0 for an empty sorted list
-    12) should add(sum) all elements of the array if there are elements in the list
+    12) should return 0 for an empty sorted list
+    13) should add(sum) all elements of the array if there are elements in the list
   #average()
-    13) should return an EmptySortedList exception if there are no elements
-    14) should return the average of elements in the array
+    14) should return an EmptySortedList exception if there are no elements
+    15) should return the average of elements in the array
 
 
-  1 passing (13ms)
-  14 failing
+  0 passing (19ms)
+  15 failing
 ```
-Don't worry if only 1 test is passing... your goal is to make them ALL PASS!! :smile:
+Don't worry if none of these tests are passing... your goal is to make them ALL PASS!! :smile:
 
 ## SortedList Class
 
