@@ -1,6 +1,6 @@
 // Require the file which will be tested
 const SortedList = require('../index.js');
-// Load the Chai Assertion Library
+// Load the Assertion Library
 const assert = require('assert');
 
 describe('SortedList', () => {
@@ -125,7 +125,7 @@ describe('SortedList', () => {
       sl = new SortedList();
     });
 
-    it('should return sum of all elements in the array', () => {
+    it('should return the sum of all elements in the array', () => {
       sl.add(1);
       sl.add(2);
       sl.add(3);

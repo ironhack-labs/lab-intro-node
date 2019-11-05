@@ -83,52 +83,55 @@ The `test` folder contains all the tests we will execute with Mocha.
 
 ### Running the tests
 
-Run the tests with Mocha is super easy, you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
+Run the tests with Mocha is super easy; you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
 
 ```
-$ npm test
+$ npm test                                                                                 
 
-> lab-intro-node@1.0.0 test ~~/lab-intro-node/starter-code
+> lab-intro-node@1.0.0 test /Users/Sandra/Desktop/iron-labs/lab-intro-node/starter-code
 > mocha
 
-SortedList
-  Constructor
-    1) should create an empty SortedList
-  #add(x)
-    2) should add a single value to SortedList
-    3) should add a third value to SortedList
-  #get(i)
-    ✓ should return an OutOfBounds exception if there is no element in that position
-    4) should return the element in that position
-  #add(x) and get(i)
-    5) should add a second value to SortedList, sorted
-    6) should add a third value to SortedList, sorted
-  #max()
-    7) should return an EmptySortedList exception if there is no element in the list
-    8) should return the max element in the list
-  #min()
-    9) should return an EmptySortedList exception if there is no element in the list
-    10) should return the min element in the list
-  #sum()
-    11) should return 0 for an empty sorted list
-    12) should add(sum) all elements of the array if there are elements in the list
-  #average()
-    13) should return an EmptySortedList exception if there are no elements
-    14) should return the average of elements in the array
+
+  SortedList
+    Constructor
+      1) should have items and length properties
+    #add(x)
+      2) should add a single value to SortedList
+      3) should add a third value to SortedList
+    #get(i)
+      4) should return the element in that position
+      5) should return an OutOfBounds exception if there is no element in that position
+    #add(x) and get(i)
+      6) should add a second value to SortedList, sorted
+      7) should add a third value to SortedList, sorted
+    #max()
+      8) should return the max (highest) value in the array
+      9) should return an EmptySortedList exception if there is no elements in the array
+    #min()
+      10) should return the min (lowest) value in the array
+      11) should return an EmptySortedList exception if there is no elements in the array
+    #sum()
+      12) should return the sum of all elements in the array
+      13) should return 0 for an empty sorted list
+    #avg()
+      14) should return the average of elements in the array
+      15) should return an EmptySortedList exception if there are no elements
 
 
-  1 passing (13ms)
-  14 failing
+  0 passing (25ms)
+  15 failing
 ```
-Don't worry if only 1 test is passing... your goal is to make them ALL PASS!! :smile:
+Don't worry that none of the tests is passing... you will make them ALL PASS!! :smile:
 
-## SortedList Class
+## Instructions
+
+### SortedList Class
 
 The task here is to create a class that maintains a sorted list of numbers in ascending order.
 
 The class will have the following methods:
 
-### constructor()
+### Iteration 1: constructor()
 
 `new SortedList` should create a new object from the `SortedList` class.
 
@@ -137,21 +140,21 @@ The object should have a `items` and `length` property.
 - `items` should be an array.
 - `length` should be the number of elements in the array.
 
-### add()
+### Iteration 2: add()
 
 The `add(x)` method will add `x` to the items array.
 
-### get()
+### Iteration 3: get()
 
 The method will get the `nth` value in the list.
 
-You should also provide a length property that gives the length of the list. Make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get element on the position 12*).
+You should also provide a length property that gives the length of the list. Make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get the element on the position 6*).
 
-### max()
+### Iteration 4: max()
 
 The `max()` method should return the highest value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
+In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
 throw new Error("EmptySortedList")
@@ -159,19 +162,19 @@ throw new Error("EmptySortedList")
 
 If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
 
-### min()
+### Iteration 5: min()
 
 The `min()` method should return the lowest value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
+In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
 
-### sum()
+### Iteration 6: sum()
 
 The `sum()` method should return the sum value of the array. At this point, we will not tell you anything else, so go ahead and check the corresponding test and see if there's anything else to be added. You can do this developer! :heart:
 
-### average()
+### Iteration 7: avg()
 
-The `average()` method should return the average value of the array.
+The `avg()` method should return the average value of the array.
 
 The same as above, check the corresponding test to see if there's anything else to be added.
 
