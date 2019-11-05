@@ -55,28 +55,26 @@ describe('SortedList', () => {
    
   });
 
-
-  // I really don't understand why we have to specify this?
-  // describe('#add(x) and get(i)', function() {
-  //   var sl;
-  //   beforeEach(function(){
-  //     sl = new SortedList();
-  //   });
-  //   it('should add a second value to SortedList, sorted', function() {
-  //     sl.add(20);
-  //     sl.add(10);
-  //     assert.equal(sl.get(0), 10);
-  //     assert.equal(sl.get(1), 20);
-  //   });
-  //   it('should add a third value to SortedList, sorted', function() {
-  //     sl.add(30);
-  //     sl.add(20);
-  //     sl.add(10);
-  //     assert.equal(sl.get(0), 10);
-  //     assert.equal(sl.get(1), 20);
-  //     assert.equal(sl.get(2), 30);
-  //   });
-  // });
+  describe('#add(x) and get(i)', () =>  {
+    let sl;
+    beforeEach(() => {
+      sl = new SortedList();
+    });
+    it('should add a second value to SortedList, sorted',() => {
+      sl.add(20);
+      sl.add(10);
+      assert.equal(sl.get(0), 10);
+      assert.equal(sl.get(1), 20);
+    });
+    it('should add a third value to SortedList, sorted', () => {
+      sl.add(30);
+      sl.add(20);
+      sl.add(10);
+      assert.equal(sl.get(0), 10);
+      assert.equal(sl.get(1), 20);
+      assert.equal(sl.get(2), 30);
+    });
+  });
 
   describe('#max()', () => {
     let sl;
