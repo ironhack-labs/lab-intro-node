@@ -45,11 +45,7 @@ describe('SortedList', () => {
     });
 
     it('should return an OutOfBounds exception if there is no element in that position', () => {
-      assert.throws(() => {
-        if (sl.get(4) === 'undefined') {
-          throw new Error('OutOfBounds');
-        }
-      }, Error)
+      assert.throws(() => { sl.get(4); }, Error, "OutOfBounds");
     });
 
    
@@ -90,11 +86,7 @@ describe('SortedList', () => {
     });
 
     it('should return an EmptySortedList exception if there is no elements in the array', () => {
-       assert.throws(() => {
-        if (sl.max([]) === 'undefined') {
-          throw new Error('EmptySortedList');
-        }
-      }, Error)
+      assert.throws(() => { sl.max([]) }, Error, "EmptySortedList");
     });
   });
 
@@ -111,11 +103,7 @@ describe('SortedList', () => {
     });
 
     it('should return an EmptySortedList exception if there is no elements in the array', () => {
-      assert.throws(() => {
-        if (sl.min([]) === 'undefined') {
-          throw new Error('EmptySortedList');
-        }
-      }, Error)
+      assert.throws(() => { sl.min([]) }, Error, "EmptySortedList");
     });
   });
 
@@ -152,11 +140,7 @@ describe('SortedList', () => {
     })
 
     it('should return an EmptySortedList exception if there are no elements', () => {
-      assert.throws(() => {
-        if (sl.avg([]) === 'undefined') {
-          throw new Error('EmptySortedList');
-        }
-      }, Error)
+      assert.throws(() => { sl.avg([]) }, Error, "EmptySortedList");
     })
 
     
