@@ -135,11 +135,11 @@ The object should have an `items` and `length` property.
 - `items` should be an array.
 - `length` should be the number of elements in the array.
 
-### add()
+### add(x)
 
-The `add(x)` method will add `x` to the items array.
+The `add(x)` method should add the value `x` to the items array, while ensuring that the items array stays sorted in ascending order.
 
-You might also want to update the length property that returns the length of the list.
+You might want to update the length property that returns the length of the list.
 
 ### get()
 
