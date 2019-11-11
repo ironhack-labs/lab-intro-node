@@ -40,13 +40,15 @@ describe('SortedList', () => {
     });
 
     it('should return an OutOfBounds exception if there is no element in that position', () => {
+      let errorObject;
       try {
         list.get(20);
       } catch (error) {
-        assert.equal(error instanceof Error, true);
-        assert.equal(error.message, 'OutOfBounds');
-        assert.throws(list.get, Error, '/OutOfBounds/');
+        errorObject = error;
       }
+      assert.equal(errorObject instanceof Error, true);
+      assert.equal(errorObject.message, 'OutOfBounds');
+      assert.throws(list.get, Error, '/OutOfBounds/');
     });
 
     it('should return the element in that position', () => {

@@ -19,11 +19,11 @@ class SortedList {
     // ...
   }
 
-  average() {
+  sum() {
     // ...
   }
 
-  sum() {
+  average() {
     // ...
   }
 }
