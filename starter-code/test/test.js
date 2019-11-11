@@ -3,7 +3,7 @@ var SortedList = require('../index.js')
 
 // Load the Chai Assertion Library
 var assert = require('assert');
-
+//1
 describe('SortedList', function() {
   describe('Constructor', function() {
     it('should create an empty SortedList', function() {
@@ -12,7 +12,7 @@ describe('SortedList', function() {
       assert.equal(sl instanceof SortedList, true);
     });
   });
-
+//2, 3
   describe('#add(x)', function() {
     var sl;
     beforeEach(function(){
@@ -30,7 +30,7 @@ describe('SortedList', function() {
       assert.equal(sl.length, 3);
     });
   });
-
+//4
   describe('#get(i)', function() {
     var sl;
     beforeEach(function(){
