@@ -1,10 +1,10 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Intro to NodeJS
+# Intro to Node.js
 
 ## Introduction
 
-Today is our first day using NodeJS, so we will practice doing some basic operations. **Ready to start?**
+Today is our first day using Node.js, so we will practice doing some basic operations. **Ready to start?**
 
 ## Requirements
 
@@ -15,14 +15,13 @@ Today is our first day using NodeJS, so we will practice doing some basic operat
 
 - Upon completion, run the following commands:
 
-  ```
+  ```bash
   git add .
-  git commit -m "done"
+  git commit -m "Finished lab"
   git push origin master
   ```
 
 - Create Pull Request so your TAs can check up your work.
-
 
 ## Testing - Introduction
 
@@ -30,7 +29,7 @@ This exercise will be completed through a series of tests. You should be familia
 
 ### What is testing?
 
-*Software testing is a process of executing an application to validate and verify that it meets the business and technical requirements and works as expected.*
+_Software testing is a process of executing an application to validate and verify that it meets the business and technical requirements and works as expected._
 
 Testing is a **process**, not a single activity. As early as we start developing and conducting tests, the better are chances that we can prevent deficiencies in the code or product design.
 
@@ -54,13 +53,13 @@ To start using mocha, you have to install it as a **global package** in your sys
 
 We will do so by running:
 
-```
+```bash
 $ npm install -g mocha
 ```
 
 We can check that Mocha is correctly installed by running:
 
-```
+```bash
 $ mocha --version
 6.1.4
 ```
@@ -85,7 +84,7 @@ The `test` folder contains all the tests we will execute with Mocha.
 
 Run the tests with Mocha is super easy, you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
 
-```
+```bash
 $ npm test
 
 > lab-intro-node@1.0.0 test ~~/lab-intro-node/starter-code
@@ -120,6 +119,7 @@ SortedList
   1 passing (13ms)
   14 failing
 ```
+
 Don't worry if only 1 test is passing... your goal is to make them ALL PASS!! :smile:
 
 ## SortedList Class
@@ -132,7 +132,7 @@ The class will have the following methods:
 
 `new SortedList` should create a new object from the `SortedList` class.
 
-The object should have a `items` and `length` property.
+The object should have an `items` and `length` property.
 
 - `items` should be an array.
 - `length` should be the number of elements in the array.
@@ -145,7 +145,7 @@ The `add(x)` method will add `x` to the items array.
 
 The method will get the `nth` value in the list.
 
-You should also provide a length property that gives the length of the list. Make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get element on the position 12*).
+You should also provide a length property that gives the length of the list. Make sure you _throw_ an error _OutOfBounds_ if a user tries to get an element from a non-existing index (ex. _if the array has 5 elements and we are trying to get element on the position 12_).
 
 ### max()
 
@@ -154,7 +154,7 @@ The `max()` method should return the highest value of the array.
 In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
-throw new Error("EmptySortedList")
+throw new Error('EmptySortedList');
 ```
 
 If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
@@ -177,4 +177,4 @@ The same as above, check the corresponding test to see if there's anything else 
 
 And you reached the end!
 
-Happy Coding! :heart:
+Happy Coding! 💙

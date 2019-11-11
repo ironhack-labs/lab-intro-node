@@ -2,25 +2,24 @@
   "name": "lab-intro-node",
   "version": "1.0.0",
   "description": "Intro Node Lab for Students",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ironhack/lab-intro-node.git"
   },
-  "keywords": [
-    "node",
-    "intro"
-  ],
-  "author": "fer@ironhack.com",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ironhack/lab-intro-node/issues"
   },
   "homepage": "https://github.com/ironhack/lab-intro-node#readme",
+  "keywords": [
+    "node",
+    "intro"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "mocha": "^6.2.2"
   }
 }
