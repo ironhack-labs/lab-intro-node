@@ -50,20 +50,16 @@ We have already included Mocha in the project you just forked, so let's see how 
 
 ### Usage
 
-To start using mocha, you have to install it as a **global package** in your system. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
+To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
 
-We will do so by running:
-
-```
-$ npm install -g mocha
-```
-
-We can check that Mocha is correctly installed by running:
+__Navigate to the `starter-code`__ and then run the following command:
 
 ```
-$ mocha --version
-6.1.4
+$ npm install mocha
 ```
+After this step, we will see `dependencies` in the _package.json_ and mocha will be there.
+
+_Note_: The current version of mocha is 6.2.2.
 
 ## Project Structure
 
