@@ -7,7 +7,7 @@ class SortedList {
     // ...
   }
 
-  get(pos) {
+  load(pos) {
     // ...
   }
 

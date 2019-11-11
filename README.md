@@ -95,10 +95,10 @@ SortedList
   #add(x)
     2) should add a single value to SortedList
     3) should add a third value to SortedList
-  #get(i)
+  #load(i)
     4) should return an OutOfBounds exception if there is no element in that position
     5) should return the element in that position
-  #add(x) and get(i)
+  #add(x) and load(i)
     6) should add a second value to SortedList, sorted
     7) should add a third value to SortedList, sorted
   #max()
@@ -135,29 +135,31 @@ The object should have an `items` and `length` property.
 - `items` should be an array.
 - `length` should be the number of elements in the array.
 
-### add(x)
+### add(item)
 
-The `add(x)` method should add the value `x` to the items array, while ensuring that the items array stays sorted in ascending order.
+The `add` method should add the value `item` to the items array, while ensuring that the items array stays sorted in ascending order.
 
 You might want to update the length property that returns the length of the list.
 
-### get()
+### load(pos)
 
-The method will get the `nth` value in the list.
+The `load` method will get the value at index `pos` in the list.
 
-Make sure you _throw_ an error **_OutOfBounds_** if a user tries to get an element from a non-existing index (ex. _if the array has 5 elements and we are trying to get element on the position 12_).
+Make sure you _throw_ an error with the message "OutOfBounds" if a user tries to get an element from a non-existing index (ex. _if the array has 5 elements and we are trying to get element on the position 12_).
+
+To throw an error, you can do the following:
+
+```js
+throw new Error('OutOfBounds');
+```
+
+If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
 
 ### max()
 
 The `max()` method should return the highest value of the array.
 
-In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
-
-```js
-throw new Error('EmptySortedList');
-```
-
-If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
+In the case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
 
 ### min()
 

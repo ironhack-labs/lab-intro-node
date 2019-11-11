@@ -42,7 +42,7 @@ describe('SortedList', () => {
     });
   });
 
-  describe('#get(i)', () => {
+  describe('#load(i)', () => {
     let list;
     beforeEach(() => {
       list = new SortedList();
@@ -51,25 +51,25 @@ describe('SortedList', () => {
     it('should return an OutOfBounds exception if there is no element in that position', () => {
       let errorObject;
       try {
-        list.get(20);
+        list.load(20);
       } catch (error) {
         errorObject = error;
       }
       assert.equal(errorObject instanceof Error, true);
       assert.equal(errorObject.message, 'OutOfBounds');
-      assert.throws(list.get, Error, '/OutOfBounds/');
+      assert.throws(list.load, Error, '/OutOfBounds/');
     });
 
     it('should return the element in that position', () => {
       const foo = 10;
       for (let i = 0; i < 200; i++) {
         list.add(foo * i);
-        assert.equal(list.get(i), foo * i);
+        assert.equal(list.load(i), foo * i);
       }
     });
   });
 
-  describe('#add(x) and get(i)', () => {
+  describe('#add(x) and load(i)', () => {
     let list;
     beforeEach(() => {
       list = new SortedList();
@@ -78,17 +78,17 @@ describe('SortedList', () => {
     it('should add a second value to SortedList, sorted', () => {
       list.add(20);
       list.add(10);
-      assert.equal(list.get(0), 10);
-      assert.equal(list.get(1), 20);
+      assert.equal(list.load(0), 10);
+      assert.equal(list.load(1), 20);
     });
 
     it('should add a third value to SortedList, sorted', () => {
       list.add(30);
       list.add(20);
       list.add(10);
-      assert.equal(list.get(0), 10);
-      assert.equal(list.get(1), 20);
-      assert.equal(list.get(2), 30);
+      assert.equal(list.load(0), 10);
+      assert.equal(list.load(1), 20);
+      assert.equal(list.load(2), 30);
     });
   });
 
@@ -103,9 +103,9 @@ describe('SortedList', () => {
         list.max();
         // The next line should not be executed
         assert.equal(true, false);
-      } catch (e) {
-        assert.equal(e instanceof Error, true);
-        assert.equal(e.message, 'EmptySortedList');
+      } catch (error) {
+        assert.equal(error instanceof Error, true);
+        assert.equal(error.message, 'EmptySortedList');
       }
     });
 
@@ -128,9 +128,9 @@ describe('SortedList', () => {
         list.min();
         // The next line should not be executed
         assert.equal(true, false);
-      } catch (e) {
-        assert.equal(e instanceof Error, true);
-        assert.equal(e.message, 'EmptySortedList');
+      } catch (error) {
+        assert.equal(error instanceof Error, true);
+        assert.equal(error.message, 'EmptySortedList');
       }
     });
 
