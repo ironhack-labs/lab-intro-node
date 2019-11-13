@@ -1,7 +1,7 @@
 class SortedList {
     constructor() {
       this.items = [];
-      this.length = 0;
+      this.length = this.items.length;
     }
   
     add(item) {
@@ -22,34 +22,40 @@ class SortedList {
     }
 
     max() {
-      if (this.length>0) {
+      if (this.length > 0) {
         return Math.max(...this.items);
-      } else if(this.items = [])  {
+        // return this.items[this.length - 1] // since we work with a sorted array, we can return the last item of the array
+      } else if(this.length === 0)  {
         throw new Error("EmptySortedList");
       }
 
+      //or we can use try and catch
       // try {
-      //   return Math.max(...this.items);
-      // } catch(e) {
+      //   if(this.length === 0) {
       //     throw new Error("EmptySortedList");
-        
+      //   }
+      //   return this.items[this.length - 1];
+      // } catch(e) {
+      //     throw e;
       // }
     }
       
     min() {
-      if (this.length>0) {
+      if (this.length > 0) {
         return Math.min(...this.items);
-      } else if(this.items = [])  {
+      } else if(this.length === 0)  {
         throw new Error("EmptySortedList");
       }
-
-      // try {
-      //   return Math.min(...this.items);
-      // } catch(error) {
-      //   if(this.items = []) {
-      //    throw new Error("EmptySortedList");
-      //   }
-      // }
+      
+      // or we can use try and catch
+    //   try {
+    //     if(this.length === 0) {
+    //       throw new Error("EmptySortedList");
+    //     }
+    //     return Math.min(...this.items);
+    //   } catch(error) {
+    //       throw error;
+    //   }
     }
 
 
