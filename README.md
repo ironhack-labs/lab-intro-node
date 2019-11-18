@@ -121,11 +121,11 @@ Don't worry that none of the tests is passing... you will make them ALL PASS!! :
 
 ## Instructions
 
-### SortedList Class
+The task here is to create a class that maintains a __sorted list of numbers in ascending order__.
 
-The task here is to create a class that maintains a sorted list of numbers in ascending order.
+Go in the `index.js` file and there you will find the bare bones of the _SortedList_ class.
 
-The class will have the following methods:
+The __SortedList__ class will have the following methods:
 
 ### Iteration 1: constructor()
 
@@ -136,17 +136,21 @@ The object should have a `items` and `length` property.
 - `items` should be an array.
 - `length` should be the number of elements in the array.
 
-### Iteration 2: add()
+### Iteration 2: add(item)
 
-The `add(x)` method will add `x` to the items array.
+The `add(x)` method will add `x` to the items array. Here you should also make sure that the length gets updated accordingly.
 
-### Iteration 3: get()
+### Iteration 3: get(pos)
 
-The method will get the `nth` value in the list.
+The `get(pos)` method will get the `nth` value in the list. 
+_Example_: if an instance of SortedList has elements: [2, 5, 7], when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
 
-You should also provide a length property that gives the length of the list. Make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get the element on the position 6*).
+As addition, make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get the element on the position 6*).
 
-### Iteration 4: max()
+### Iteration 4: make that list sorted!
+Up to this moment, we were just adding elements in the array of _items_, but our ultimate goal is to make this array _sorted in ascending order_. What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details.
+
+### Iteration 5: max()
 
 The `max()` method should return the highest value of the array.
 
@@ -156,19 +160,19 @@ In case you have an empty `SortedList`, you must throw an error with the message
 throw new Error("EmptySortedList")
 ```
 
-If you want more information about `try...catch`, you can go on the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch).
-
-### Iteration 5: min()
+### Iteration 6: min()
 
 The `min()` method should return the lowest value of the array.
 
 In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList".
 
-### Iteration 6: sum()
+## Bonus iterations
+
+### Iteration 7: sum()
 
 The `sum()` method should return the sum value of the array. At this point, we will not tell you anything else, so go ahead and check the corresponding test and see if there's anything else to be added. You can do this developer! :heart:
 
-### Iteration 7: avg()
+### Iteration 8: avg()
 
 The `avg()` method should return the average value of the array.
 
