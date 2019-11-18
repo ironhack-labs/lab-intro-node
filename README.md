@@ -142,13 +142,14 @@ The `add(x)` method will add `x` to the items array. Here you should also make s
 
 ### Iteration 3: get(pos)
 
-The `get(pos)` method will get the `nth` value in the list. 
+The `get(pos)` method will get the `nth` value in the list. <br>
 _Example_: if an instance of SortedList has elements: [2, 5, 7], when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
 
 As addition, make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get the element on the position 6*).
 
 ### Iteration 4: make that list sorted!
-Up to this moment, we were just adding elements in the array of _items_, but our ultimate goal is to make this array _sorted in ascending order_. What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details.
+Up to this moment, in the `add(item)` method we were just adding elements in the array of _items_. Our ultimate goal is to make this array _sorted in ascending order_. <br>
+What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details.
 
 ### Iteration 5: max()
 
