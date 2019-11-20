@@ -1,10 +1,10 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Intro to NodeJS
+# Intro to Node
 
 ## Introduction
 
-Today is our first day using NodeJS, so we will practice doing some basic operations. **Ready to start?**
+Today is our first day using Node, so we will practice doing some basic operations. **Ready to start?**
 
 ## Requirements
 
@@ -23,14 +23,13 @@ Today is our first day using NodeJS, so we will practice doing some basic operat
 
 - Create Pull Request so your TAs can check up your work.
 
-
 ## Testing - Introduction
 
 This exercise will be completed through a series of tests. You should be familiar with testing from previous lessons and exercises, but just in case, here is a short recap of Intro to testing. :wink:
 
 ### What is testing?
 
-*Software testing is a process of executing an application to validate and verify that it meets the business and technical requirements and works as expected.*
+_Software testing is a process of executing an application to validate and verify that it meets the business and technical requirements and works as expected._
 
 Testing is a **process**, not a single activity. As early as we start developing and conducting tests, the better are chances that we can prevent deficiencies in the code or product design.
 
@@ -52,11 +51,12 @@ We have already included Mocha in the project you just forked, so let's see how 
 
 To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
 
-__Navigate to the `starter-code`__ and then run the following command:
+**Navigate to the `starter-code`** and then run the following command:
 
 ```
 $ npm install mocha
 ```
+
 After this step, we will see `dependencies` in the _package.json_ and mocha will be there.
 
 _Note_: The current version of mocha is 6.2.2.
@@ -82,7 +82,7 @@ The `test` folder contains all the tests we will execute with Mocha.
 Run the tests with Mocha is super easy; you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
 
 ```
-$ npm test                                                                                 
+$ npm test
 
 > lab-intro-node@1.0.0 test /Users/Sandra/Desktop/iron-labs/lab-intro-node/starter-code
 > mocha
@@ -94,74 +94,82 @@ $ npm test
     #add(x)
       2) should add a single value to SortedList
       3) should add a third value to SortedList
+      4) should add a value while keeping the list sorted
     #get(i)
-      4) should return the element in that position
       5) should return an OutOfBounds exception if there is no element in that position
-    #add(x) and get(i)
-      6) should add a second value to SortedList, sorted
-      7) should add a third value to SortedList, sorted
+      6) should return the element in that position
     #max()
-      8) should return the max (highest) value in the array
-      9) should return an EmptySortedList exception if there is no elements in the array
+      7) should return an EmptySortedList exception if there is no elements in the list
+      8) should return the max (highest) value in the list
     #min()
-      10) should return the min (lowest) value in the array
-      11) should return an EmptySortedList exception if there is no elements in the array
+      9) should return an EmptySortedList exception if there is no elements in the list
+      10) should return the min (lowest) value in the list
     #sum()
-      12) should return the sum of all elements in the array
-      13) should return 0 for an empty sorted list
+      11) should return the sum of all elements in the list
+      12) should return 0 for an empty sorted list
     #avg()
-      14) should return the average of elements in the array
-      15) should return an EmptySortedList exception if there are no elements
+      13) should return an EmptySortedList exception if there are no elements
+      14) should return the average of elements in the list
 
-
-  0 passing (25ms)
-  15 failing
+  0 passing (13ms)
+  14 failing
 ```
+
 Don't worry that none of the tests is passing... you will make them ALL PASS!! :smile:
 
 ## Instructions
 
-The task here is to create a class that maintains a __sorted list of numbers in ascending order__.
+The task here is to create a class that maintains a **sorted list of numbers in ascending order**.
 
 Go in the `index.js` file and there you will find the bare bones of the _SortedList_ class.
 
-The __SortedList__ class will have the following methods:
+The **SortedList** class will have the following methods:
 
 ### Iteration 1: constructor()
 
 `new SortedList` should create a new object from the `SortedList` class.
 
-The object should have a `items` and `length` property.
+The object should have two properties: `items` and `length`.
 
-- `items` should be an array.
+- `items` should be an array,
 - `length` should be the number of elements in the array.
 
 ### Iteration 2: add(item)
 
-The `add(x)` method will add `x` to the items array. Here you should also make sure that the length gets updated accordingly.
+The `add(item)` method should add the value `item` to the items array, ensuring that **the items array stays sorted in ascending order**.
+What does this mean? Well, if array of items has these elements: [2, 5, 7], and if `6` is added, the array of items should be as follows: [2, 5, 6, 7].
+
+Here you should also make sure that the length property gets updated accordingly when new items are added to the list.
 
 ### Iteration 3: get(pos)
 
-The `get(pos)` method will get the `nth` value in the list. <br>
+The `get(pos)` method will get the value at index `pos` in the list. <br>
 _Example_: if an instance of SortedList has elements: [2, 5, 7], when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
 
-As addition, make sure you *throw* an error *OutOfBounds* if a user tries to get an element in the unexisting position (ex. *if the array has 5 elements and we are trying to get the element on the position 6*).
+As addition, make sure you _throw_ an error with the message _OutOfBounds_ if a user tries to get an element in the non-existing position (ex. _if the array has 5 elements and we are trying to get the element on the position 7_).
 
-### Iteration 4: make that list sorted!
+To throw an error, you can do the following:
+
+```js
+throw new Error("OutOfBounds");
+```
+
+<!-- ### Iteration 4: make that list sorted!
+
 Up to this moment, in the `add(item)` method we were just adding elements in the array of _items_. Our ultimate goal is to make this array _sorted in ascending order_. <br>
-What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details.
+What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details. -->
 
-### Iteration 5: max()
+### Iteration 4: max()
 
 The `max()` method should return the highest value of the array.
 
 In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
-throw new Error("EmptySortedList")
+throw new Error("EmptySortedList");
 ```
 
-### Iteration 6: min()
+### Iteration 5: min()
 
 The `min()` method should return the lowest value of the array.
 
@@ -169,15 +177,15 @@ In case you have an empty `SortedList`, you must throw an error with the message
 
 ## Bonus iterations
 
-### Iteration 7: sum()
+### Iteration 6: sum()
 
-The `sum()` method should return the sum value of the array. At this point, we will not tell you anything else, so go ahead and check the corresponding test and see if there's anything else to be added. You can do this developer! :heart:
+The `sum()` method should return the sum value of the array. At this point, we will not tell you anything else. Just go ahead and check the corresponding test and see if anything else needs to be added. You can do this! :heart:
 
-### Iteration 8: avg()
+### Iteration 7: avg()
 
 The `avg()` method should return the average value of the array.
 
-The same as above, check the corresponding test to see if there's anything else to be added.
+Just as before, check the corresponding test to see if there's anything else that needs to be added.
 
 And you reached the end!
 
