@@ -41,7 +41,7 @@ Tests prove that your code actually works in every situation in which it’s des
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99e6ffece1023c0fe141512493fc6ad2.png)
 
-[Mocha](https://mochajs.org/) is a feature-rich JavaScript test framework running on Node.js and in the browser, making asynchronous testing simple and fun.
+[Mocha](https://mochajs.org/) is a feature-rich JavaScript testing framework running on Node.js and in the browser, making asynchronous testing simple and fun.
 
 <!-- Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. -->
 
@@ -49,7 +49,7 @@ We have already included Mocha in the project you just forked, so let's see how 
 
 ### Usage
 
-To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (NPM) to manage all the packages in our projects.
+To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (npm) to manage all the packages in our projects.
 
 **Navigate to the `starter-code`** and then run the following command:
 
@@ -63,12 +63,12 @@ _Note_: The current version of mocha is 6.2.2.
 
 ## Project Structure
 
-Before start coding, we will explain the provided project structure:
+Before we start coding, let's explain the provided project structure:
 
 ```
 starter-code/
 ├── test
-│   └── test.js
+│   └── index.spec.js
 └─ package.json
 └─ index.js
 ```
@@ -79,7 +79,7 @@ The `test` folder contains all the tests we will execute with Mocha.
 
 ### Running the tests
 
-Run the tests with Mocha is super easy; you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code`.
+Running our tests with Mocha is super easy; you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code` directory.
 
 ```
 $ npm test
@@ -102,7 +102,7 @@ $ npm test
       7) should return an EmptySortedList exception if there is no elements in the list
       8) should return the max (highest) value in the list
     #min()
-      9) should return an EmptySortedList exception if there is no elements in the list
+      9) should return an EmptySortedList exception if there are no elements in the list
       10) should return the min (lowest) value in the list
     #sum()
       11) should return the sum of all elements in the list
@@ -115,7 +115,7 @@ $ npm test
   14 failing
 ```
 
-Don't worry that none of the tests is passing... you will make them ALL PASS!! :smile:
+Don't worry that none of the tests are passing... you will make them ALL PASS!! :smile:
 
 ## Instructions
 
@@ -137,7 +137,7 @@ The object should have two properties: `items` and `length`.
 ### Iteration 2: add(item)
 
 The `add(item)` method should add the value `item` to the items array, ensuring that **the items array stays sorted in ascending order**.
-What does this mean? Well, if array of items has these elements: [2, 5, 7], and if `6` is added, the array of items should be as follows: [2, 5, 6, 7].
+What does this mean? Well, if an array of items has these elements: `[2, 5, 7]`, and if `6` is added, the array of items should be as follows: `[2, 5, 6, 7]`.
 
 Here you should also make sure that the length property gets updated accordingly when new items are added to the list.
 
@@ -146,7 +146,7 @@ Here you should also make sure that the length property gets updated accordingly
 The `get(pos)` method will get the value at index `pos` in the list. <br>
 _Example_: if an instance of SortedList has elements: [2, 5, 7], when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
 
-As addition, make sure you _throw_ an error with the message _OutOfBounds_ if a user tries to get an element in the non-existing position (ex. _if the array has 5 elements and we are trying to get the element on the position 7_).
+In addition, make sure you _throw_ an error with the message _OutOfBounds_ if a user tries to get an element in the non-existing position (e.g. _if the array has 5 elements and we are trying to get the element on the position 7_).
 
 To throw an error, you can do the following:
 

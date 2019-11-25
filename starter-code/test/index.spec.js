@@ -34,10 +34,12 @@ describe("SortedList", () => {
     it("should add a value while keeping the list sorted", () => {
       list.add(30);
       list.add(20);
+      list.add(100);
       list.add(10);
       assert.equal(list.items[0], 10);
       assert.equal(list.items[1], 20);
       assert.equal(list.items[2], 30);
+      assert.equal(list.items[3], 100);
     });
   });
 
@@ -71,7 +73,7 @@ describe("SortedList", () => {
       list = new SortedList();
     });
 
-    it("should return an EmptySortedList exception if there is no elements in the list", () => {
+    it("should return an EmptySortedList exception if there are no elements in the list", () => {
       assert.throws(
         () => {
           list.max([]);
