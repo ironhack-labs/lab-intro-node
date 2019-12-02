@@ -26,26 +26,26 @@ class SortedList {
     if(this.length===0){
       throw new Error("EmptySortedList");
     }
-    let max = 0;
- for(let i =0;i<this.length;i++){
+//     let max = 0;
+//  for(let i =0;i<this.length;i++){
    
-   if(this.items[i]>max)
-   max = this.items[i]
- }
- return max
+//    if(this.items[i]>max)
+//    max = this.items[i]
+//  }
+ return this.items[this.length-1]
   }
 
   min() {
     if(this.length===0){
       throw new Error("EmptySortedList");
     }
-    let min = this.items[0];
- for(let i =0;i<this.length;i++){
+//     let min = this.items[0];
+//  for(let i =0;i<this.length;i++){
    
-   if(this.items[i]<min)
-   min = this.items[i]
- }
- return min
+//    if(this.items[i]<min)
+//    min = this.items[i]
+//  }
+ return this.items[0]
   }
 
   sum() {
