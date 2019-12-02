@@ -27,15 +27,45 @@ class SortedList {
     }
     this.length++;
   }
-  get(pos) {}
+  get(pos) {
+    if (pos >= this.length || pos < 0){
+      throw new Error("OutOfBounds");
+    } else {
+      return this.items[pos];
+    }
+  }
 
-  max() {}
+  max() {
+    if (this.length > 0){
+      return this.items[this.length-1]
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
-  min() {}
+  min() {
+    if (this.length > 0){
+      return this.items[0]
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
-  sum() {}
+  sum() {
+    if (this.length > 0){
+      return this.items.reduce((accumulator, currentValue) => accumulator + currentValue);
+    } else {
+      return 0
+    }
+  }
 
-  avg() {}
+  avg() {
+    if (this.length > 0){
+      return this.sum() / this.length;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 }
 
 module.exports = SortedList;
