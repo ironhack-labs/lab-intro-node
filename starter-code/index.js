@@ -15,25 +15,22 @@ class SortedList {
     else return this.items[pos];
   };
 
-  max() {
-    if (this.length) {
-      return Math.max(...this.items);
-    } else {
-      throw new Error("EmptySortedList");
-    }
-  }
+  max = () => {
+    if (this.length) return Math.max(...this.items);
+    else throw Error("EmptySortedList");
+  };
 
-  min() {
-    if (this.length) {
-      return Math.min(...this.items);
-    } else {
-      throw new Error("EmptySortedList");
-    }
-  }
+  min = () => {
+    if (this.length) return Math.min(...this.items);
+    else throw Error("EmptySortedList");
+  };
 
-  sum() {}
+  sum = () => (this.length ? this.items.reduce((a, b) => (b += a)) : 0);
 
-  avg() {}
+  avg = () => {
+    if (this.length) return this.items.reduce((a, b) => (b += a)) / this.length;
+    else throw Error("EmptySortedList");
+  };
 }
 
 module.exports = SortedList;
