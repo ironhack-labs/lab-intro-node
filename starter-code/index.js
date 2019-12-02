@@ -28,7 +28,7 @@ class SortedList {
   sum = () => (this.length ? this.items.reduce((a, b) => (b += a)) : 0);
 
   avg = () => {
-    if (this.length) return this.items.reduce((a, b) => (b += a)) / this.length;
+    if (this.length) return this.sum() / this.length;
     else throw Error("EmptySortedList");
   };
 }
