@@ -71,8 +71,9 @@ class SortedList {
     if (this.items.length > 0){
       return this.sum()/this.items.length
       }
+
  else {
-      throw new Error("EmptySortedList");
+      return item
     }
   }
 }
