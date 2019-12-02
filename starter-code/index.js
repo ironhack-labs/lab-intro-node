@@ -63,12 +63,13 @@ class SortedList {
     if(this.length===0){
       throw new Error("EmptySortedList");
     }
-    let sum = 0;
-    for(let i =0;i<this.length;i++){
+    // let sum = 0;
+    // for(let i =0;i<this.length;i++){
       
       
-      sum+= this.items[i]
-    }
+    //   sum+= this.items[i]
+    // }
+    let sum=this.sum()
     return (sum/this.length)
   }
 }
