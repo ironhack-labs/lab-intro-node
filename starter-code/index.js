@@ -10,7 +10,13 @@ class SortedList {
     this.length = sortedItems.length
   }
 
-  get(pos) {}
+  get(pos) {
+    if(pos = this.items[pos]){
+      return this.items[pos]
+    } else {
+      throw new Error("OutOfBounds");
+    }
+  }
 
   max() {}
 
