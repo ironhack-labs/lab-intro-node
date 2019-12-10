@@ -37,7 +37,7 @@ class SortedList {
   avg() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
-    } else return this.items.reduce((acc, currentValue) => acc + currentValue, 0) / this.items.length;
+    } else return this.items.reduce((acc, currentValue) => acc + currentValue) / this.items.length;
   }
 }
 
