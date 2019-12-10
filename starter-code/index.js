@@ -1,17 +1,42 @@
+
+
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = 0;
+  }
 
-  add(item) {}
+  add(item) {
+    this.length = this.items.push(item);
+    this.items.sort((a,b) => {return (a-b)});
+  }
 
-  get(pos) {}
+  get(pos) {
+    if (pos < 0 || pos >= this.length) throw new Error("OutOfBounds");
+    else return this.items[pos];
+  }
 
-  max() {}
+  max() {
+    if (this.length === 0) throw new Error("EmptySortedList");
+    else return this.items[this.length - 1];
+  }
 
-  min() {}
+  min() {
+    if (this.length === 0) throw new Error("EmptySortedList");
+    else return this.items[0];
+  }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((acc,e) => {return acc + e}, 0);
+  }
 
-  avg() {}
+  avg() {
+    if (this.length > 0) return this.sum() / this.length;
+    else throw new Error("EmptySortedList");
+  }
+   
+
 }
 
 module.exports = SortedList;
+
