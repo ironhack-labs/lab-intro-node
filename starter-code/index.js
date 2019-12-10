@@ -32,7 +32,12 @@ class SortedList {
   }
   
 
-  sum() {}
+  sum() {
+    if(this.length>0){
+      return this.items.reduce((total, num)=>total+num);
+    }
+    return 0;
+  }
 
   avg() {}
 }
