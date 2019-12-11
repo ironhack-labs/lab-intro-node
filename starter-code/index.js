@@ -9,7 +9,12 @@ class SortedList {
     this.items.sort((a, b) => a - b);
   }
 
-  get(pos) {}
+  get(pos) {
+   if(!this.items[pos]){
+    throw new Error("OutOfBounds");
+   }
+   return this.items[pos];
+  }
 
   max() {}
 
