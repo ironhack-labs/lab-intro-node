@@ -38,7 +38,12 @@ class SortedList {
       (a, b) => a + b, 0);
   }
 
-  avg() {}
+  avg() {
+    if(this.length == 0){
+      throw new Error("EmptySortedList");
+    }
+      return this.sum(this.items)/this.length;    
+  }
 }
 
 
