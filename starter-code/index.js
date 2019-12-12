@@ -30,7 +30,13 @@ class SortedList {
     return Math.min(...this.items);
   }
 
-  sum() {}
+  sum() {
+    if(this.length == 0){
+      return 0;
+    }
+    return this.items.reduce(
+      (a, b) => a + b, 0);
+  }
 
   avg() {}
 }
