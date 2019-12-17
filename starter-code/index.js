@@ -4,11 +4,10 @@ class SortedList {
     this.length = this.items.length;
   }
 
-  add(item) {
+  add(item) { 
     this.items.push(item)
-    this.items.sort()
     this.length = this.items.length;
-
+    this.items.sort((a,b) => a - b)
   }
 
   get(pos) {
@@ -66,4 +65,4 @@ module.exports = SortedList;
 // newArr.add(1)
 // newArr.add(4)
 
-// console.log(newArr.get())
+// console.log(newArr.add(3))
