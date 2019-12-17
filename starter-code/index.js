@@ -12,15 +12,28 @@ class SortedList {
 
   get(pos) {
     if (this.items[pos]) {
-
-    } else {
-
+      return this.items[pos];
     }
+    throw new Error("OutOfBounds");
   }
 
-  max() {}
+  max() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return this.items.reduce((a, b) => {
+      return Math.max(a, b);
+    });
+  }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return this.items.reduce((a, b) => {
+      return Math.min(a, b);
+    });
+  }
 
   sum() {}
 
