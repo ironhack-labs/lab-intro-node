@@ -31,7 +31,9 @@ class SortedList {
       throw new Error("EmptySortedList");
   }
 
-  sum() {}
+  sum() {
+      return this.items.reduce((acc, val) => { return acc + val }, 0);
+  }
 
   avg() {}
 }
