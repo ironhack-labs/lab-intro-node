@@ -1,5 +1,9 @@
+/*jshint esversion: 6 */
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = 0;
+  }
 
   add(item) {}
 
