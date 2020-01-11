@@ -5,17 +5,43 @@ class SortedList {
     this.length = 0;
   }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.length++;
+    this.items.sort((a, b) => a - b);
+  }
 
-  get(pos) {}
+  get(pos) {
+    if (this.items.indexOf(pos) === -1) {
+      throw new Error("OutOfBounds");
+    }
+    return this.items.indexOf(pos);
+  }
 
-  max() {}
+  max() {
+    if (this.length < 1) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.max(...this.items);
+  }
 
-  min() {}
+  min() {
+    if (this.length < 1) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.min(...this.items);
+  }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((acc, currVal) => acc + currVal, 0);
+  }
 
-  avg() {}
+  avg() {
+    if (this.length < 1) {
+      throw new Error("EmptySortedList");
+    }
+    return this.sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
