@@ -32,7 +32,13 @@ class SortedList {
     return this.items.reduce((a, b) => a + b, 0)
   }
 
-  avg() {}
+  avg() {
+    if(this.length !== 0) {
+      return this.sum()/this.length
+    } else {
+      throw new Error ("EmptySortedList")
+    }
+  }
 }
 
 module.exports = SortedList;
