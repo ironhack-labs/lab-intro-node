@@ -11,27 +11,15 @@ class SortedList {
   }
 
   get(pos) {
-    if (this.items[pos]) {
-      return this.items[pos];
-    } else {
-      throw new Error("OutOfBounds");
-    }
+    return this.items[pos] ? this.items[pos] : function() {throw new Error("OutOfBounds")}();
   }
 
   max() {
-    if (this.items.length > 0) {
-      return Math.max(...this.items);
-    } else {
-      throw new Error("EmptySortedList");
-    }
+    return this.items.length > 0 ? Math.max(...this.items) : function() {throw new Error("EmptySortedList")}();
   }
 
   min() {
-    if (this.items.length > 0) {
-      return Math.min(...this.items);
-    } else {
-      throw new Error("EmptySortedList");
-    }
+    return this.items.length > 0 ? Math.min(...this.items) : function() {throw new Error("EmptySortedList")}();
   }
 
   sum() {
@@ -39,11 +27,7 @@ class SortedList {
   }
 
   avg() {
-    if (this.length !== 0) {
-      return this.sum() / this.length;
-    } else {
-      throw new Error("EmptySortedList");
-    }
+    return this.length !== 0 ? this.sum() / this.length : function() {throw new Error("EmptySortedList")}();
   }
 }
 
