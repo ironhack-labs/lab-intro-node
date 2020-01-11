@@ -28,7 +28,9 @@ class SortedList {
     } else {throw new Error("EmptySortedList")}
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((a, b) => a + b, 0)
+  }
 
   avg() {}
 }
