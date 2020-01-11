@@ -22,7 +22,11 @@ class SortedList {
     } else {throw new Error("EmptySortedList")}
   }
 
-  min() {}
+  min() {
+    if (this.items.length > 0) {
+      return Math.min(...this.items)
+    } else {throw new Error("EmptySortedList")}
+  }
 
   sum() {}
 
