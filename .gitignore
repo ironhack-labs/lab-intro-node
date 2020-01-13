@@ -1,3 +1,5 @@
+.DS_Store
+.VScode
 # Logs
 logs
 *.log
