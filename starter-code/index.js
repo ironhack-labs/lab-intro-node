@@ -69,15 +69,15 @@ class SortedList {
   }
 }
 
-module.exports = SortedList;
 const test = new SortedList();
 // console.log(test.add(5));
 // console.log(test.add(2));
 // console.log(test.add(7));
-console.log(test.items);
-// console.log(test.add(1, 2, 7, 4, 6, 24, 5));
-console.log(test.get(1));
-console.log(test.max());
-console.log(test.min());
-console.log(test.sum());
-console.log(test.avg());
+// console.log(test.items);
+// // console.log(test.add(1, 2, 7, 4, 6, 24, 5));
+// console.log(test.get(1));
+// console.log(test.max());
+// console.log(test.min());
+// console.log(test.sum());
+// console.log(test.avg());
+module.exports = SortedList;
