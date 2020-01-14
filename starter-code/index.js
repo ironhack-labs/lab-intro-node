@@ -11,22 +11,46 @@ class SortedList {
   }
 
   get(pos) {
-    let value;
     if ((pos + 1) > this.items.length) {
       throw new Error("OutOfBounds");
     } else {
-      value = this.items[pos];
+      return this.items[pos];
     }
-    return value;
   }
 
-  max() {}
+  max() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.max(...this.items);
+    }
+  }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.min(...this.items);
+    }
+  }
 
-  sum() {}
+  sum() {
+    if (this.items.length === 0) {
+      return 0;
+    } else {
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      return this.items.reduce(reducer);
+    }
+  }
 
-  avg() {}
+  avg() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      return (this.items.reduce(reducer))/ this.items.length;
+    }
+  }
 }
 
 module.exports = SortedList;
