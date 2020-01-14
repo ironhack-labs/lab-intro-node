@@ -43,7 +43,7 @@ class SortedList {
   min() {
     // try {
     if (this.items.length === 0) {
-      throw Error('EmptySortedList');
+      throw new Error('EmptySortedList');
     }
     return Math.min(...this.items);
     // } catch (err) {
@@ -60,7 +60,7 @@ class SortedList {
   avg() {
     // try {
     if (this.items.length === 0) {
-      throw Error('EmptySortedList');
+      throw new Error('EmptySortedList');
     }
     return this.sum() / this.length;
     // } catch (err) {
