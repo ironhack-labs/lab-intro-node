@@ -13,7 +13,7 @@ class SortedList {
   get(pos) {
     return (
       this.items[pos] ||
-      (function() {
+      (() => {
         throw new Error('OutOfBounds');
       })()
     );
@@ -32,7 +32,7 @@ class SortedList {
   min() {
     //1.
     return !this.length
-      ? (function() {
+      ? (() => {
           throw new Error('OutOfBounds');
         })()
       : Math.min(...this.items);
