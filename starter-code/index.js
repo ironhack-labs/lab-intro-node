@@ -10,29 +10,18 @@ class SortedList {
     return this.items.sort((a, b) => a - b);
   }
 
-  //with arguments
-  // add(item) {
-  //   return [...arguments].sort((a, b) => a - b);
-  // }
-
   get(pos) {
-    // try {
-    if (this.items[pos] === undefined) {
-      // return !this.items[pos];
-      throw new Error('OutOfBounds');
-    }
-    return this.items[pos];
-    // } catch (err) {
-    //   return `(${err.name}): ${err.message}`;
-    //   // return ` ${err}`;
-    // }
+    return (
+      this.items[pos] ||
+      (function() {
+        throw new Error('OutOfBounds');
+      })()
+    );
   }
 
   max() {
     // try {
-    if (this.items.length === 0) {
-      throw new Error('EmptySortedList');
-    }
+    if (!this.length) throw new Error('EmptySortedList');
     return Math.max(...this.items);
     // } catch (err) {
     //   return ` ${err}`;
@@ -41,43 +30,27 @@ class SortedList {
   }
 
   min() {
-    // try {
-    if (this.items.length === 0) {
-      throw new Error('EmptySortedList');
-    }
-    return Math.min(...this.items);
-    // } catch (err) {
-    //   return ` ${err}`;
-    //   // return `Error: ${err.message}`; //or
+    //1.
+    return !this.length
+      ? (function() {
+          throw new Error('OutOfBounds');
+        })()
+      : Math.min(...this.items);
+    //2.
+    // if (!this.length) {
+    //   throw new Error('EmptySortedList');
     // }
+    // return Math.min(...this.items);
   }
 
   sum() {
-    if (this.items.length == 0) return 0;
-    return this.items.reduce((acc, val) => acc + val);
+    return !this.length ? 0 : this.items.reduce((acc, val) => acc + val);
   }
 
   avg() {
-    // try {
-    if (this.items.length === 0) {
-      throw new Error('EmptySortedList');
-    }
+    if (!this.length) throw new Error('EmptySortedList');
     return this.sum() / this.length;
-    // } catch (err) {
-    //   return ` ${err}`;
-    // }
   }
 }
 
-const test = new SortedList();
-// console.log(test.add(5));
-// console.log(test.add(2));
-// console.log(test.add(7));
-// console.log(test.items);
-// // console.log(test.add(1, 2, 7, 4, 6, 24, 5));
-// console.log(test.get(1));
-// console.log(test.max());
-// console.log(test.min());
-// console.log(test.sum());
-// console.log(test.avg());
 module.exports = SortedList;
