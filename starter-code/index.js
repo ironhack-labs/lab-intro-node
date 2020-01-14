@@ -1,9 +1,24 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = this.items.length;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.items.sort((a, b) => a - b);
+    this.length = this.items.length;
+  }
 
-  get(pos) {}
+  get(pos) {
+    let value;
+    if ((pos + 1) > this.items.length) {
+      throw new Error("OutOfBounds");
+    } else {
+      value = this.items[pos];
+    }
+    return value;
+  }
 
   max() {}
 
