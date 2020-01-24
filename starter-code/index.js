@@ -15,13 +15,25 @@ class SortedList {
     throw new Error("OutOfBounds");
   }
 
-  max() {}
+  max() {
+    if ( this.length > 0 ) return Math.max(...this.items);
+    throw new Error("EmptySortedList");
+  }
 
-  min() {}
+  min() {
+    if ( this.length > 0 ) return Math.min(...this.items);
+    throw new Error("EmptySortedList");
+  }
 
-  sum() {}
+  sum() {
+    if ( this.length > 0 ) return this.items.reduce( (acc, cur) => acc + cur );
+    return 0;
+  }
 
-  avg() {}
+  avg() {
+    if ( this.length > 0 ) return this.sum() / this.length;
+    throw new Error("EmptySortedList");
+  }
 }
 
 module.exports = SortedList;
