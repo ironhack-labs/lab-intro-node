@@ -1,6 +1,7 @@
 //sorted list of numbers in ascending order
 class SortedList {
   constructor() {
+    //constructor only gets called once when you initilize a class
     this.items = [];
     this.length = this.items.length;
   }
