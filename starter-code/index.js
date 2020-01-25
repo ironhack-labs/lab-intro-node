@@ -44,6 +44,8 @@ class SortedList {
   }
 
   sum() {
+    return this.items.reduce((acc, val) => acc + val, 0);
+    //or
     return !this.length ? 0 : this.items.reduce((acc, val) => acc + val);
   }
 
