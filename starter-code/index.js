@@ -43,7 +43,9 @@ class SortedList {
     return Math.min(...this.items);
   }
 
-  sum() {}
+  sum() {
+    //
+  }
 
   avg() {}
 }
