@@ -42,8 +42,18 @@ class SortedList {
     return sum;
   }
 
+  //sacar la media
   avg() {
-    
+
+    if (this.items.length === 0) {
+      throw Error("EmptySortedList")
+    } else {
+      let sum = 0;
+      this.items.forEach(e => {
+        sum += e;
+      })
+      return sum / this.items.length;
+    }
   }
 }
 
