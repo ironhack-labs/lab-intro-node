@@ -34,9 +34,17 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    let sum = 0;
+    this.items.forEach(e => {
+      sum += e;
+    })
+    return sum;
+  }
 
-  avg() {}
+  avg() {
+    
+  }
 }
 
 module.exports = SortedList;
