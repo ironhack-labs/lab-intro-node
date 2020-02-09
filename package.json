@@ -1,0 +1,13 @@
+{
+  "name": "lab-intro-node",
+  "version": "2.0.0",
+  "description": "Intro Node Lab for Students",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "mocha": "^7.0.1"
+  }
+}
