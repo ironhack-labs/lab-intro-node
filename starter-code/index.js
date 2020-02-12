@@ -7,7 +7,6 @@ class SortedList {
   add(item) {
     this.items.push(item);
     this.items.sort(function(a, b){return a - b});
-    this.lenght++;
   }
 
   get(pos) {
@@ -19,9 +18,24 @@ class SortedList {
         }
   }
 
-  max() {}
+  max() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    else {
+      return Math.max(...this.items);
+    }
+    
+  }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    else {
+      return Math.min(...this.items);
+    }
+  }
 
   sum() {}
 
