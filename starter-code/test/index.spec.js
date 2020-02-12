@@ -1,5 +1,3 @@
-// jshint esversion: 6
-
 // Require the file which will be tested
 const SortedList = require("../index.js");
 
