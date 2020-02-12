@@ -52,14 +52,16 @@ class SortedList {
     }
   }
 
-  avg() {}
+  avg() {
+    if (this.length !== 0) {
+      const total = this.items.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+      });
+      return total / this.length;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 }
-
-const items = new SortedList();
-items.add(1);
-items.add(3);
-items.add(2);
-console.log(items);
-console.log(items.sum());
 
 module.exports = SortedList;
