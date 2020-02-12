@@ -22,7 +22,13 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.items.length != 0) {
+      return Math.max(...this.items);
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
   min() {}
 
