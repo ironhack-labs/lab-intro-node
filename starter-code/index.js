@@ -1,7 +1,7 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.lenght = this.items.lenght;
+    this.length = this.items.length;
   }
 
   add(item) {
@@ -38,9 +38,16 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if (this.length != 0) {
+      return this.items.reduce((accum, value) => {
+        return accum + value;
+      });
+    } else {
+      return 0;
+    }
+  }
 
   avg() {}
-}
 
 module.exports = SortedList;
