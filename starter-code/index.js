@@ -33,11 +33,33 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if (this.length !== 0) {
+      return this.items[0];
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
-  sum() {}
+  sum() {
+    if (this.length !== 0) {
+      const total = this.items.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+      });
+      return total;
+    } else {
+      return 0;
+    }
+  }
 
   avg() {}
 }
+
+const items = new SortedList();
+items.add(1);
+items.add(3);
+items.add(2);
+console.log(items);
+console.log(items.sum());
 
 module.exports = SortedList;
