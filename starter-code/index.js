@@ -47,7 +47,11 @@ class SortedList {
   }
 
   avg() {
-
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.items.reduce((a, b) => a + b, 0) / this.items.length;
+    }
   }
 }
 
