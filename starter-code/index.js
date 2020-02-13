@@ -29,7 +29,6 @@ class SortedList {
     else{
       return Math.max(...this.items)
     }
-
   }
 
   min() {
@@ -39,15 +38,27 @@ class SortedList {
     else{
       return Math.min(...this.items)
     }
-
   }
 
   sum() {
-
+    let sumElements = 0
+    this.items.forEach(function(element){
+      sumElements += element
+    })
+    return sumElements
   }
 
   avg() {
-
+    if(this.items.length === 0){
+      throw new Error("EmptySortedList");
+    }
+    else{
+      let sumElements = 0
+      this.items.forEach(function(element){
+        sumElements+=element
+      })
+      return sumElements/this.items.length
+    }
   }
 }
 
