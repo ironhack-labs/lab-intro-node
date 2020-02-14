@@ -24,11 +24,27 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.length === 0){
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.max(...this.items);
 
-  min() {}
+    }
+  }
 
-  sum() {}
+  min() {
+    if (this.length === 0){
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.min(...this.items);
+
+    }
+  }
+
+  sum() {
+    
+  }
 
   avg() {}
 }
