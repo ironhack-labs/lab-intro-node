@@ -47,9 +47,8 @@ class SortedList {
     if (this.items.length <= 0) {
       throw new Error("EmptySortedList");
     } else {
-      let result = 0;
-      this.items.forEach(item => result += item)
-      return result / this.items.length;
+      const reducer = (acc, value) => acc + value;
+      return this.items.reduce(reducer) / this.items.length;
     }
   }
 }
