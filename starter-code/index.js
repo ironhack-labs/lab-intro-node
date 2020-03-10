@@ -20,7 +20,7 @@ class SortedList {
     if(this.items.find(element => element === pos)){
       return this.items[pos];
     }else{
-      return OutOfBounds;
+      throw new Error("OutOfBounds");
     }
   }
 
