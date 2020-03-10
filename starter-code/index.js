@@ -27,7 +27,7 @@ class SortedList {
   max() {
     let arra=this.items;
     if( this.length === 0){
-      return EmptySortedList;
+      throw new Error(EmptySortedList);
     }else{
       var max = Math.max(...arra);
       return max;
@@ -37,7 +37,7 @@ class SortedList {
   min() {
     var arra=this.items;
     if(this.length === 0){
-      return EmptySortedList;
+      throw new Error(EmptySortedList);
     }else{
       var min = Math.min(...arra);
       return min;
@@ -59,7 +59,7 @@ class SortedList {
   avg() {
     var arra=this.items;
     if(this.length === 0){
-      return EmptySortedList;
+      throw new Error(EmptySortedList);
     }else{
       var total = arra.reduce((acu,next)=>{
         return acu+next;
