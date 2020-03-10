@@ -47,7 +47,10 @@ class SortedList {
   }
 
   avg() {
-    return (this.items.reduce((accumulator, currentValue) => {return accumulator + currentValue;})/this.items.length);
+    if (this.items[0] === undefined ){
+      throw Error('EmptySortedList')
+    }
+    return (this.sum()/this.items.length);
   }
 }
 
