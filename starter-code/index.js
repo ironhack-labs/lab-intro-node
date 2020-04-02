@@ -13,11 +13,16 @@ class SortedList {
   }
 
   get(pos) {
-    if (pos > this.length) {
+    if (pos > this.length - 1) {
       throw new Error("OutOfBounds")
     } else {
       return this.items[pos]
     }
+
+    /* easier:
+    if (pos > this.length -1) {throw new Error("OutOfBounds")}
+    return this.items[pos]
+    */
   }
 
   max() {
@@ -47,6 +52,9 @@ class SortedList {
     if (this.length === 0) {
       return sumArray = 0
     } else {
+      /* even shorter:
+      return this.items.reduce((sum, el) => sum + el, 0)
+      */
       for (let i = 0; i < this.length; i++) {
         sumArray += this.items[i]
       }
