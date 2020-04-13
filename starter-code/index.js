@@ -45,13 +45,13 @@ class SortedList {
 
 	sum() { 
 
-		return this.length > 0 ? this.items.reduce((acc, elm) => acc += elm, 0) : 0
+		return this.length > 0 ? this.items.reduce((acc, elm) => acc += elm) : 0
 	}
 
 	avg() { 
 	
 		if (this.length > 0) {
-			return this.items.reduce((acc, elm) => acc += elm, 0) / this.length
+			return this.sum() / this.length
 
 		} else {
 			throw new Error("EmptySortedList")
