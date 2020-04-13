@@ -6,7 +6,7 @@ class SortedList {
 
   add(item) {
     this.items.push(item)
-    this.items.sort((a, b) => {
+    this.items = this.items.sort((a, b) => {
       return a - b
     })
     this.length = this.items.length
@@ -20,7 +20,13 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+      throw new Error('EmptySortedList')
+    } else {
+      return this.items[this.length - 1]
+    }
+  }
 
   min() {}
 
