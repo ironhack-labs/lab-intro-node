@@ -1,12 +1,12 @@
 class SortedList {
   constructor() {
     this.items = []
-    this.length = 0
+    this.length = this.items.length
   }
   add(item) {
     this.items.push(item)
     this.items.sort((a, b) => a - b)
-    
+
     return this.length = this.items.length
   }
 
@@ -49,11 +49,3 @@ class SortedList {
 }
 
 module.exports = SortedList
-
-let prueba = new SortedList()
-prueba.add(1)
-prueba.add(4)
-prueba.add(7)
-console.log(prueba.sum());
-console.log(prueba.length);
-console.log(prueba.avg());
