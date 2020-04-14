@@ -18,16 +18,20 @@ class SortedList {
     }
   }
 
-  max() {
+  checkIfNoItems() {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
-    } else return Math.max(...this.items);
+    }
+  }
+
+  max() {
+    this.checkIfNoItems();
+    return Math.max(...this.items);
   }
 
   min() {
-    if (this.items.length === 0) {
-      throw new Error("EmptySortedList");
-    } else return Math.min(...this.items);
+    this.checkIfNoItems();
+    return Math.min(...this.items);
   }
 
   sum() {
@@ -39,9 +43,8 @@ class SortedList {
   }
 
   avg() {
-    if (this.items.length === 0) {
-      throw new Error("EmptySortedList");
-    } else return this.items.reduce((a, b) => a + b) / this.length;
+    this.checkIfNoItems();
+    return this.items.reduce((a, b) => a + b) / this.length;
   }
 }
 
