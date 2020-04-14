@@ -1,6 +1,7 @@
 class SortedList {
   constructor(items, length) {
-    (this.items = []), (this.length = this.items.length);
+    (this.items = []), 
+    (this.length = this.items.length);
   }
 
   add(item) {
@@ -12,7 +13,7 @@ class SortedList {
   }
 
   get(pos) {
-    if(pos <= this.items.length){
+    if(pos <= this.length){
       return this.items[pos]
     }
     throw new Error("OutOfBounds");
@@ -20,27 +21,27 @@ class SortedList {
   }
 
   max() {
-    if(this.items.length > 0){
+    if(this.length > 0){
       return Math.max(...this.items)
     }
     throw new Error("EmptySortedList");
   }
 
   min() {
-    if(this.items.length > 0){
+    if(this.length > 0){
       return Math.min(...this.items)
     }
     throw new Error("EmptySortedList");
   }
 
   sum() {
-    if(this.items.length <= 0) return 0
+    if(this.length <= 0) return 0
     var total = this.items.reduce(function(a, b){ return a + b; });
     return total
   }
 
   avg() {
-    if(this.items.length > 0){
+    if(this.length > 0){
       return this.sum() / this.items.length
     }
     throw new Error("EmptySortedList");
