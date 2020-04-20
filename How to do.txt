@@ -1,0 +1,5 @@
+Il faut dans le terminal écrire "npm run test", car :
+
+ "scripts": {
+   "test": "mocha"
+ },
