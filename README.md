@@ -51,7 +51,7 @@ We have already included Mocha in the project you just forked, so let's see how 
 
 To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (npm) to manage all the packages in our projects.
 
-**Navigate to the `starter-code`** and then run the following command:
+Run the following command:
 
 ```
 $ npm install mocha
@@ -66,7 +66,7 @@ _Note_: The current version of mocha is 6.2.2.
 Before we start coding, let's explain the provided project structure:
 
 ```
-starter-code/
+.
 ├── test
 │   └── index.spec.js
 └─ package.json
@@ -79,12 +79,14 @@ The `test` folder contains all the tests we will execute with Mocha.
 
 ### Running the tests
 
-Running our tests with Mocha is super easy; you just have to run `npm test`. Before you run this command, make sure you navigate to the `starter-code` directory.
+Running our tests with Mocha is super easy; you just have to run `npm test`.
+
+<!-- Before you run this command, make sure you navigate to the `starter-code` directory. -->
 
 ```
 $ npm test
 
-> lab-intro-node@1.0.0 test /Users/Sandra/Desktop/iron-labs/lab-intro-node/starter-code
+> lab-intro-node@1.0.0 test /Users/Sandra/Desktop/iron-labs/lab-intro-node
 > mocha
 
 
@@ -151,7 +153,7 @@ In addition, make sure you _throw_ an error with the message _OutOfBounds_ if a 
 To throw an error, you can do the following:
 
 ```js
-throw new Error("OutOfBounds");
+throw new Error('OutOfBounds');
 ```
 
 <!-- ### Iteration 4: make that list sorted!
@@ -166,7 +168,7 @@ The `max()` method should return the highest value of the array.
 In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
-throw new Error("EmptySortedList");
+throw new Error('EmptySortedList');
 ```
 
 ### Iteration 5: min()
@@ -187,6 +189,6 @@ The `avg()` method should return the average value of the array.
 
 Just as before, check the corresponding test to see if there's anything else that needs to be added.
 
-And you reached the end!
+And you have reached the end!
 
 Happy Coding! :heart:
