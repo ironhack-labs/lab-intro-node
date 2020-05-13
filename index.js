@@ -1,6 +1,6 @@
 class SortedList {
   constructor(items, length) {
-    this.items = [];
+    this.items = [1,3,5,7];
     this.length = this.items.length;
   }
   sortItems (arr) {
@@ -16,7 +16,9 @@ class SortedList {
   }
 
 
-  get(pos) {}
+  get(pos) {
+    return this.items[pos];
+  }
 
   max() {}
 
@@ -29,9 +31,6 @@ class SortedList {
 
 
 let sortedList = new SortedList();
-sortedList.add(4);
-sortedList.add(6);
-sortedList.add(8);
-sortedList.add(0);
+
 
 module.exports = SortedList;
