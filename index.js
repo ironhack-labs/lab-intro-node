@@ -14,9 +14,7 @@ class SortedList {
   get(pos) {
     if (pos <= this.items.length) {
       return this.items[pos];
-    } else {
-      throw Error("OutOfBounds");
-    }
+    } else throw Error("OutOfBounds");
   }
   //Iteración 4: max ()
   max() {
@@ -39,7 +37,7 @@ class SortedList {
   sum() {
     return this.items.reduce((acc, val) => acc + val, 0);
   }
-//Iteration 7: avg()
+  //Iteration 7: avg()
   avg() {
     return !this.items.length
       ? (() => {
