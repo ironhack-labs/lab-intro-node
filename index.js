@@ -17,7 +17,12 @@ class SortedList {
 
 
   get(pos) {
+    if (pos < this.items.length){
+      console.log(this.items[pos])
     return this.items[pos];
+    } else {
+      throw new Error('OutOfBounds');
+    }
   }
 
   max() {}
@@ -31,6 +36,6 @@ class SortedList {
 
 
 let sortedList = new SortedList();
-
+sortedList.get(0);
 
 module.exports = SortedList;
