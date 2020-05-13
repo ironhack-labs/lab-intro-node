@@ -12,7 +12,7 @@ class SortedList {
   }
   //Iteration 3: get(pos)
   get(pos) {
-    if (pos <= this.length) {
+    if (pos < this.length) {
       return this.items[pos];
     } else throw Error("OutOfBounds");
   }
