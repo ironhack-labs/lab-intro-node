@@ -19,7 +19,13 @@ class SortedList {
     }
   }
 
-  get(pos) {}
+  get(pos) {
+    if (pos > this.length) {
+      throw new Error('OutOfBounds');
+    } else {
+      return this.items[pos];
+    }
+  }
 
   max() {}
 
