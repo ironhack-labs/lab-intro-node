@@ -2,13 +2,13 @@ class SortedList {
   constructor() {
     //Iteration 1: constructor()
     this.items = [];
-    this.lenght = this.items.length;
+    this.length = this.items.length;
   }
   //Iteration 2: add(item)
   add(item) {
-    this.length++;
     this.items.push(item);
     this.items.sort((a, b) => a - b);
+    this.length = this.items.length;
   }
   //Iteration 3: get(pos)
   get(pos) {
