@@ -22,22 +22,30 @@ class SortedList {
   }
 
   max() {
-    if (!this.items.length) {
+    if (!this.length) {
       this.getError("EmptySortedList");
     }
-    return this.items[this.items.length - 1];
+    return this.items[this.length - 1];
   }
 
   min() {
-    if (!this.items.length) {
+    if (!this.length) {
       this.getError("EmptySortedList");
     }
     return this.items[0];
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((acc, elem) => acc + elem, 0);
+  }
 
-  avg() {}
+  avg() {
+    if (!this.length) {
+      this.getError("EmptySortedList");
+    } else {
+      return this.sum() / this.length;
+    }
+  }
 }
 
 module.exports = SortedList;
