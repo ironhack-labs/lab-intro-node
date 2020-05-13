@@ -8,20 +8,32 @@ class SortedList {
   add(item) {
     this.length++;
     this.items.push(item);
-    this.items.sort((a, b) => a - b);
+    if (this.items.length >= 2) this.items.sort((a, b) => a - b);
   }
   //Iteration 3: get(pos)
   get(pos) {
     if (pos <= this.items.length) {
-      return this.items[pos - 1];
+      return this.items[pos];
     } else {
       throw Error("OutOfBounds");
     }
   }
-
-  max() {}
-
-  min() {}
+  //Iteración 4: max ()
+  max() {
+    return !this.items.length
+      ? (() => {
+          throw new Error("EmptySortedList");
+        })()
+      : Math.max(...this.items);
+  }
+  //Iteración 4: min ()
+  min() {
+    return !this.items.length
+      ? (() => {
+          throw new Error("EmptySortedList");
+        })()
+      : Math.min(...this.items);
+  }
 
   sum() {}
 
