@@ -5,11 +5,11 @@ class SortedList {
   }
 
   add(item) {
-    if (this.length === 0 || item > this.items[this.items.length - 1]) {
+    if (this.length === 0 || item > this.items[this.length - 1]) {
       this.items.push(item);
       this.length++;
     } else {
-      for (let i = 0; i < this.items.length; i++) {
+      for (let i = 0; i < this.length; i++) {
         if (item < this.items[i]) {
           this.items.splice(i, 0, item);
           this.length++;
@@ -27,9 +27,21 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (!this.length) {
+      throw new Error('EmptySortedList');
+    } else {
+      return this.items[this.length - 1];
+    }
+  }
 
-  min() {}
+  min() {
+    if (!this.length) {
+      throw new Error('EmptySortedList');
+    } else {
+      return this.items[0];
+    }
+  }
 
   sum() {}
 
