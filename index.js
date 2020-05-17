@@ -5,9 +5,9 @@ class SortedList {
   }
 
   add(item) {
-    this.item.push(item);
-    this.item.sort((a,b) => a-b);
-    this.length = this.item.length; 
+    this.items.push(item);
+    this.items.sort((a,b) => a-b);
+    this.length = this.items.length; 
             }
 
   get(pos) {
