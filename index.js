@@ -4,26 +4,26 @@ class SortedList {
     this.length = this.items.length;
   };
 
-  add(items) {
-    this.items.push()
+  add(item) {
+    this.items.push(item)
     // this.items.sort(function (a, b) {
     //   return a - b;
     // });
     this.items.sort((a, b) => a - b);
 
-    this.length = this.items.length
+    this.length += 1 //this.items.length
   };
 
   get(pos) {
-    if (this.items[pos] === undefined) {
+    if (!this.length[pos]) {
       throw new Error('OutOfBounds');
     } else {
-      return this.items[pos]
+      return this.items[pos];
     }
   };
 
   max() {
-    if (this.items.length <= 0){
+    if (this.items.length <= 0) {
       throw new Error('EmptySortedList');
     } else {
       return Math.max.apply(null, this.items);
@@ -32,7 +32,7 @@ class SortedList {
 
   min() {
 
-    if (this.items.length <= 0){
+    if (this.items.length <= 0) {
       throw new Error('EmptySortedList');
     } else {
       return Math.min.apply(null, this.items);
@@ -41,18 +41,18 @@ class SortedList {
   };
 
   sum() {
-   if (this.items.length <= 0){
-     return 0
-   } else{
-     return this.items.reduce((a,b)=> a+b)
-   }
+    if (this.items.length <= 0) {
+      return 0
+    } else {
+      return this.items.reduce((a, b) => a + b)
+    }
   };
 
   avg() {
-    if (this.items.length <= 0){
+    if (this.items.length <= 0) {
       throw new Error('EmptySortedList');
     } else {
-      return (this.items.reduce((a,b)=> a+b)) / this.items.length
+      return (this.items.reduce((a, b) => a + b)) / this.items.length
     }
   }
 }
