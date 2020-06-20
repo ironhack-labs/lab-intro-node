@@ -13,7 +13,7 @@ class SortedList {
 
   get(pos) {
     if (pos < 0 || pos >= this.length) {
-      throw new Error('OutOfBounds');
+      throw new Error('OutOfBounds')
     } else {
       return this.items[pos]
     }
@@ -21,7 +21,7 @@ class SortedList {
 
   max() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList');
+      throw new Error('EmptySortedList')
     } else {
       return this.items[this.length - 1]
     }
@@ -29,7 +29,7 @@ class SortedList {
 
   min() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList');
+      throw new Error('EmptySortedList')
     } else {
       return this.items[0]
     }
@@ -44,9 +44,10 @@ class SortedList {
 
   avg() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList');
+      throw new Error('EmptySortedList')
+    } else {
+      return this.sum() / this.length
     }
-    return this.sum() / this.length
   }
 }
 
