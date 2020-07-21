@@ -52,7 +52,7 @@ describe("SortedList", () => {
       }
     });
 
-    it("should return an OutOfBounds exception if there is no element in that position", () => {
+    it("should return an OutOfgitBounds exception if there is no element in that position", () => {
       assert.throws(
         () => {
           list.get(4);
