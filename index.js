@@ -2,13 +2,8 @@ class SortedList {
 
   //Iteration 1: constructor()
   constructor(items, length) {
-    if (typeof items === 'undefined') {
-      this.items = [];
-      this.length = 0;
-    } else {
-      this.items = items;
-      this.length = length;
-    }
+       this.items = [];
+      this.length = 0;     
   }
 
   // Iteration 2: add(item)
@@ -76,5 +71,8 @@ class SortedList {
   }
 
 }
+
+// const list = new SortedList([3, 8, 1], 3);
+// console.log(list);
 
 module.exports = SortedList;
