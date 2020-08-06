@@ -19,7 +19,7 @@ class SortedList {
       throw new Error("OutOfBounds");
     }
   }
-
+//to do
   max() {}
 
   min() {}
