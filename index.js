@@ -21,7 +21,7 @@ class SortedList {
   }
 
   max() {
-    if (this.length === 0) {
+    if (this.length == 0) {
       throw new Error('EmptySortedList');
   } else {
     return Math.max(...this.items)
@@ -29,15 +29,24 @@ class SortedList {
 }
 
   min() {
-    if (this.length === 0) {
+    if (this.length == 0) {
       throw new Error('EmptySortedList');
   } else {
     return Math.min(...this.items)
   }
   }
 
+  sum() {
+    if (this.length == 0) {
+      return 0;
+    } else {
+      var reducer = function(accumulator, currentValue) {
+        return accumulator + currentValue;
+      };
+    return this.items.reduce(reducer);
+    }
+  }
 
-  sum() {}
 
   avg() {}
 }
