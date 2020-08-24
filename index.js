@@ -1,12 +1,14 @@
 class SortedList {
-  constructor(items, length){
+  constructor(){
     this.items=[]
     this.length=this.items.length
   }
   add(item){
-    while(this.items.sort()){
-      this.items.push(item)
-    }
+    this.items.push(item)
+    this.length++;
+    this.items=this.items.sort(function(a,b){
+      return  a-b
+    });
   }
   get(pos){
     if(pos>this.items.length){
