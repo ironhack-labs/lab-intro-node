@@ -26,11 +26,17 @@ class SortedList {
     return Math.max(...this.items)
   }
 
-  min() {}
+  min() {
 
-  sum() {}
+  }
 
-  avg() {}
+  sum() {
+
+  }
+
+  avg() {
+    
+  }
 }
 
 module.exports = SortedList;
