@@ -27,15 +27,32 @@ class SortedList {
   }
 
   min() {
-
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    }
+    return Math.min(...this.items)
   }
 
   sum() {
-
+    if (this.items.length === 0) {
+      return 0
+    }
+    let sum = this.items.reduce(function(a,b) {
+      return a+b
+    }) 
+    return sum
   }
 
   avg() {
-    
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    }
+    let total = 0;
+    for (let i = 0; i < this.items.length; i++) {
+      total += this.items[i]
+    }
+    let avg = total / this.items.length;
+    return avg
   }
 }
 
