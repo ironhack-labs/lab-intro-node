@@ -19,7 +19,7 @@ describe("SortedList", () => {
     beforeEach(() => {
       list = new SortedList();
     });
-    it("should add a single value to SortedList", () => {
+    it("the length of the SortedList should be updated", () => {
       assert.equal(list.length, 0);
       list.add(1);
       assert.equal(list.length, 1);
