@@ -8,6 +8,7 @@ describe("SortedList", () => {
   describe("Constructor", () => {
     it("should have items and length properties", () => {
       const list = new SortedList();
+      const list2 = new SortedList();
       assert.equal(list instanceof SortedList, true);
       assert.equal(list.length, 0);
       assert(Array.isArray(list.items));
