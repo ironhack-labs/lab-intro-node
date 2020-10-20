@@ -20,7 +20,7 @@ class SortedList {
 
   max() {
     if(this.items.length > 0) {
-      return this.items[this.items.length - 1];
+      return Math.max(...this.items)
     } else {
       throw new Error('EmptySortedList')
     }
@@ -28,7 +28,8 @@ class SortedList {
 
   min() {
     if(this.items.length > 0){
-      return this.items[0];
+      return Math.min(...this.items)
+      // return this.items[0];
     } else {
       throw new Error('EmptySortedList')
     }
