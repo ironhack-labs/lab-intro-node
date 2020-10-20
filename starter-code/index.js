@@ -60,4 +60,4 @@ class SortedList {
   }
 
 
-module.exports = SortedList;
+module.export = SortedList;
