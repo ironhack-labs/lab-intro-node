@@ -140,7 +140,6 @@ The object should have two properties: `items` and `length`.
 
 The `add(item)` method should add the value `item` to the items array, ensuring that **the items array stays sorted in ascending order**.
 What does this mean? Well, if an array of items has these elements: `[2, 5, 7]`, and if `6` is added, the array of items should be as follows: `[2, 5, 6, 7]`.
-
 Here you should also make sure that the length property gets updated accordingly when new items are added to the list.
 
 ### Iteration 3: get(pos)
