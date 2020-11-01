@@ -33,7 +33,7 @@ class SortedList {
     // let res = ""
     // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList". For this, you can use:
     if (this.items.length === 0) {
-      throw new Error('EmptySortedList');
+      // throw new Error('EmptySortedList');
 
 
     } else {
@@ -43,7 +43,17 @@ class SortedList {
     // return res
   }
 
-  min() {}
+//The min() method should return the lowest value of the array.
+  min() {
+    // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList".
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    } else {
+
+      return this.items[0]
+    }
+
+  }
 
   sum() {}
 
