@@ -59,8 +59,10 @@ class SortedList {
 
     return this.items.reduce((a, b) => a + b, 0)
   }
-
-  avg() {}
+//The avg() method should return the average value of the array.
+  avg() {
+    return this.sum()/this.items.length 
+  }
 }
 
 module.exports = SortedList;
