@@ -54,8 +54,11 @@ class SortedList {
     }
 
   }
+// The sum() method should return the sum value of the array.
+  sum() {
 
-  sum() {}
+    return this.items.reduce((a, b) => a + b, 0)
+  }
 
   avg() {}
 }
