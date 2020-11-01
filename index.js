@@ -61,7 +61,12 @@ class SortedList {
   }
 //The avg() method should return the average value of the array.
   avg() {
-    return this.sum()/this.items.length 
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    } else {
+      return this.sum()/this.items.length
+
+    }
   }
 }
 
