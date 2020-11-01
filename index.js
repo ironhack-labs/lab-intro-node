@@ -26,8 +26,17 @@ class SortedList {
     return res
 
   }
-
-  max() {}
+  //The max() method should return the highest value of the array.
+  max() {
+    return this.items[this.items.length-1]
+    // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList". For this, you can use:
+    //
+    // throw new Error('EmptySortedList');The max() method should return the highest value of the array.
+    //
+    // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList". For this, you can use:
+    //
+    // throw new Error('EmptySortedList');
+  }
 
   min() {}
 
@@ -42,5 +51,7 @@ let list = new SortedList;
 list.add(2)
 list.add(5)
 list.add(7)
+list.add(7)
 
-console.log(list.get(2));
+
+console.log(list.max());
