@@ -33,7 +33,7 @@ class SortedList {
     // let res = ""
     // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList". For this, you can use:
     if (this.items.length === 0) {
-      // throw new Error('EmptySortedList');
+      throw new Error('EmptySortedList');
 
 
     } else {
@@ -72,11 +72,11 @@ class SortedList {
 
 module.exports = SortedList;
 
-let list = new SortedList;
+// let list = new SortedList;
 // list.add(2)
 // list.add(5)
 // list.add(7)
 // list.add(7)
 
 
-console.log(list.max());
+// console.log(list.max());
