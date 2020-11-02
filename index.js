@@ -36,16 +36,24 @@ class SortedList {
   }
 
   sum() {
+    if (this.items.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce((acc, currVal) => {
+        return acc + currVal;
+      });
+    }
+  }
+
+  avg() {
     if (this.items.length > 0) {
-      this.items.reduce((acc, currVal) => {
-        return acc * currVal;
+      return this.items.reduce((acc, currVal) => {
+        return Math.ceil((acc + currVal) / this.items.length);
       });
     } else {
       throw new Error("EmptySortedList");
     }
   }
-
-  avg() {}
 }
 
 module.exports = SortedList;
