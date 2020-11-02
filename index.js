@@ -48,13 +48,21 @@ class SortedList {
   sum() {
     let sum = 0
     let arr = [...this.items]
-   arr.reduce((acc, num) =>{
-      sum = acc + num
+   sum = arr.reduce((acc, num) =>{
+      return acc + num
     },0)
     return sum
   }
 
-  avg() {}
+  avg() {
+    let avg = 0
+    if(this.length == 0){
+      throw new Error('EmptySortedList')
+    }
+    avg = this.sum(this.items)/this.length
+    return avg
+  }
+  
 }
 function compare(a,b){return a-b;}
 
