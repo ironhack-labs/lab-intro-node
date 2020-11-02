@@ -18,31 +18,33 @@ class SortedList {
   }
 
   max() {
-    let max = 0
+
     if(this.items.length == 0){
       throw new Error('EmptySortedList')
-    }else{
-      this.items.forEach(num => {
+    }/*else{
+      max = 
+      /*this.items.forEach(num => {
         if(num > max){
           max = num
         } 
       })
-    }
-    return max
+    }*/
+    return this.items[this.length -1]
   }
 
   min() {
     let min = 10000000000000000000000000
     if(this.items.length == 0){
       throw new Error('EmptySortedList')
-    }else{
+    }/*else{
       this.items.forEach(num => {
         if(num < min){
           min= num
         } 
       })
     }
-    return min
+    return min*/
+    return this.items[0]
   }
 
   sum() {
