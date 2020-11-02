@@ -54,11 +54,3 @@ module.exports = SortedList;
 
 const sortedList= new SortedList
 
-sortedList.add(30)
-sortedList.add(20)
-sortedList.add(100)
-sortedList.add(200)
-sortedList.add(10)
-
-console.log(sortedList.sum())
-
