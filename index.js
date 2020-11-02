@@ -51,6 +51,3 @@ class SortedList {
 }
 
 module.exports = SortedList;
-
-const sortedList= new SortedList
-
