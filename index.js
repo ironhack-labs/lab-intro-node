@@ -8,12 +8,14 @@ class SortedList {
    }
 
   add(item) {
-    this.items.push(item);
-    if (!this.items.length){
+    
+  /*   if (!this.items.length){
       throw new Error('EmptySortedList');
-    } else {
-    return this.items.sort;
-    }
+    }  */
+    this.items.push(item);
+    this.length = this.items.length;
+    return this.items.sort((a,b) => a-b);
+    
   }
 
   get(pos) {
@@ -44,12 +46,18 @@ class SortedList {
   sum() {
     if (!this.items.length){
       return 0;
-    } else {
-    this.items.reduce(function (a, b)  { return a + b; });
-    }
-   }
+    } ;
+    return this.items.reduce((a, b) =>  a + b );
+    
+  }
 
-  avg() {}
+  avg() {
+    if (!this.items.length){
+      throw new Error('EmptySortedList');
+    };
+    
+    return this.sum()/this.items.length;
+    
 }
-
+}
 module.exports = SortedList;
