@@ -1,4 +1,5 @@
 // Require the file which will be tested
+const http= require('http');
 const SortedList = require("../index.js");
 
 // Load the Assertion Library
