@@ -1,17 +1,56 @@
 class SortedList {
-  constructor() {}
+  constructor(items) {
+    this.items = [];
+    this.length = this.items.length;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.items.sort(function(a, b){return a-b});
+    this.length = this.items.length;
+  }
 
-  get(pos) {}
+  get(pos) {
+    if (pos > this.length-1) {
+      throw new Error("OutOfBounds")
+    } else {
+      return this.items[pos]
+    };
+  }
+// why are Math.min/max not working here? They seem to return NaN :<
+  // max() {
+  //   if (this.length === 0) {throw new Error('EmptySortedList')}
+    
+  //   else {
+  //     console.log(Math.max(this.items));
+  //     return this.items.sort(function(a, b){return a-b})[this.length-1]} 
+  // }
+  max() {
+    if (this.length === 0) {throw new Error('EmptySortedList')}
+    else {
+      return Math.max(...this.items);
+    } 
+  }
 
-  max() {}
+  min() {
+    if (this.length === 0) {throw new Error('EmptySortedList')}
+    else {
+      return Math.min(...this.items);
+    } 
+  }
 
-  min() {}
+  sum() {
+      return this.items.reduce(function (a, current) {
+        return a + current;
+      }, 0);
+  }
 
-  sum() {}
-
-  avg() {}
+  avg() {
+    if (this.length === 0) {throw new Error('EmptySortedList')}
+    else {
+      return this.sum(this.items)/this.length;
+    }
+  }
 }
 
 module.exports = SortedList;
