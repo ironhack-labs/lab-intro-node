@@ -30,8 +30,8 @@ class SortedList {
   }
 
   min() {
-    if (!this.items) {
-      return new Error("EmptySortedList");
+    if (!this.items.length) {
+      throw new Error("EmptySortedList");
     }
     let min = Math.min(...this.items);
     if (typeof min === "number") {
