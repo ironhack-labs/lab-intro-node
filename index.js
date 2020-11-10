@@ -7,7 +7,7 @@ class SortedList {
   add(item) {
     this.items.push(item);
     this.items.sort((a, b) => a - b);
-    this.length = this.items.length;
+    this.length++;
   }
 
   get(pos) {
@@ -19,9 +19,6 @@ class SortedList {
   }
 
   max() {
-    //The max() method should return the highest value of the array.
-    // In case you have an empty SortedList, you must throw an error with the message "EmptySortedList". For this, you can use:
-    // throw new Error('EmptySortedList');
     if (this.length > 0) return Math.max(...this.items);
     throw new Error("EmptySortedList");
   }
