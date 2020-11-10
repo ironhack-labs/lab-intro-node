@@ -43,12 +43,15 @@ class SortedList {
     } else {
       return this.items.reduce((a, b) => a + b);
     }
+    // caculos da soma
   }
 
   avg() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
-    } else {}
+    } else {
+      return this.items.reduce((a, b) => a + b) / this.items.length;
+    }
   }
 }
 
