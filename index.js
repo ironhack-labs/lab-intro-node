@@ -6,10 +6,7 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
-    this.items.sort(function (a,b){
-        return a-b
-      }
-    );
+    this.items.sort((a,b) => a-b);
     this.length++
   }
 
@@ -25,9 +22,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return this.items.reduce(function(a,b){
-        return Math.max(a,b);
-      })
+      return this.items.reduce((a,b) => Math.max(a,b))
     }
   }
 
@@ -35,9 +30,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return this.items.reduce(function(a,b){
-        return Math.min(a,b);
-      })
+      return this.items.reduce((a,b) => Math.min(a,b))
     }
   }
 
@@ -45,7 +38,7 @@ class SortedList {
     if (this.length === 0) {
       return 0;
     } else {
-        let sum =0; 
+        let sum = 0; 
         for (let i=0; i<this.length; i++ ){
           sum += this.items[i];
           
@@ -58,12 +51,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-        let sum =0; 
-        for (let i=0; i<this.length; i++ ){
-          sum += this.items[i];
-          
-        }
-        return sum/this.length;
+        return this.sum()/this.length
       }
 
   }
