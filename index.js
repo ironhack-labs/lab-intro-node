@@ -30,6 +30,7 @@ class SortedList {
       }); 
     }
   }
+  //return Math.max(...this.items)
 
   min() {
     if (this.length === 0) {
@@ -40,16 +41,16 @@ class SortedList {
       });
   }
 }
+  //return Math.min(...this.items)
 
   sum() {
     if (this.length === 0) {
       return 0;
     } else {
-      let sum = 0;
-      for (let i = 0, i < this.length; i++ ) {
-        sum += this.items[i];
-      }
-      return sum;
+      let totalSum = this.items.reduce(function(a,b) {
+        return a + b;
+      }, 0);
+      return totalSum;
     }
   }
 
@@ -57,11 +58,10 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      let sum = 0;
-      for (let i = 0; i < this.length; i++) {
-        sum += this.items[i];
-      }
-      return sum/this.length;
+      let totalSum = this.items.reduce(function(a, b) {
+        return a + b;
+      }, 0);
+      return totalSum/this.length;
   }
 }
 
