@@ -4,9 +4,6 @@ class SortedList {
     this.length = this.items.length
   }
   add(item) {
-    if (!this.items){
-      this.length = 1
-    }
     this.items.push(item)
     this.items.sort(function(a,b){
       return a - b;
