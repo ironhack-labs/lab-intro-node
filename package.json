@@ -19,5 +19,13 @@
     "intro"
   ],
   "author": "fer@ironhack.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^8.2.1",
+    "mocka": "0.0.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {}
 }
