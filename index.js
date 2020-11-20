@@ -13,28 +13,29 @@ class SortedList {
   }
 
   get(pos) {
-    const index = this.items.filter((num, i, arr) => { if (i === pos) return num });
-    if (index[0]) {
-      console.log("esto", index)
-      return index[0]
-    } else {
-      throw new Error('OutOfBounds');
-    }
+    const num = this.items[pos]
+    if (num) return num
+    throw new Error('OutOfBounds');
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) throw new Error('EmptySortedList');
+    else return this.items[this.length -1]
+  }
 
-  min() {}
+  min() {
+    if (this.length === 0) throw new Error('EmptySortedList');
+    else return this.items[0]
+  }
 
-  sum() {}
+  sum() {
+    return this.items.reduce( (b, a) => a + b, 0)
+  }
 
-  avg() {}
+  avg() {
+    if (this.length === 0) throw new Error('EmptySortedList');
+    return this.sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
-
-/*const list = new SortedList;
-
-list.add(2);
-console.log(list.get(1))*/
-
