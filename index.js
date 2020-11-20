@@ -1,17 +1,65 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = this.items.length;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
 
-  get(pos) {}
+    this.items.sort(function (a, b) {
+      return a - b;
+    });
+    this.length = this.items.length;
+  }
 
-  max() {}
+  get(pos) {
+    if (pos > this.items.length) {
+      throw new Error("OutOfBounds");
+    } else {
+      return this.items[pos];
+    }
+  }
 
-  min() {}
+  max() {
+    if (this.items.length == 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      var max = Math.max(...this.items);
+      return max;
+    }
+  }
 
-  sum() {}
+  min() {
+    if (this.items.length == 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      var min = Math.min(...this.items);
+      return min;
+    }
+  }
 
-  avg() {}
+  sum() {
+    if (this.items.length == 0) {
+      return 0;
+    } else {
+      return this.items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue
+      );
+    }
+  }
+
+  avg() {
+    if (this.items.length == 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      var reducedArray = this.items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue
+      );
+      reducedArray = reducedArray / this.items.length;
+      return reducedArray;
+    }
+  }
 }
 
 module.exports = SortedList;
