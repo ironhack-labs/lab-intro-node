@@ -1,14 +1,18 @@
 class SortedList {
-  constructor(items,length) {
+  constructor() {
     this.items = [];
     this.length = 0;
   }
 
   add(item) {
-    this.items.push(item).sort((a,b)=>{
+    if (!this.items){
+      this.length = 1
+    }
+    this.items.push(item);
+    this.items.sort((a,b)=>{
       return a-b
     });
-    this.length++;
+    this.length = this.items.length
   }
 
   get(pos) {
@@ -38,16 +42,19 @@ class SortedList {
 
   sum() {
     if(this.length == 0){
-      throw new Error('EmptySortedList')
+      return 0
     } else {
-      this.items.reduce((acc,next)=>{
-        acc+next
-      })
+      return this.items.reduce((acc,next)=> acc+next)
     }
   }
 
   avg() {
-  return this.sum()/this.length;
+    if(this.length == 0){
+      throw new Error('EmptySortedList')
+    } else {
+      let sum = this.sum()
+      return sum/this.length
+    }
   }
 }
 
