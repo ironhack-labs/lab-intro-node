@@ -64,5 +64,6 @@ class SortedList {
       return totalSum/this.length;
   }
 }
+}
 
 module.exports = SortedList;
