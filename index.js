@@ -36,7 +36,13 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    const total = 0;
+    for(let item of this.items){
+      total += item;
+    }
+    return total;
+  }
 
   avg() {}
 }
