@@ -6,7 +6,7 @@ class SortedList {
 
     add(item) {
         this.items = [...this.items, item];
-        this.items.sort(function(a, b) { return a - b });
+        this.items.sort((a, b) => a - b);
         this.length = this.items.length;
     }
 
@@ -37,7 +37,7 @@ class SortedList {
 
     sum() {
         let sum = 0;
-        for (let i = 0; i < this.items.length; i++) {
+        for (let i = 0; i < this.length; i++) {
             sum += this.items[i];
         }
         return sum;
