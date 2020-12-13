@@ -23,17 +23,19 @@ class SortedList {
     if(this.items.length === 0){
       throw new Error('EmptySortedList')
     } else {
-      this.items.sort((a,b)=> a - b)
       return this.items[this.items.length-1]
     }
   }
 
   min() {
+    //Math.min ???
     if(this.items.length === 0){
       throw new Error('EmptySortedList')
     } else {
       this.items.sort((a,b)=> b - a)
       return this.items[this.items.length-1]
+      //or
+      //return this.items.reduce((a,b)=> Math.min(a,b))
     }
   }
 
