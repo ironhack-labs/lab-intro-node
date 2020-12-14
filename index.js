@@ -13,14 +13,12 @@ class SortedList {
   }
 
   get(pos) {
-    for (let i = 0; i < this.items.length; i++) {
-      pos = this.items[i - 1];
+      pos = this.items[pos];
       if (!pos) {
         throw new Error('OutOfBounds');
       } else {
-        return this.items[i];
+        return pos;
       }
-    }
   }
 
   max() {
@@ -44,7 +42,8 @@ class SortedList {
     if(this.length === 0) {
       return 0;
     } else {
-      this.items.reduce((acc, i) => {return acc + i;});
+      const sum = this.items.reduce((acc, pos) => {return acc + pos;});
+      return sum;
       }
   }
 
