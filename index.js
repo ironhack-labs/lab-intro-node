@@ -21,11 +21,26 @@ class SortedList {
     return this.items[pos];
   }
 
-  max() {}
+  max() {
+     if (this.length === 0) {
+       throw new Error("EmptySortedList");
+     }
+     return Math.max(...this.items);
+  }
 
-  min() {}
+  min() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.min(...this.items);
+  }
 
-  sum() {}
+  sum() {
+     if (this.length === 0) {
+       return 0;
+     }
+     return this.items.reduce((acc, cv) => acc +cv )
+  }
 
   avg() {}
 }
