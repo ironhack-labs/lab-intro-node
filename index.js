@@ -10,9 +10,16 @@ class SortedList {
     this.items.sort(function (a, b) {
       return a - b;
     });
+
+    this.length = this.items.length;
   }
 
-  get(pos) {}
+  get(pos) {
+    if (this.length - 1 < pos) {
+      throw new Error("OutOfBounds");
+    }
+    return this.items[pos];
+  }
 
   max() {}
 
@@ -22,6 +29,5 @@ class SortedList {
 
   avg() {}
 }
-
 
 module.exports = SortedList;
