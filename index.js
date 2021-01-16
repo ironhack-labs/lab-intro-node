@@ -22,10 +22,10 @@ class SortedList {
   }
 
   max() {
-     if (this.length === 0) {
-       throw new Error("EmptySortedList");
-     }
-     return Math.max(...this.items);
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.max(...this.items);
   }
 
   min() {
@@ -36,13 +36,18 @@ class SortedList {
   }
 
   sum() {
-     if (this.length === 0) {
-       return 0;
-     }
-     return this.items.reduce((acc, cv) => acc +cv )
+    if (this.length === 0) {
+      return 0;
+    }
+    return this.items.reduce((acc, cv) => acc + cv);
   }
 
-  avg() {}
+  avg() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return this.sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
