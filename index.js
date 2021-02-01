@@ -14,24 +14,34 @@ class SortedList {
   get(pos) {
     if (pos >= this.items.length)
       throw new Error('OutOfBounds');
+
     return this.items[pos];
   }
 
   max() {
     if (this.items.length === 0)
       throw new Error('EmptySortedList');
+
     return Math.max(...this.items);
   }
 
   min() {
     if (this.items.length === 0)
       throw new Error('EmptySortedList');
+
     return Math.min(...this.items);
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((total, el) => total + el, 0);
+  }
 
-  avg() {}
+  avg() {
+    if (this.items.length === 0)
+      throw new Error('EmptySortedList');
+
+    return this.sum()/this.length;
+  }
 }
 
 module.exports = SortedList;
