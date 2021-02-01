@@ -35,19 +35,14 @@ class SortedList {
   }
 
   sum() {
-    const sum = this.items.reduce(function (total, element) {
-      const updatedTotal = total + element;
-      return updatedTotal;
-    }, 0);
-    return sum;
+    return this.items.reduce((tot, el) => tot + el, 0);
   }
 
   avg() {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      const avg = this.sum() / this.items.length;
-      return avg;
+      return this.sum() / this.length;
     }
   }
 }
