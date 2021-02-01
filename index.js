@@ -20,10 +20,12 @@ class SortedList {
   }
 
   max() {
+    if (this.items.length === 0) throw new Error("EmptySortedList");
     return Math.max(...this.items);
   }
 
   min() {
+    if (this.items.length === 0) throw new Error("EmptySortedList");
     return Math.min(...this.items);
   }
 
@@ -33,5 +35,3 @@ class SortedList {
 }
 
 module.exports = SortedList;
-
-
