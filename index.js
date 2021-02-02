@@ -11,7 +11,7 @@ class SortedList {
   }
 
   get(pos) {
-    if (pos > this.length){
+    if (pos > this.items.length || pos < 0){
       throw new Error('OutOfBounds');
     } else {
       return this.items[pos];
@@ -19,16 +19,34 @@ class SortedList {
   }
 
   max() {
-    throw new Error('EmptySortedList');
+    if (!this.items.length) {
+      throw new Error("EmptySortedList");
+    }
+    return this.items[this.length - 1];
   }
 
   min() {
-    throw new Error('EmptySortedList');
+    if (!this.items.length) {
+      throw new Error("EmptySortedList");
+    }
+    return this.items[0];
   }
 
-  sum() {}
+  sum() {
+    if (!this.items.length) {
+      return 0;
+    }
+    // se iniciar o acumulador com 0, nao precisa colocar o if antes.
+    return this.items.reduce((acc, el) => acc + el, 0);
+  }
 
-  avg() {}
+  avg() {
+    if (!this.items.length) {
+      throw new Error("EmptySortedList");
+    }
+  // aproveitando a soma feita e so dividir pelo tamanho
+    return this.sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
