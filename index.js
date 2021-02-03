@@ -1,9 +1,19 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+  this.items = [],
+  this.length = this.items.length
+  }
+  
 
-  add(item) {}
+  add(item) {
+     let a = this.items.push(item); 
+     console.log(a)
 
-  get(pos) {}
+  }
+
+  get(pos) {
+
+  }
 
   max() {}
 
