@@ -4,7 +4,7 @@ class SortedList {
     this.items = [];
     this.length = this.items.length;
   }
-
+  //Iteration 2: add(item)
   add(item) {
     if (this.length === 0 || item > this.items[this.length - 1]) {
       this.items.push(item);
@@ -19,12 +19,30 @@ class SortedList {
     }
     this.length = this.items.length;
   }
-
-  get(pos) {}
-
-  max() {}
-
-  min() {}
+  // Iteration 3: get(pos)
+  get(pos) {
+    if (pos >= this.length) {
+      throw new Error("OutOfBounds");
+    } else {
+      return this.items[pos];
+    }
+  }
+  // Iteration 4: max()
+  max() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.items[this.length - 1];
+    }
+  }
+  // Iteration 5: min()
+  min() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.items[0];
+    }
+  }
 
   sum() {}
 
