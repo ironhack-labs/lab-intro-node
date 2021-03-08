@@ -19,7 +19,12 @@ class SortedList {
     return this.items[pos];
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return this.items[this.items.length - 1];
+  }
 
   min() {}
 
