@@ -17,13 +17,35 @@ class SortedList {
     throw new Error("OutOfBounds");
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.max(...this.items);
+  }
 
-  min() {}
+  min() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.min(...this.items);
+  }
 
-  sum() {}
+  sum() {
+    if (this.length === 0) {
+      return 0;
+    }
+    const sum = this.items.reduce((acc, val) => acc + val, 0);
+    return sum;
+  }
 
-  avg() {}
+  avg() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    const sum = this.items.reduce((acc, val) => acc + val, 0);
+    return sum / this.length;
+  }
 }
 
 module.exports = SortedList;
