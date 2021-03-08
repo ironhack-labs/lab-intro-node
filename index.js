@@ -12,7 +12,12 @@ class SortedList {
     this.items.forEach((element) => this.length++);
   }
 
-  get(pos) {}
+  get(pos) {
+    if (this.items[pos] == null) {
+      throw new Error("OutOfBounds");
+    }
+    return this.items[pos];
+  }
 
   max() {}
 
