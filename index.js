@@ -1,13 +1,26 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = this.items.length;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.length++;
+    this.items.sort((a, b) => a - b);
+  }
 
-  get(pos) {}
+  get(pos) {
+    return item[pos];
+  }
 
-  max() {}
+  max() {
+    return this.items.sort((a, b) => a - b)[this.length - 1];
+  }
 
-  min() {}
+  min() {
+    return this.items[0];
+  }
 
   sum() {}
 
