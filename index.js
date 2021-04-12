@@ -36,9 +36,22 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if (!this.items){
+      return 0
+    } else {
+      return this.items.reduce((acc, num)=>{
+        return acc + num}, 0)
+    }
+  }
 
-  avg() {}
+  avg() {
+    if (!this.items[0]){
+      throw EmptySortedList
+    } else {
+      return (this.sum()/this.length)
+    }
+  }
 }
 
 module.exports = SortedList;
@@ -47,4 +60,4 @@ sortedList = new SortedList()
 sortedList.add(1)
 sortedList.add(3)
 sortedList.add(2)
-console.log(Math.max(...sortedList.items))
+console.log(sortedList.sum())
