@@ -30,11 +30,15 @@ class SortedList {
   
 
   sum() {
-
+    if (this.items.length !==0){
+      return (this.items.reduce((a,b)=>a+b,0))
+    }else{return 0}
   }
 
   avg() {
-
+    if (this.items.length !==0){
+      return ((this.items.reduce((a,b)=>a+b,0))/this.items.length)
+    }else{throw new Error('EmptySortedList')}
   }
 }
 
