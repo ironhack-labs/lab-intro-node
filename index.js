@@ -24,8 +24,6 @@ class SortedList {
       return this.items[this.length -1];
   }
 
-
-
   min() {
       if(this.length === 0) {
           throw new Error('EmptySortedList');
@@ -33,9 +31,19 @@ class SortedList {
       return this.items[0];
   }
 
-  sum() {}
+  sum() {
+      return this.items.reduce((acc, value) => {
+          acc += value;
+          return acc;
+      }, 0);
+  }
 
-  avg() {}
+  avg() {
+      if(this.length === 0) {
+          throw new Error('EmptySortedList');
+      }
+    return this.sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
