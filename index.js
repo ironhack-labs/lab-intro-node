@@ -10,15 +10,27 @@ class SortedList {
     this.length=this.items.length
   }
 
-  get(pos) {}
+  get(pos) {
+    if (pos >= 0 && pos<this.items.length){
+      return (this.items[pos])
+    }else{throw new Error('OutOfBounds')}
+  }
 
-  max() {}
+  max() {
 
-  min() {}
+  }
 
-  sum() {}
+  min() {
 
-  avg() {}
+  }
+
+  sum() {
+
+  }
+
+  avg() {
+
+  }
 }
 
 module.exports = SortedList;
