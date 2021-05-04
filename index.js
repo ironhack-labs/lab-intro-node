@@ -1,7 +1,7 @@
 class SortedList {
   constructor() {
     this.items = [],
-    this.length = 0
+    this.length = this.items.length
   }
 
   add(item) {
@@ -21,7 +21,7 @@ class SortedList {
   }
 
   max() {
-    if(SortedList.length === 0){
+    if(this.length === 0){
       throw new Error('EmptySortedList');
     }else{
       const highestVal = Math.max(...this.items);
@@ -30,7 +30,7 @@ class SortedList {
   }
 
   min() {
-    if(SortedList.length === 0){
+    if(this.length === 0){
     throw new Error('EmptySortedList');
   }else{
     const lowestVal = Math.min(...this.items);
@@ -46,10 +46,10 @@ class SortedList {
   }
 
   avg() {
-    if(SortedList.length === 0){
+    if(this.length === 0){
       throw new Error('EmptySortedList');
     }else{
-      return this.sum / this.length
+      return this.sum() / this.length
     }
     
   }
