@@ -5,9 +5,15 @@ class SortedList {
   }
 
   add(item) {
-    this.items.push(item);
+    let newItemIdx = 0;
+
+    for (const el of this.items) {
+      if (el < item) newItemIdx++
+      else break
+    }
+
+    this.items.splice(newItemIdx, 0, item);
     this.length ++;
-    this.items.sort((a, b) => a - b)
   }
 
   get(pos) {
