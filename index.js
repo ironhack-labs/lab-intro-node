@@ -17,11 +17,34 @@ class SortedList {
     }else{
     return item
     }
-
-    
   }
 
-  max() {}
+  max() {
+    const itemsO =this.items = this.items.sort((a,b)=> a-b);
+    
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList');
+    }else{
+      return itemsO.slice(-1).pop()
+    }
+
+
+    /*const max = this.items.reduce((total,num) => total + num, 0)
+    
+    if(this.items.length = 0){
+      throw new Error('EmptySortedList');
+    }else{
+      return max
+    }*/
+
+    /*
+    const max = Math.max(this.item)
+    if(this.items.length = 0){
+       throw new Error('EmptySortedList');
+    }else{
+      return max
+    }*/
+  }
 
   min() {}
 
