@@ -6,42 +6,49 @@ class SortedList {
   }
 
   add(item) {
-    this.items.push(item)
-    this.item.sort();
+    this.items.splice(1, 0, item);
+    this.items.sort((e1, e2) => {
+      return e1 - e2;
+    });
     this.length++;
   }
 
   get(pos) {
-    if (pos < 0 || pos >= this.length) {
-      throw new Error('OutOfBounds');
-    };
-    return SortedList[pos];
-  };
+    if (this.items[pos]) {
+      return this.items[pos];
+    } else {
+      throw new Error("OutOfBounds");
+    }
+  }
 
   max() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList');
+      throw new Error("EmptySortedList");
     }
     return this.items[this.length - 1];
   }
 
   min() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList');
+      throw new Error("EmptySortedList");
     }
     return this.items[0];
   }
 
   sum() {
-    let sum = 0;
-    for (pos = 0; pos < this.length; pos++) {
-      sum += this.items[pos];
+    if (this.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce((e1, e2) => e1 + e2, 0);
     }
-    return sum;
   }
 
   avg() {
-    return (this.length === 0 ? 0 : this.sum() / this.length);
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.items.reduce((e1, e2) => e1 + e2, 0) / this.length;
+    }
   }
 }
 
