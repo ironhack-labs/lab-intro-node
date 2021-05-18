@@ -27,30 +27,31 @@ class SortedList {
     }else{
       return itemsO.slice(-1).pop()
     }
-
-
-    /*const max = this.items.reduce((total,num) => total + num, 0)
-    
-    if(this.items.length = 0){
-      throw new Error('EmptySortedList');
-    }else{
-      return max
-    }*/
-
-    /*
-    const max = Math.max(this.item)
-    if(this.items.length = 0){
-       throw new Error('EmptySortedList');
-    }else{
-      return max
-    }*/
   }
 
-  min() {}
+  min() {
+    const itemsO =this.items = this.items.sort((a,b)=> a-b);
+    
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList');
+    }else{
+      return itemsO[0]
+    }
+  }
 
-  sum() {}
+  sum() {
+   const total = this.items.reduce((total,item) => total + item, 0)
+   return total
+  }
 
-  avg() {}
+  avg() {
+    const total = this.items.reduce((total,item) => total + item, 0)
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList');
+    }else{
+      return total/this.length
+    }
+  }
 }
 
 module.exports = SortedList;
