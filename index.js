@@ -4,17 +4,52 @@ class SortedList {
     this.length = this.items.length;
   }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item)
+    this.items.sort((a,b) => a -b)
+    this.length = this.items.length
+  }
 
-  get(pos) {}
+  get(pos) {
+     if (this.items[pos]) {
+       return this.items[pos];
+     } else {
+       throw new Error("OutOfBounds");
+     }
+  }
 
-  max() {}
+  max() {
+     if (this.items.length > 1) {
+       return Math.max(...this.items);
+     } else {
+       throw new Error("EmptySortedList");
+     }
+  }
 
-  min() {}
+  min() {
+     if(this.items.length > 1){
+      return Math.min(...this.items);
+    }else{
+      throw new Error('EmptySortedList');
+    }
+  }
 
-  sum() {}
+  sum() {
+    if(this.items.length === 0){
+      return 0;
+    }else{
+    let sum = this.items.reduce((acc, curr)=> acc += curr)
+    return sum;
+  }
 
-  avg() {}
+  avg() {
+     if(this.items.length === 0){
+      throw new error('EmptySortedList');
+    }else{
+      let total = this.items.reduce((acc, curr)=> acc += curr )
+      return total / this.items.length
+    }
+  }
 }
 
 module.exports = SortedList;
