@@ -44,18 +44,20 @@ class SortedList {
     if (this.items.length === 0) {
       return 0;
     } else {
-      this.items.reduce(
-        (accumulator, currentValue) => accumulator + currentValue,
-        0
-      );
+
+      let sum = this.items.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      return sum
     }
+    
   }
 
   avg() {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      this.items.sum()/this.items.length
+      let sum = this.items.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+      return sum/this.items.length
     }
 
   }
