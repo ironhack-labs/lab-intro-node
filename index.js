@@ -24,9 +24,13 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      this.items.sort(function (a, b) {
+      const sorted = this.items.sort(function (a, b) {
         return a - b;
       });
+
+      const maxNumber = Math.max.apply(null, sorted);
+
+      return maxNumber;
     }
   }
 
@@ -34,9 +38,13 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      this.items.sort(function (a, b) {
+      const sorted = this.items.sort(function (a, b) {
         return a - b;
       });
+
+      const minNumber = Math.min.apply(null, sorted);
+
+      return minNumber;
     }
   }
 
@@ -44,22 +52,25 @@ class SortedList {
     if (this.items.length === 0) {
       return 0;
     } else {
-
-      let sum = this.items.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-      return sum
+      const sum = this.items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
+      return sum;
     }
-    
   }
 
   avg() {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      let sum = this.items.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+      const sum = this.items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
 
-      return sum/this.items.length
+      return sum / this.items.length;
     }
-
   }
 }
 
