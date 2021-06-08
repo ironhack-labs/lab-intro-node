@@ -9,42 +9,56 @@ class SortedList {
     this.items.sort(function (a, b) {
       return a - b;
     });
-    this.length = this.items.length
+    this.length = this.items.length;
   }
 
   get(pos) {
-    if(this.items[pos]){
-      return this.items[pos]
-    }else{
-      throw new Error('OutOfBounds');
+    if (this.items[pos]) {
+      return this.items[pos];
+    } else {
+      throw new Error("OutOfBounds");
     }
   }
 
   max() {
-    if(this.items.length === 0){
-      throw new Error ('EmptySortedList')
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
     } else {
-      this.items
       this.items.sort(function (a, b) {
         return a - b;
       });
-
     }
   }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      this.items.sort(function (a, b) {
+        return a - b;
+      });
+    }
+  }
 
   sum() {
-    this.items.reduce(function (accumulator, currentValue) {
-      return accumulator + currentValue;
-    });
-
-    if (this.items.add().length < 0) {
+    if (this.items.length === 0) {
       return 0;
+    } else {
+      this.items.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        0
+      );
     }
   }
 
-  avg() {}
+  avg() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      this.items.sum()/this.items.length
+    }
+
+  }
 }
 
 module.exports = SortedList;
