@@ -24,6 +24,7 @@ class SortedList {
     if(this.items.length === 0){
       throw new Error ('EmptySortedList')
     } else {
+      this.items
       this.items.sort(function (a, b) {
         return a - b;
       });
