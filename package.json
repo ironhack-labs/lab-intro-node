@@ -1,5 +1,5 @@
 {
-  "name": "lab-intro-node",
+  "name": "index.spec.js",
   "version": "2.0.0",
   "description": "Intro Node Lab for Students",
   "main": "index.js",
@@ -19,5 +19,11 @@
     "intro"
   ],
   "author": "fer@ironhack.com",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "mocha": "^9.0.2"
+  }
 }
