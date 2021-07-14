@@ -1,3 +1,4 @@
+//Code corresponding to the node introduction
 class SortedList {
   constructor() {
 
