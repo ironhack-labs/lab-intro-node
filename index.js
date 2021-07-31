@@ -34,9 +34,25 @@ class SortedList {
     }
    }
 
-  sum() { }
+  sum() {
+    if (this.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce((acc,item) => {
+        return acc + item})
+    }
+    
+   }
 
-  avg() { }
+  avg() { 
+
+    if (this.length === 0) {
+      throw new Error('EmptySortedList');
+    } else {
+      return this.items.reduce((acc,item) => {
+        return acc + item})/this.length
+    }
+  }
 }
 
 let list = new SortedList()
