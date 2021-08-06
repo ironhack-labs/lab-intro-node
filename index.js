@@ -1,13 +1,13 @@
 class SortedList {
   constructor() {
-    this.length = 0;
     this.items = [];
+    this.length = this.items.length;
   }
 
   add(item) {
-    this.length++;
     this.items.push(item);
     this.items.sort((a, b) => a - b);
+    this.length++;
   }
 
   get(pos) {
@@ -32,7 +32,7 @@ class SortedList {
   }
 
   sum() {
-    return this.items.reduce((acc, current, index, array) => {
+    return this.items.reduce((acc, current) => {
       return acc + current;
     }, 0)
   }
