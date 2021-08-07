@@ -12,21 +12,21 @@ class SortedList {
 
   get(pos) {
     if (!this.items[pos]) {
-      throw Error("OutOfBounds");
+      throw new Error("OutOfBounds");
     }
     return this.items[pos]
   }
 
   max() {
     if (!this.items.length) {
-      throw Error("EmptySortedList");
+      throw new Error("EmptySortedList");
     }
     return this.items[this.items.length - 1]
   }
 
   min() {
     if (!this.items.length) {
-      throw Error("EmptySortedList");
+      throw new Error("EmptySortedList");
     }
     return this.items[0];
   }
