@@ -11,7 +11,7 @@ class SortedList {
   }
 
   get(pos) {
-    if (this.items[pos] == undefined){
+    if (pos > this.items.length){
       throw new Error('OutOfBounds'); //make sure you throw an error with the message OutOfBounds if a user tries to get an element in the non-existing position
     }else{
       return this.items[pos];
@@ -23,7 +23,7 @@ class SortedList {
     if(this.length == 0){
       throw new Error('EmptySortedList');//In case you have an empty SortedList, you must throw an error with the message "EmptySortedList".
     }else{
-      return this.items[this.length - 1]
+      return Math.max(...this.items)
     }
   }
 
