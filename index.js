@@ -6,13 +6,13 @@ class SortedList {
 
   add(item) {
     this.items.push(item) //add value item to the items array
-    this.items.sort()// ensuring that the items array stays sorted in ascending order
+    this.items.sort((a, b) => a - b)// ensuring that the items array stays sorted in ascending order
     this.length = this.items.length
   }
 
   get(pos) {
-    if (this.items[pos] === undefined){
-      throw new Error('OutOfBounds');
+    if (this.items[pos] == undefined){
+      throw new Error('OutOfBounds'); //make sure you throw an error with the message OutOfBounds if a user tries to get an element in the non-existing position
     }else{
       return this.items[pos];
     }
@@ -20,15 +20,15 @@ class SortedList {
   }
 
   max() {
-    if(this.length === 0){
-      throw new Error('EmptySortedList');
+    if(this.length == 0){
+      throw new Error('EmptySortedList');//In case you have an empty SortedList, you must throw an error with the message "EmptySortedList".
     }else{
       return this.items[this.length - 1]
     }
   }
 
   min() {
-    if(this.length === 0){
+    if(this.length == 0){
     throw new Error('EmptySortedList');
     }else{
       return this.items[0]
