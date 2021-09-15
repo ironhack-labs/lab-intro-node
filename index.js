@@ -7,7 +7,7 @@ class SortedList {
   add(item) {
     this.items.push(item)
     this.items.sort((a, b) => a - b);
-    this.length = this.length;
+    this.length = this.items.length;
     }
 
   get(pos) {
@@ -34,7 +34,9 @@ class SortedList {
   }
   
   sum() {
-    return this.items.reduce(function(acc, act) { return acc + act; }, 0)
+    return this.items.reduce(function(acc, act) {
+       return acc + act; 
+      }, 0)
   }
 
   avg() {
