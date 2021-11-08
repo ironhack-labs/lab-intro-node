@@ -30,7 +30,14 @@ class SortedList {
     return max
   }
 
-  min() {}
+  min() {
+    if(this.length === 0) throw new Error('EmptySortedList') //If list is empty, throw error
+    let min = 0
+    this.items.forEach((item)=>{ //Iterate over all the elements of the array to find the min, then return it
+      if(item < min) min = item
+    })
+    return min
+  }
 
   sum() {}
 
