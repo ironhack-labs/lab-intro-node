@@ -37,9 +37,23 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if (this.length === 0){
+      return 0
+    } else{
+      let sum = this.items.reduce((a,b)=> a+b,0)
+      return sum
+    }
+  }
 
-  avg() {}
-}
+  avg() {
+    if (this.length === 0){
+      throw new Error ('EmplySortedList');
+    } else {
+      const avg = this.sum() / this.length
+      return avg
+    }}
+  }
+
 
 module.exports = SortedList;
