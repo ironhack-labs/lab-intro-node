@@ -5,25 +5,30 @@ class SortedList {
   }
 
   add(item) {
-    const arr = this.items //Create a reference to the items array
-    arr.push(item) //Push the new item inside of it
+    this.items.push(item) //Push the new item inside of it
     this.length++
-    arr.sort((a, b) => { //Then sort it
+    this.items.sort((a, b) => { //Then sort it
       return a - b
     })
   }
 
   get(pos) {
-    const arr = this.items
-    if(typeof arr[pos] === 'undefined') { //If nothing exists in the provided position, throw error
+    if(typeof this.items[pos] === 'undefined') { //If nothing exists in the provided position, throw error
       throw new Error('OutOfBounds')
     }
     else { //If something exists, return it
-      return arr[pos]
+      return this.items[pos]
     }
   }
 
-  max() {}
+  max() {
+    if(this.length === 0) throw new Error('EmptySortedList') //If list is empty, throw error
+    let max = 0
+    this.items.forEach((item)=>{ //Iterate over all the elements of the array to find the max, then return it
+      if(item > max) max = item
+    })
+    return max
+  }
 
   min() {}
 
