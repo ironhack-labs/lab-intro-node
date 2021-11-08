@@ -5,7 +5,7 @@ class SortedList {
   }
 
   add(item) {
-    this.length = this.items.push(item)
+    this.length = this.items.push(item);
     this.items.sort((a, b) => {
       if (a < b) {
         return -1;
@@ -15,21 +15,27 @@ class SortedList {
 
   get(pos) {
     if (pos < this.length) {
-      return this.items[pos]
+      return this.items[pos];
     } else {
-      throw new Error('OutOfBounds')
+      throw new Error('OutOfBounds');
     }
   }
 
   max() {
     if (this.length === 0) {
-     throw new Error('OutOfBounds')
+      throw new Error('OutOfBounds');
     } else {
-      return this.items[this.items.length - 1]
+      return this.items[this.items.length - 1];
     }
   }
 
-  min() {}
+  min() {
+    if (this.length === 0) {
+      throw new Error('OutOfBounds');
+    } else {
+      return this.items[this.items.length - this.items.length]
+    }
+  }
 
   sum() {}
 
