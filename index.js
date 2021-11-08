@@ -42,11 +42,22 @@ class SortedList {
     if (this.items.length === 0) {
       return 0;
     } else {
-      return this.items.reduce(function(a, b){ return a + b; });
+      return this.items.reduce(function (a, b) {
+        return a + b;
+      });
     }
   }
 
-  avg() {}
+  avg() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      let reduce = this.items.reduce(function (a, b) {
+        return a + b;
+      });
+      return reduce/this.items.length;
+    }
+  }
 }
 
 module.exports = SortedList;
