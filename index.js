@@ -21,7 +21,13 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+     throw new Error('OutOfBounds')
+    } else {
+      return this.items[this.items.length - 1]
+    }
+  }
 
   min() {}
 
