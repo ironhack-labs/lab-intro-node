@@ -22,16 +22,16 @@ class SortedList {
   }
 
   max() {
-    if(this.length === 0) throw new Error('EmptySortedList') //If list is empty, throw error
+    this.checkIfEmpty() //If list is empty, this function throws an error
     let max = 0
-    this.items.forEach((item)=>{ //Iterate over all the elements of the array to find the max, then return it
+    this.items.forEach((item)=>{ //Iterate over all the elements of the narray to find the max, then return it
       if(item > max) max = item
     })
     return max
   }
 
   min() {
-    if(this.length === 0) throw new Error('EmptySortedList')
+    this.checkIfEmpty()
     let min = 0
     this.items.forEach((item)=>{
       if(item < min) min = item
@@ -48,8 +48,12 @@ class SortedList {
   }
 
   avg() {
+    this.checkIfEmpty()
+    return this.sum() / this.length //Divide sum by number of elements to get avg
+  }
+
+  checkIfEmpty() {
     if(this.length === 0) throw new Error('EmptySortedList')
-    return this.sum() / this.length
   }
 }
 
