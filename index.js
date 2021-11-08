@@ -50,14 +50,15 @@ class SortedList {
   sum() {
     if (this.items.length === 0) {
     return 0;
-    } else {
-    let sum = this.items.reduce(
-      function(acc,e){
-        return acc+e
-      },0)} return sum
+    } 
+    let counter = 0
+    for (let i = 0; i<this.items.length; i++){
+    counter+= this.items[i]
+    }
+    
+    return counter
   }
-
-
+  
 
 
 
@@ -65,6 +66,12 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error('EmptySortedList');
     }
+    let counter = 0
+    for (let i = 0; i<this.items.length; i++){
+    counter+= this.items[i]
+    }
+    return counter / this.items.length 
+    
   }
 }
 
