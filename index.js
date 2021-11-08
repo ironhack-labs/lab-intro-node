@@ -21,9 +21,16 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if(this.length === 0){
+      throw new Error('EmptySortedList');
+    } else{
+      return Math.max.apply(null,this.items)
+    }
+  }
 
-  min() {}
+  min() {
+  }
 
   sum() {}
 
