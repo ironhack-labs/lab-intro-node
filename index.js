@@ -30,6 +30,11 @@ class SortedList {
   }
 
   min() {
+    if(this.length === 0){
+      throw new Error('EmptySortedList');
+    } else{
+      return Math.min.apply(null,this.items)
+    }
   }
 
   sum() {}
