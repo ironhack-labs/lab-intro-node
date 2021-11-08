@@ -39,7 +39,13 @@ class SortedList {
     return min
   }
 
-  sum() {}
+  sum() {
+    let sum = 0
+    this.items.forEach((item)=>{ //Sum every element
+      sum += item
+    })
+    return sum
+  }
 
   avg() {}
 }
