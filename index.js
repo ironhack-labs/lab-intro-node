@@ -23,14 +23,20 @@ class SortedList {
   }
 
   max() {
-    if(this.items.length ===0){
-      throw new Error('EmptySortedList');
-    }else{
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
       return Math.max.apply(Math, this.items);
     }
   }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.min.apply(Math, this.items);
+    }
+  }
 
   sum() {}
 
