@@ -33,13 +33,26 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('OutOfBounds');
     } else {
-      return this.items[this.items.length - this.items.length]
+      return this.items[this.items.length - this.items.length];
     }
   }
 
-  sum() {}
+  sum() {
+    let sum = 0;
+    this.items.forEach((number) => {
+      sum += number;
+    });
+    return sum;
+  }
 
-  avg() {}
+  avg() {
+    if (this.items.length === 0) {
+      throw new Error('EmptySortedList');
+    }
+    let sum = this.sum();
+    let avg = sum / this.items.length;
+    return avg;
+  }
 }
 
 module.exports = SortedList;
