@@ -1,7 +1,16 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = []
+    this.length = 0
+  }
 
-  add(item) {}
+  add(item) {
+    const arr = this.items //Create a reference to the items array
+    arr.push(item) //Push the new item inside of it
+    arr.sort((a, b) => { //Then sort it
+      return a-b
+    })
+  }
 
   get(pos) {}
 
