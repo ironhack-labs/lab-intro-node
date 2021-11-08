@@ -31,9 +31,9 @@ class SortedList {
   }
 
   min() {
-    if(this.length === 0) throw new Error('EmptySortedList') //If list is empty, throw error
+    if(this.length === 0) throw new Error('EmptySortedList')
     let min = 0
-    this.items.forEach((item)=>{ //Iterate over all the elements of the array to find the min, then return it
+    this.items.forEach((item)=>{
       if(item < min) min = item
     })
     return min
@@ -47,7 +47,10 @@ class SortedList {
     return sum
   }
 
-  avg() {}
+  avg() {
+    if(this.length === 0) throw new Error('EmptySortedList')
+    return this.sum() / this.length
+  }
 }
 
 module.exports = SortedList;
