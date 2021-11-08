@@ -2,7 +2,6 @@
 
 # Intro to Node
 
-
 ## Introduction
 
 Today is our first day using Node, so we will practice doing some basic operations. **Ready to start?**
