@@ -6,10 +6,10 @@ class SortedList {
 
   add(item) {
     this.items.push(item)
-    this.items.sort(function(a,b){
-      return a-b
-    })
-    // this.items.sort((a, b) => { a-b } )
+    // this.items.sort(function(a,b){
+    //   return a-b
+    // })
+     this.items.sort((a, b) => {return a-b } )
 
     this.length = this.items.length
   }
@@ -42,9 +42,7 @@ class SortedList {
     if(this.length === 0){
       return 0;
     } else {
-      return this.items.reduce(function(prev,cur){
-        return prev+cur
-      },0)
+      return this.items.reduce((prev,cur) =>{ return prev+cur },0)
     }
   }
 
