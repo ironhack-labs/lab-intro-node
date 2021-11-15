@@ -35,10 +35,26 @@ class SortedList {
   }
 
   sum() {
-
+    if (this.length <= 0) {
+      return 0
+    } else {
+      let sumArr = this.items.reduce((acc, valActual) =>{
+         return acc + valActual
+      })
+      return sumArr
+    }
   }
 
-  avg() {}
+  avg() {
+    if (this.length <= 0) {
+      throw new Error('EmptySortedList');
+    } else {
+      let sumArr = this.items.reduce((acc, valActual) =>{
+         return acc + valActual
+      })
+      return sumArr/this.length
+    }
+  }
 }
 
 module.exports = SortedList;
