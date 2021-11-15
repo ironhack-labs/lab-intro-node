@@ -8,12 +8,14 @@ class SortedList {
   add(item) {
     this.items.push(item)
     this.length = this.items.length
+    return this.items.sort((a,b) => a-b)
   }
 
   get(pos) {
     if(pos > this.length) {
       throw new Error('OutOfBounds');
     }
+    
     return this.items.indexOf(pos)
   }
 
