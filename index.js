@@ -5,8 +5,6 @@ class SortedList {
   }
 
   add(item) {
-    //Clonamos el nuevo arreglo y agregamos el nuevo item
-    // const newArray = [...this.items];
     //agregamos elemento al array
     this.items.push(item);
     //ordenamos de manera ascendente
@@ -41,6 +39,8 @@ class SortedList {
   }
 
   sum() {
+    if (this.length === 0) return 0;
+
     const suma = this.items.reduce((acumulador, currentValue) => {
       return acumulador + currentValue;
     }, 0);
