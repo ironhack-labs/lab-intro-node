@@ -56,13 +56,10 @@ class SortedList {
   sum() {
     let array = this.items;
     if(array){
-      const maxNum = (array) =>{
-        const mayor = array.reduce((acum, value)=>{ 
-          return acum > value ? acum : value})
-       return mayor    
-    }
-    return maxNum(array)
-    }else if(!array){
+      const suma = array.reduce((acum, value)=>{ 
+        return acum + value})
+    return suma
+    }else if(array.length == 0){
       return 0;
     }
 
