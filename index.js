@@ -46,9 +46,29 @@ class SortedList {
     return number
   }
 
-  sum() {}
+  sum() {
+    let total;
+    if(!this.items.length){
+      return 0
+    } else {
+          total = this.items.reduce((acc,curr)=>{
+      return acc + curr
+    })
+    }
+    return total
+  }
 
-  avg() {}
+  avg() {
+    let total;
+    if(!this.items.length){
+      throw new Error('EmptySortedList');
+    } else {
+        total = this.items.reduce((acc,curr)=>{
+      return acc + curr
+    })
+    }
+    return total / this.items.length
+  }
 }
 
 
