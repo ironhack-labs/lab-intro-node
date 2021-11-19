@@ -24,7 +24,7 @@ class SortedList {
     if(this.items.length === 0){
       throw new Error('EmptySortedList');
     }else{
-     this.items.sort(function(a,b){return Math.max(a,b)})
+     return this.items[this.items.length - 1]
     }
   }
 
@@ -43,10 +43,13 @@ class SortedList {
   }
 
   avg() {
+    if(this.items.length === 0){
+      error
+       }else{
     let sum = 0
-    for(let x=0; x<this.items.length; x++){
-      sum += this.items[x]
-    }
+    for(let i of this.items) sum+=i
+    return sum/ this.items.length
+       }
   }
 }
 
