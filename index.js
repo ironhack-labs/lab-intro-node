@@ -5,16 +5,8 @@ class SortedList {
   }
 
   add(item) {
-    if(item > this.items[this.length - 1] || this.length === 0) {
-      this.items.push(item);
-    }
-
-    for (let i = 0; i < this.length; i++) {
-      if(this.items[i] > item) {
-        this.items.splice(i, 0, item);
-        break;
-      }
-    }
+    this.items.push(item);
+    this.items.sort((a,b) => a-b)
     this.length = this.items.length;
   }
 
