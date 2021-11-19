@@ -30,7 +30,7 @@ class SortedList {
     if(this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return this.items[this.length - 1];
+      return Math.max(...this.items);
     }
   }
 
@@ -38,14 +38,12 @@ class SortedList {
     if(this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return this.items[0];
+      return Math.min(...this.items);
     }
   }
 
   sum() {
-    return this.items.reduce((acc, cv) => {
-      return acc + cv;
-    }, 0)
+    return this.items.reduce((acc, cv) => acc + cv, 0);
   }
 
   avg() {
