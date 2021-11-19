@@ -28,11 +28,26 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList');
+    }else{
+     return this.items[0]
+    }
+  }
 
-  sum() {}
+  sum() {
+    let sum = 0
+    for(let i of this.items) sum+=i
+    return sum
+  }
 
-  avg() {}
+  avg() {
+    let sum = 0
+    for(let x=0; x<this.items.length; x++){
+      sum += this.items[x]
+    }
+  }
 }
 
 module.exports = SortedList;
