@@ -43,11 +43,9 @@ class SortedList {
   }
 
   sum() {
-    let sum = 0;
-    this.items.forEach(item => {
-      sum += item;
-    })
-    return sum;
+    return this.items.reduce((acc, cv) => {
+      return acc + cv;
+    }, 0)
   }
 
   avg() {
