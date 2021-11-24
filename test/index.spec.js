@@ -36,10 +36,12 @@ describe("SortedList", () => {
       list.add(20);
       list.add(100);
       list.add(10);
-      assert.equal(list.items[0], 10);
-      assert.equal(list.items[1], 20);
-      assert.equal(list.items[2], 30);
-      assert.equal(list.items[3], 100);
+      list.add(5);
+      assert.equal(list.items[0], 5);
+      assert.equal(list.items[1], 10);
+      assert.equal(list.items[2], 20);
+      assert.equal(list.items[3], 30);
+      assert.equal(list.items[4], 100);
     });
   });
 
