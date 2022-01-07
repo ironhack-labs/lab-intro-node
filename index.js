@@ -41,9 +41,13 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((previousValue, currentValue) => previousValue + currentValue)
+  }
 
-  avg() {}
+  avg() {
+    return this.sum()/this.length
+  }
 }
 
 module.exports = SortedList;
