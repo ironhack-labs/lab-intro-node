@@ -5,17 +5,28 @@ class SortedList {
   }
 
   add(item) {
-    console.log(this.items)
     this.items.push(item);
-    console.log(this.items)
     this.items.sort((a, b) => a - b);
-    console.log(this.items)
-    this.length = this.items.length
+    this.length = this.items.length;
   }
 
-  get(pos) {}
+  get(pos) {
+    if (pos >= this.items.length) throw new Error('OutOfBounds');
+    return this.items[pos];
+  }
 
-  max() {}
+  max() {
+    if (!this.items.length) throw new Error ('EmptySortedList');
+    let max = Number.MIN_SAFE_INTEGER;
+    console.log(max)
+    this.items.forEach((number) => {
+      if (number >= max){
+        max = number;
+      }
+    })
+    console.log(max)
+    return max
+  }
 
   min() {}
 
