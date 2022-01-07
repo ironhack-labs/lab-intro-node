@@ -17,7 +17,13 @@ class SortedList {
     this.length = arrayAfterAddingItem.length
   }
 
-  get(pos) {}
+  get(pos) {
+    if (this.length <= pos) {
+      throw new Error('OutOfBounds')
+    } else {
+      return this.items[pos]
+    }
+  }
 
   max() {
     if (this.length === 0) {
