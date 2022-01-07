@@ -19,17 +19,19 @@ class SortedList {
     if (!this.items.length) throw new Error ('EmptySortedList');
     // let max = Number.MIN_SAFE_INTEGER;
     // this.items.forEach((number) => {
-    //   if (number >= max){
-    //     max = number;
-    //   }
-    // })
-    // return max
-    console.log(...this.items)
-    console.log(Math.max(...this.items))
+      //   if (number >= max){
+        //     max = number;
+        //   }
+        // })
+        // return max
     return Math.max(...this.items)
   }
+      
+  min() {
+    if (!this.items.length) throw new Error ('EmptySortedList');
+    return Math.min(...this.items)
 
-  min() {}
+  }
 
   sum() {}
 
