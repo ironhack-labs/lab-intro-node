@@ -1,7 +1,7 @@
 class SortedList {
-  constructor(items) {
-    this.items = items;
-    this.length = items.length;
+  constructor() {
+    this.items = [];
+    this.length = this.items.length;
   }
 
   add(item) {
@@ -39,11 +39,17 @@ class SortedList {
   }
 
   sum() {
+    if (this.length <= 0) {
+      return 0;
+    }
     let result = this.items.reduce((pv, cv) => pv + cv);
     return result;
   }
 
   avg() {
+    if (this.length <= 0) {
+      throw new Error('EmptySortedList');
+    }
     let result = this.items.reduce((pv, cv) => pv + cv);
     return result / this.items.length;
   }
