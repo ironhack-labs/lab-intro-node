@@ -1,5 +1,5 @@
 class SortedList {
-  constructor(items, length) {
+  constructor() {
     this.items = [];
     this.length = this.items.length;
   }
