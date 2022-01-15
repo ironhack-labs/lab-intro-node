@@ -18,13 +18,43 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    const highestValue = this.items.sort((item1, item2) => item1 - item2)
+     
+    if (highestValue.length > 0) {
+      return highestValue[highestValue.length - 1];
+    } else {
+      throw new Error('EmptySortedList');
+    }
+  }
 
-  min() {}
+  min() {
+    const lowestValue = this.items.sort((item1, item2) => item1 - item2)
+     
+    if (lowestValue.length > 0) {
+      return lowestValue[0];
+    } else {
+      throw new Error('EmptySortedList');
+    }
+  }
 
-  sum() {}
+  sum() {
+        return this.items.reduce((acc, item) => {
+          return acc + item;
+        }, 0);  
+  }
 
-  avg() {}
+  avg() {
+
+    if (!this.length) {
+      throw new Error('EmptySortedList');
+    }
+    const totalAverage = this.items.reduce((acc, item) => {
+      return acc + item;
+    }, 0);
+    
+    return totalAverage / this.length
+  }
 }
 
 module.exports = SortedList;
