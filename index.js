@@ -32,13 +32,9 @@ class SortedList {
   }
 
   sum() {
-    if (!this.length){
-      return 0;
-    }
-
     return this.items.reduce((prev, curr) => {
       return prev += curr;
-    });
+    }, 0);
   }
 
   avg() {
@@ -46,9 +42,7 @@ class SortedList {
       throw new Error('EmptySortedList');
     }
 
-    return this.items.reduce((prev, curr) => {
-      return prev += curr;
-    }) / this.length;
+    return this.sum() / this.length;
   }
 }
 
