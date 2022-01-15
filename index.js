@@ -49,11 +49,8 @@ class SortedList {
     if (!this.length) {
       throw new Error('EmptySortedList');
     }
-    const totalAverage = this.items.reduce((acc, item) => {
-      return acc + item;
-    }, 0);
     
-    return totalAverage / this.length
+    return this.sum() / this.length
   }
 }
 
