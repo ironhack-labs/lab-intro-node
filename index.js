@@ -2,36 +2,30 @@ class SortedList {
   
   constructor() {
     this.items = [],
-    this.length = this.items.length
+    this.length = 0
   }
 
   add(item) {
     
-    const arrayAfterAddingItem = new Array
-    
-    if (this.length > 0) {
+    let arrayValuesBelow = new Array
+    let arrayValuesAbove = new Array     
 
-      for(let i = 0; i < this.length; i++){
-        
-        if (this.items[i] >= item) {
-          arrayAfterAddingItem.push(item)
-          arrayAfterAddingItem.push(this.items[i])
-        } else if (i === this.length-1) {
-          arrayAfterAddingItem.push(this.items[i])
-          arrayAfterAddingItem.push(item)
-        } else {
-          arrayAfterAddingItem.push(this.items[i])
-        }
-
-      }
-
+    if (this.length === 0) {
+      this.items.push(item)
     } else {
-      arrayAfterAddingItem.push(item)
+      arrayValuesBelow = this.items.filter(function (number) {return number<item})
+      arrayValuesAbove = this.items.filter(function (number) {return number>item})
+      if (arrayValuesBelow.length === 0) {
+        this.items.unshift([item])
+      } else if (arrayValuesAbove.length === 0){
+        this.items.push(item)
+      } else {
+        this.items = [...arrayValuesBelow,item,...arrayValuesAbove]
+      }  
     }
 
-    this.items = arrayAfterAddingItem
-    this.length = arrayAfterAddingItem.length
-
+    this.length += 1
+    
   }
 
   get(pos) {
@@ -71,7 +65,10 @@ class SortedList {
       throw new Error('EmptySortedList')
     }
   }
-  
+
 }
+
+const example = new SortedList
+example.add(100)
 
 module.exports = SortedList;
