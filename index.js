@@ -6,7 +6,7 @@ class SortedList {
   add(item) {
     this.items.push(item);
     this.items.sort((a, b) => a - b);
-    this.length++;
+    this.length ++;
   }
   get(pos) {
     if (pos >= this.items.length || pos < 0) {
@@ -32,14 +32,10 @@ class SortedList {
   }
 
   sum() {
-    if (this.items.length == 0) {
-      return 0;
-    } else {
       return this.items.reduce((acc, value) => {
         return acc + value;
-    });
+    }, 0);
     }
-  }
 
   avg() {
     if (this.items.length == 0) {
