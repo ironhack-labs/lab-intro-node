@@ -20,7 +20,19 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if(this.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      let max = 0;
+      this.items.forEach(e => {
+        if(max < e) {
+          max = e
+        }
+      })
+      return max
+    }
+  }
 
   min() {}
 
