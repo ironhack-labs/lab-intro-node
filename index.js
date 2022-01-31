@@ -14,7 +14,7 @@ class SortedList {
 
   get(pos) {
     if (this.items.indexOf(pos) === -1) {
-      return 'OutOfBounds'
+      throw new Error('OutOfBounds');
     } else {
       let position = this.items[pos]
       return position
@@ -23,18 +23,18 @@ class SortedList {
 
   max() {
     if (this.items.length === 0) {
-      return 'EmptySortedList'
+      throw new Error('EmptySortedList');
     } else {
-      let highest = Math.max(this.items)
+      let highest = Math.max.apply(null, this.items)
       return highest
     }
   }
 
   min() {
     if (this.items.length === 0) {
-      return 'EmptySortedList'
+      throw new Error('EmptySortedList');
     } else {
-      let lowest = Math.min(this.items)
+      let lowest = Math.min.apply(null, this.items)
       return lowest
     }
   }
