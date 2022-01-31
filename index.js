@@ -60,7 +60,17 @@ class SortedList {
     }
   }
 
-  avg() {}
+  avg() {
+    if(this.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      let sum = 0
+      this.items.forEach(e => {
+        sum += e
+      })
+      return sum / this.length
+    }
+  }
 }
 
 module.exports = SortedList;
