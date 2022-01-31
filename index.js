@@ -27,15 +27,29 @@ class SortedList {
     }
   }
 
-  min() {if(this.length === 0){
+  min() {
+    if(this.length === 0){
     throw new Error('EmptySortedList')
   } else {
      return Math.min(...this.items) 
     }}
 //
-  sum() {}
+  sum() {
+    if(this.length === 0){
+      return 0
+    }else {
+      return this.items.reduce((a,b) => a+b)
+    }
+  }
 
-  avg() {}
+  avg() {
+    if(this.length === 0){
+      throw new Error('EmptySortedList')
+  }else {
+    return this.sum() / this.items.length;
+  }
+}
+
 }
 
 module.exports = SortedList;
