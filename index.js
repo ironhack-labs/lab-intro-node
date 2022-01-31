@@ -48,7 +48,17 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if(this.length === 0) {
+      return 0
+    } else {
+      let sum = 0
+      this.items.forEach(e => {
+        sum += e
+      })
+      return sum
+    }
+  }
 
   avg() {}
 }
