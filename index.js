@@ -34,7 +34,19 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if(this.length === 0) {
+      throw new Error("EmptySortedList")
+    } else {
+      let min = this.items[0]
+      this.items.forEach(e => {
+        if(min > e) {
+          min = e
+        }
+      })
+      return min
+    }
+  }
 
   sum() {}
 
