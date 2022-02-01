@@ -36,7 +36,15 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
+    if (this.items.length === 0) {
+      return 0;
+    } else {
+      return this.items.reduce(function (sum, item) {
+        return sum + item;
+      });
+    }
+  }
 
   avg() {}
 }
