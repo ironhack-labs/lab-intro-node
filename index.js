@@ -18,7 +18,7 @@ class SortedList {
 
   get(pos) {
 
-    if (this.items.indexOf(pos) === -1) {
+    if (pos > this.length) {
       throw new error('OutOfBounds'); 
     } else if (this.items.indexOf(pos)) {
       return this.items[pos]
