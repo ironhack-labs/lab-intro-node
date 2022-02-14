@@ -55,6 +55,7 @@ describe("SortedList", () => {
     it("should return an OutOfBounds exception if there is no element in that position", () => {
       assert.throws(
         () => {
+
           list.get(4);
         },
         Error,
