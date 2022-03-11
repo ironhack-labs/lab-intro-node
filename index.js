@@ -28,11 +28,32 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if(this.length === 0){
+      throw new Error('EmptySortedList');
+    } else {
+      return Math.min(...this.items)
+    }
+  }
 
-  sum() {}
+  sum() {
+    if(this.length === 0){
+      return 0
+    } else {
+      return  this.items.reduce(
+        (previousValue, currentValue) => previousValue + currentValue,
+        0
+      )
+    }
+  }
 
-  avg() {}
+  avg() {
+    if(this.length === 0){
+      throw new Error('EmptySortedList');
+    } else {
+      return this.sum()/this.items.length
+    }
+  }
 }
 
 module.exports = SortedList;
