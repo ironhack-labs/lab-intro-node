@@ -1,7 +1,16 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = 0;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.length++;
+    this.items.sort(( a , b) => {return a-b});
+
+  }
+  
 
   get(pos) {}
 
@@ -14,4 +23,10 @@ class SortedList {
   avg() {}
 }
 
+
+
 module.exports = SortedList;
+
+
+//goal here is to create a class 
+//that sorts list of numbers in ascending order.
