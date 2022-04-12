@@ -10,15 +10,15 @@ class SortedList {
   add(item) {
     this.items.push(item);
     this.length++;
-    this.items.sort(( a , b) => {return a-b});
+    this.items.sort((a , b) => {return a - b});
 
   }
   
 
   get(pos) { 
-      if ((this.items.indexOf(pos) === -1)){
+      if (pos > this.length){
         throw new Error('OutOfBounds');
-      } else return this.items.indexOf(pos);
+      } else return this.items[pos];
     }
   
 
@@ -37,9 +37,7 @@ class SortedList {
 
 
   sum() {
-    if(this.items.length === 0) {
-      return 0;
-    } else return this.items.reduce((a, b) => a + b, 0);
+    return this.items.reduce((a, b) => a + b, 0);
 }
 
   avg() {
