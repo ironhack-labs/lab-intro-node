@@ -7,7 +7,7 @@ class SortedList {
   add(item) {
     this.items.push(item);
 
-    // function compare(a, b) {
+    // function compare(a, b) { .
     //   if (a < b) {
     //     return -1;
     //   }
@@ -47,13 +47,17 @@ class SortedList {
   sum() {
     if(this.items.length === 0) return 0;
     
-    let total = this.items.reduce((a,b) => a + b);
-    return total;
+    return this.items.reduce((a,b) => a + b);
   }
   
   avg() {
-    let average = this.items.reduce((a,b) => a + b) / this.items.length;
-    return average; 
+    // let average = this.items.reduce((a,b) => a + b) / this.items.length;
+    // return average;
+    // made new iterations.. 
+    
+    if(this.items.length === 0) throw new Error('EmptySortedList');
+    
+    return this.sum() / this.items.length;
   }
 }
 
