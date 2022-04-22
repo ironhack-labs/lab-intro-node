@@ -12,20 +12,44 @@ class SortedList {
 
   get(pos) {    
     if((pos<0)||(pos>this.items.length)){
-      throw 'OutOfBounds';
+      throw new Error('OutOfBounds');
     }
     return this.items[pos];
   }
 
   max() {
-
+    if(this.items.length==0){
+      throw new Error('EmptySortedList');
+    }
+    return Math.max(...this.items);
   }
 
-  min() {}
+  min() {
+    if(this.items.length==0){
+      throw new Error('EmptySortedList');
+    }
+    return Math.min(...this.items);
+  }
 
-  sum() {}
+  sum() {
+/*     4) should return the sum of all elements in the list
+    5) should return 0 for an empty sorted list */
+    if(this.items.length==0){
+      return 0;
+    }else {
+      //let sum=this.items.forEach(el=>el+el); 
+      return this.items.reduce((a, b) => a + b, 0);//sum of all elements in the list;
+    }
+  }      
 
-  avg() {}
+  avg() {
+/*     6) should return an EmptySortedList exception if there are no elements
+    7) should return the average of elements in the list */
+    if(this.items.length==0){
+      throw new Error('EmptySortedList');
+    }
+    return this.sum(this.items)/this.items.length;
+  }
 }
 
 module.exports = SortedList;
