@@ -21,6 +21,7 @@
   "author": "fer@ironhack.com",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^5.0.1",
     "mocha": "^9.2.2"
   }
 }

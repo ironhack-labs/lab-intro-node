@@ -6,8 +6,7 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
-    //ensuring that the items array stays sorted in ascending order
-    this.items.sort();
+    this.items.sort((a,b)=>a-b);
     this.length=this.items.length;
   }
 
@@ -18,7 +17,9 @@ class SortedList {
     return this.items[pos];
   }
 
-  max() {}
+  max() {
+
+  }
 
   min() {}
 
