@@ -36,13 +36,17 @@ class SortedList {
   }
 
   sum() {
-    const sum = this.items.reduce((sum, a) => {
-      sum + a, 0;
-    });
-    return sum;
+    return this.items.reduce((acc, a) => acc + a, 0);
   }
 
-  avg() {}
+  avg() {
+    if (this.length > 0) {
+      const sum = this.items.reduce((acc, a) => acc + a, 0);
+      return sum / this.length;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 }
 
 module.exports = SortedList;
