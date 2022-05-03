@@ -11,14 +11,43 @@ class SortedList {
   }
 
   get(pos) {
-    
+    if(pos === this.length - 1){
+      return pos
+    } else {
+      throw new Error('OutOfBounds');
+    }
+
   }
 
-  max() {}
+  max() {
+    const maximum = Math.max(...this.items)
+    const index = this.items.indexOf(maximum)
 
-  min() {}
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList')
+    }
+    if (index) {
+      return maximum
+    }
 
-  sum() {}
+  }
+  
+
+  min() {
+    const minimum = Math.min(...this.items)
+    
+
+    if(this.items.length === 0){
+      throw new Error('EmptySortedList')
+    }
+    if (this.length) {
+      return minimum
+    }
+  }
+
+  sum() {
+    
+  }
 
   avg() {}
 }
