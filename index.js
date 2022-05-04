@@ -5,34 +5,36 @@ class SortedList {
   }
 
   add(item) {
+    this.items.sort();
     this.items.push(item);
     this.items.sort();
+    this.length = this.items.length;
   }
 
   get(pos) {
-    this.items[pos];
-    if (pos <= this.items.length) {
+    if (this.items[pos] === null) {
       throw new Error("OutOfBounds");
     }
+    return this.items[pos];
   }
 
   max() {
-    if (this.items === null) {
+    if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     }
     return Math.max(...this.items);
   }
 
   min() {
-    if (this.items === null) {
+    if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     }
     return Math.min(...this.items);
   }
 
   sum() {
-    if (this.items === null) {
-      throw new Error("EmptySortedList");
+    if (this.items.length === 0) {
+      return 0;
     }
     let sum = 0;
     for (let i = 0; i < this.length; i++) {
@@ -42,14 +44,10 @@ class SortedList {
   }
 
   avg() {
-    if (this.items === null) {
+    if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     }
-
-    const sumOfNumbers = this.items.reduce((previousValue, currentValue) => {
-      previousValue + currentValue;
-    });
-    return sumOfNumbers / this.length;
+    return this.sum() / this.length;
   }
 }
 
