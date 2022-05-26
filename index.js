@@ -1,17 +1,44 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = []
+    this.length = this.items.length
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item)
+    this.items.sort()
+    this.length = this.items.length
+  }
 
-  get(pos) {}
+  get(pos) {
 
-  max() {}
+    return this.items.indexOf(pos)
+  }
 
-  min() {}
+  max() {
 
-  sum() {}
+    return Math.max(...this.items)
+  }
 
-  avg() {}
+  min() {
+
+    return Math.min(...this.items)
+  }
+
+  sum() {
+
+    // const sum = arr.reduce((a,b) => a + b, 0)
+    // return sum
+    let sum = 0
+    for (let i = 0; i < this.items.length; i++){
+      sum += this.items[i]
+    }
+    return sum
+  }
+
+  avg() {
+    
+  }
 }
 
 module.exports = SortedList;
