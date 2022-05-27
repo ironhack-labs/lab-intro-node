@@ -6,7 +6,8 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
-    this.items.sort();
+    this.items.sort((a,b)=>a-b);
+    this.length = this.items.length;
   }
 
   get(pos) {
@@ -16,24 +17,24 @@ class SortedList {
 
   max() {
     if(this.items.length === 0) throw new Error('EmptySortedList');
-    else return Math.max(...items);
+    else return Math.max(...this.items);
   }
 
   min() {
     if(this.items.length === 0) throw new Error('EmptySortedList');
-    else return Math.min(...items);
+    else return Math.min(...this.items);
   }
 
   sum() {
-    let sum = this.items.reduce((acc,current)=>acc+current);
+    let sum = this.items.reduce((acc,current)=>acc+current,0);
     return sum;
   }
 
   avg() {
-    let avg = this.items.reduce((acc,current)=>{
-      let i = this.items.length;
-      return acc+current/i;
-    })
+    if(this.items.length === 0) throw new Error('EmptySortedList');
+    else {
+      return this.items.reduce((acc,current)=>acc+current,0)/this.items.length;
+    }
   }
 }
 
