@@ -7,10 +7,18 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
+    //add a single value to the sorted list
+    this.length = this.items.length;
     this.items.sort((a, b) => a - b);
   }
 
-  get(pos) {}
+  get(pos) {
+    if(pos > this.items.length) {
+      throw new Error('OutOfBounds');
+    }else{
+      return this.items[pos];
+    }
+  }
 
   max() {
     if(this.items.length === 0) {
