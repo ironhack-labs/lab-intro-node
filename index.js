@@ -19,10 +19,10 @@ class SortedList {
   }
 
   max() {
-    if (this.items) {
-        return Math.max(...this.items)
-    } else {
+    if (this.items === 0) {
         throw new Error("EmptySortedList")
+    } else {
+        return Math.max(...this.items)
     }
   }
 
