@@ -29,8 +29,9 @@ class SortedList {
     if (this.items.length === 0) {
       return 0;
     } else {
-      const reducer = (acc, curr) => acc + curr;
-      return this.items.reduce(reducer);
+      //const reducer = (acc, curr) => acc + curr;
+      //return this.items.reduce(reducer);
+      return this.items.reduce((acc, value) => acc + value, 0);
     }
   }
 
