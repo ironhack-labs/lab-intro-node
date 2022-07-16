@@ -4,7 +4,7 @@ const SortedList = require("../index.js");
 // Load the Assertion Library
 const assert = require("assert");
 
-describe("SortedList", () => {
+describe.only("SortedList", () => {
   describe("Constructor", () => {
     it("should have items and length properties", () => {
       const list = new SortedList();
