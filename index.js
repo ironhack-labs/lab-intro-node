@@ -11,11 +11,20 @@ class SortedList {
   }
 
   get(pos) {
-    if (pos > this.length) throw new Error('OutOfBounds');
-    return this.items[pos];
+    if (pos > this.length) {
+      throw new Error('OutOfBounds');
+    } else {
+      return this.items[pos];
+    };
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+      throw new Error('EmptySortedList') 
+    } else {
+      return Math.max(...this.items);
+    }
+  }
 
   min() {}
 
