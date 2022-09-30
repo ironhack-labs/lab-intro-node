@@ -12,15 +12,15 @@ class SortedList {
 
   get(pos) {
     if (pos > this.length) {
-      throw new Error('OutOfBounds');
+      throw new Error("OutOfBounds");
     } else {
       return this.items[pos];
-    };
+    }
   }
 
   max() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList') 
+      throw new Error("EmptySortedList");
     } else {
       return Math.max(...this.items);
     }
@@ -28,15 +28,23 @@ class SortedList {
 
   min() {
     if (this.length === 0) {
-      throw new Error('EmptySortedList') 
+      throw new Error("EmptySortedList");
     } else {
       return Math.min(...this.items);
     }
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((total, num) => total + num, 0);
+  }
 
-  avg() {}
-}
+  avg() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return this.sum() / this.length;
+    }
+  }
+};
 
 module.exports = SortedList;
