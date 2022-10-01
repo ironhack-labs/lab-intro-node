@@ -6,7 +6,12 @@ class SortedList {
     this.length = items.length;
   }
 
-  add(item) {this.items.sort((a,b) => a-b)}
+  add(item) {
+     item = [];
+     this.items.push();
+     this.items.sort((a, b) =>{return(a - b)})
+
+  }
 
   get(pos) {}
 
