@@ -28,16 +28,17 @@ class SortedList {
         }
       }
       return highest;
-    } else {
+    } else{
       throw new Error("EmptySortedList");
     }
+    
   }
 
   min() {
-    if (this.items.length = undefined) {
-      throw new Error("EmptySortedList");
-    } else {
+    if (this.items.length >= 0) {
       return this.items[0];
+    } else{
+      throw new Error("EmptySortedList");
     }
   }
 
