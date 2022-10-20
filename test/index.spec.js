@@ -1,5 +1,5 @@
 // Require the file which will be tested
-const SortedList = require("../index.js");
+const SortedList = require("../index.js").default;
 
 // Load the Assertion Library
 const assert = require("assert");
