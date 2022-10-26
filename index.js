@@ -35,7 +35,17 @@ class SortedList {
     return this.items[0];
   }
 
-  sum() {}
+  sum() {
+    if (this.length == 0) {
+      return 0;
+    }
+
+    return this.items.reduce((acc, inc) => {
+      acc = acc + inc;
+
+      return acc;
+    }, 0);
+  }
 
   avg() {}
 }
