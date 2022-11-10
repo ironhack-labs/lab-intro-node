@@ -13,11 +13,11 @@ class SortedList {
   get(pos) {}
 
   max() {
-    Math.max(this.items);
+    return Math.max(this.items);
   }
 
   min() {
-    Math.min(this.items);
+    return Math.min(this.items);
   }
 
   sum() {}
