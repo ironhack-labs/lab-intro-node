@@ -12,7 +12,9 @@ class SortedList {
 
   get(pos) {}
 
-  max() {}
+  max() {
+    Math.max(this.items);
+  }
 
   min() {}
 
