@@ -16,7 +16,9 @@ class SortedList {
     Math.max(this.items);
   }
 
-  min() {}
+  min() {
+    Math.min(this.items);
+  }
 
   sum() {}
 
