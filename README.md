@@ -153,7 +153,7 @@ In addition, make sure you _throw_ an error with the message _OutOfBounds_ if a 
 To throw an error, you can do the following:
 
 ```js
-throw new Error('OutOfBounds');
+throw new Error("OutOfBounds");
 ```
 
 <!-- ### Iteration 4: make that list sorted!
@@ -168,7 +168,7 @@ The `max()` method should return the highest value of the array.
 In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
 
 ```js
-throw new Error('EmptySortedList');
+throw new Error("EmptySortedList");
 ```
 
 ### Iteration 5: min()
