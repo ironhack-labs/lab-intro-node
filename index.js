@@ -20,7 +20,10 @@ class SortedList {
     return Math.min(this.items);
   }
 
-  sum() {}
+  sum() {
+    this.items.reduce((accumulator, current) => accumulator + current);
+    return this.sum;
+  }
 
   avg() {}
 }
