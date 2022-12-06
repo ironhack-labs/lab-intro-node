@@ -11,17 +11,17 @@ class SortedList {
   }
 
   get(pos) {
-    if (this.items[pos] === undefined) throw new Error('OutOfBounds: element not on list')
+    if (pos >= this.length) throw new Error('OutOfBounds: element not on list')
     return this.items[pos]
   }
 
   max() {
-    if (this.length === 0) throw new Error('EmptySortedList')
+    if (!this.length) throw new Error('EmptySortedList')
     return this.items.at(-1)
   }
 
   min() {
-    if (this.length === 0) throw new Error("EmptySortedList")
+    if (!this.length) throw new Error("EmptySortedList")
     return this.items.at(0)
   }
 
@@ -29,7 +29,10 @@ class SortedList {
     return this.items.reduce((a, b) => a + b, 0)
   }
 
-  avg() {}
+  avg() {
+    if(!this.length) throw new Error('EmptySortedList')
+    return this.sum() / this.length
+  }
 }
 
 module.exports = SortedList;
