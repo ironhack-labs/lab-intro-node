@@ -11,11 +11,14 @@ class SortedList {
   }
 
   get(pos) {
-    // if (this.items[pos] === undefined) throw new Error('OutOfBounds: element not on list')
-    // return this.items[pos]
+    if (this.items[pos] === undefined) throw new Error('OutOfBounds: element not on list')
+    return this.items[pos]
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) throw new Error('EmptySortedList')
+    return this.items.at(-1)
+  }
 
   min() {}
 
