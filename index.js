@@ -25,7 +25,9 @@ class SortedList {
     return this.items.at(0)
   }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((a, b) => a + b, 0)
+  }
 
   avg() {}
 }
