@@ -20,7 +20,10 @@ class SortedList {
     return this.items.at(-1)
   }
 
-  min() {}
+  min() {
+    if (this.length === 0) throw new Error("EmptySortedList")
+    return this.items.at(0)
+  }
 
   sum() {}
 
