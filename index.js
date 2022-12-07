@@ -1,17 +1,17 @@
 class SortedList {
   constructor() {
     this.items = []
-    this.length = this.items.length
+    this.length = 0
   }
 
   add(item) {
     this.items.push(item)
-    this.length = this.items.length
+    this.length++
     this.items.sort((a, b) => a - b)
   }
 
   get(pos) {
-    if (pos >= this.length) throw new Error('OutOfBounds: element not on list')
+    if (pos >= this.length) throw new Error('OutOfBounds')
     return this.items[pos]
   }
 
