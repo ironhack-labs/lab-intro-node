@@ -11,7 +11,13 @@ class SortedList {
     this.items.sort((a, b) => a - b);
   }
 
-  get(pos) { }
+  get(pos) {
+    if (pos > this.length) {
+      throw new Error("OutOfBounds");
+    } else {
+      return this.items.length(pos);
+    }
+  }
 
   max() {
     if (this.items.length === 0) {
@@ -37,8 +43,7 @@ class SortedList {
     if (!this.length) {
       throw new Error("EmptySortedList");
     } else {
-
-      return this.sum() / this.lenght
+      return this.sum() / this.length;
     }
   }
 }
