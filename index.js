@@ -28,9 +28,18 @@ class SortedList {
     // return Math.max(...this.items);
   }
 
-  min() {}
+  min() {
+    if (!this.items.length) throw new Error("EmptySortedList");
+    return this.items.reduce((a, b) => Math.min(a, b));
+  }
 
-  sum() {}
+  sum() {
+    if (!this.items.length) return 0;
+    return this.items.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    );
+  }
 
   avg() {}
 }
