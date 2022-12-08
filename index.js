@@ -22,7 +22,7 @@ class SortedList {
   }
 
 }
-  
+  //had help here too
 
   max() {
     if(this.length > 0){
