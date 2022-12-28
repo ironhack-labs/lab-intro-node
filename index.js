@@ -39,10 +39,6 @@ class SortedList {
 
   sum() {
     return this.items.reduce((a, b) => a + b, 0)
-
-   if (this.items.length === 0) {
-      return 0;
-    }
   }
 
   avg() {
