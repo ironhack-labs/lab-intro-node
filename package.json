@@ -4,6 +4,7 @@
   "description": "Intro Node Lab for Students",
   "main": "index.js",
   "scripts": {
+    "hola": "echo 'hola'",
     "test": "mocha"
   },
   "repository": {
@@ -19,5 +20,8 @@
     "intro"
   ],
   "author": "fer@ironhack.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "^10.2.0"
+  }
 }
