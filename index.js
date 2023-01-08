@@ -21,13 +21,50 @@ class SortedList {
     throw new Error("OutOfBounds");
   }
 
-  max() {}
+  max() {
+    if (this.length > 0) {
+      const sortedArray = this.items.sort(function compare(a, b) {
+        if (a < b) return -1;
+        if (a > b) return 1;
+        if ((a = b)) return 0;
+      });
+      return sortedArray[this.length - 1];
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
-  min() {}
+  min() {
+    if (this.length > 0) {
+      const sortedArray = this.items.sort(function compare(a, b) {
+        if (a < b) return -1;
+        if (a > b) return 1;
+        if ((a = b)) return 0;
+      });
+      return sortedArray[0];
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
-  sum() {}
+  sum() {
+    if (this.length > 0) {
+      return this.items.reduce((acc, val) => {
+        return acc + val;
+      });
+    } else {
+      return 0;
+    }
+  }
 
-  avg() {}
+  avg() {
+    if (this.length > 0) {
+      const sumNums = this.sum();
+      return sumNums / this.length;
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 }
 
 module.exports = SortedList;
