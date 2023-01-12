@@ -13,10 +13,11 @@ class SortedList {
   }
 
   get(pos) {
-    if(pos >= this.items.length || pos < 0){ 
+    let posIndex = this.items.indexOf(pos);
+    if (posIndex === -1) {
       throw new Error('OutOfBounds');
     } else {
-      return this.items[pos]; // should return the element in that position -- me sigue saliendo mal y no encuentro por qué
+      return posIndex + 1;
     }
   }
 
