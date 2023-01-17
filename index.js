@@ -4,9 +4,19 @@ class SortedList {
     this.length = this.items.length;
   }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.items.sort((a, b) => a - b);
+    this.length = this.length;
+  }
 
-  get(pos) {}
+  get(pos) {
+    if (pos >= this.items.length) {
+      throw new Error("EmptySortedList");
+    }
+
+    return this.items.indexOf(pos);
+  }
 
   max() {}
 
