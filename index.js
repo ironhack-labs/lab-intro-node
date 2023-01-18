@@ -18,13 +18,31 @@ class SortedList {
     return this.items.indexOf(pos);
   }
 
-  max() {}
+  max() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return Math.max(...this.items);
+  }
 
-  min() {}
+  min() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
 
-  sum() {}
+    return Math.min(...this.items);
+  }
 
-  avg() {}
+  sum() {
+    return this.items.reduce((a, b) => a + b, 0);
+  }
+
+  avg() {
+    if (this.length === 0) {
+      throw new Error("EmptySortedList");
+    }
+    return sum() / this.length;
+  }
 }
 
 module.exports = SortedList;
