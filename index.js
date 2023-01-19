@@ -18,6 +18,7 @@ class SortedList {
     return this.items.indexOf(pos);
   }
 
+  /*La nueva sintaxis extendida es una manera más corta de escribir la solución con apply para obtener el máximo de un arreglo: Sin embargo, tanto la sintaxis extendida (...) como apply fallarán o retornarán un resultado incorrecto si el arreglo tiene demasiados elementos, porque intentan pasar el arreglo de elementos como parámetros de función. Ver apply y funciones incorporadas para más detalles. La solución con reduce no tiene este problema.*/
   max() {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
