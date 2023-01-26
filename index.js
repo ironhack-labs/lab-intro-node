@@ -11,7 +11,7 @@ class SortedList {
   }
 
   get(pos) {
-    if (pos > this.items.length - 1) {
+    if (pos > this.items.length - 1 || pos < 0) {
       throw new Error('OutOfBounds');
     } else {
       return this.items[pos];
@@ -22,7 +22,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return Math.max(...this.items);
+      return this.items.reduce((a, b) => Math.max(a, b));
     }
   }
 
@@ -30,7 +30,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      return Math.min(...this.items);
+      return this.items.reduce((a, b) => Math.min(a, b));
     }
   }
 
