@@ -1,6 +1,8 @@
 class SortedList {
-  constructor() {}
-
+  constructor(items,length) {}
+    items = []
+    length = this.items.length
+    
   add(item) {}
 
   get(pos) {}
