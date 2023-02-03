@@ -42,14 +42,19 @@ class SortedList {
     if (this.items.length == 0){
       return 0;
     } else {
-      const sum = this.items.reduce((accumulator, value) => {
-        return accumulator + value;
-      }, 0);
+      const sum = this.items.reduce((a, b) => a + b, 0)
       return sum
     }
   }
 
-  avg() {}
+  avg() {
+    if (this.items.length == 0){
+      throw new Error('EmptySortedList')
+    } else {
+      const avg = this.items.reduce((a, b) => a + b, 0) / this.items.length;
+      return avg
+    }
+}
 }
 
 module.exports = SortedList;
