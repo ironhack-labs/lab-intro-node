@@ -7,7 +7,7 @@ class SortedList {
   add(item) {
     this.items.push(item)
     this.items.sort(function(a,b){return a-b})
-    return this.items, this.length
+    return this.items, this.length++
   }
 
   get(pos) {
@@ -45,9 +45,9 @@ class SortedList {
 
   avg() {
     if(this.items.length !== 0){
-      let average = this.items((a,b) => a+ b, 0)
-     return average / this.length
-   }else if (this.length == 0){
+      let average = this.sum() / this.items.length
+      return average
+    }else if (this.length == 0){
     throw new Error('EmptySortedList');
    }
   }
