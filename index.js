@@ -27,7 +27,14 @@ class SortedList {
      }
   }
 
-  min() {}
+  min() {
+    if(this.items.length < 1){
+      throw new Error('EmptySortedList');
+     }else{
+      const minNumber = this.items.reduce((a, b) => Math.min(a, b))
+      return minNumber;
+     }
+  }
 
   sum() {}
 
