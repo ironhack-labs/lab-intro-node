@@ -18,7 +18,14 @@ class SortedList {
      }
   }
 
-  max() {}
+  max() {
+    if(this.items.length < 1){
+      throw new Error('EmptySortedList');
+     }else{
+      const maxNumber = this.items.reduce((a,b) => Math.max(a,b), -Infinity)
+      return maxNumber;
+     }
+  }
 
   min() {}
 
