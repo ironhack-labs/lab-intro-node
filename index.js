@@ -9,9 +9,21 @@ class SortedList {
     this.items.sort((a, b) => a - b);
   }
 
-  get(pos) {}
+  get(pos) {
+    if (this.items[pos]) {
+      return this.items[pos];
+    } else {
+      throw new Error("OutOfBounds");
+    }
+  }
 
-  max() {}
+  max() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.max(...this.items);
+    }
+  }
 
   min() {}
 
