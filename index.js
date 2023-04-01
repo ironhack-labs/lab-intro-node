@@ -24,9 +24,22 @@ class SortedList {
     //this.items[this.items.length-1]
   }
 
-  min() {}
+  min() {
+    if(this.items.length===0){throw new Error('EmptySortedList')}
+    else{return Math.min(...this.items)}
 
-  sum() {}
+  }
+
+  sum() {
+    if(this.items.length===0){return 0 }
+    else{
+      let sum=0;
+      for(let el of this.items){
+        sum+=el;
+      }
+      return sum
+    }
+  }
 
   avg() {}
 }
