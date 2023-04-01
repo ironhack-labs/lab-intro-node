@@ -8,22 +8,46 @@ class SortedList {
   add(item) {
     this.items.push(item)
 
-    let sortedItems = this.items.sort(function(a,b) {
+    this.items.sort(function(a,b) {
       if (a<b) return -1
       if (a>b) return 1
       if (a=b) return 0
       
-      return sortedItems
-    })
+      
 
-    this.items.length = sortedItems.length
+    
+  }
+    )}
+
+  get(pos) {
+    if (pos<=this.items.length) {
+      return this.items[pos]
+
+    } else {
+      throw new Error('OutOfBounds');
+    }
+    
+
+
   }
 
-  get(pos) {}
+  max() {
+    if (this.items = [""]) {
+      throw new Error('EmptySortedList');
+    } else {
+      let maxValue = Math.max.apply(null, this.items)
+      return maxValue
+    }
+  }
 
-  max() {}
-
-  min() {}
+  min() {
+    if (this.items = [""]) {
+      throw new Error('EmptySortedList');
+    } else {
+      let minValue = Math.min.apply(null, this.items)
+      return minValue
+    }
+  }
 
   sum() {}
 
