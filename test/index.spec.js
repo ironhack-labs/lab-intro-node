@@ -47,6 +47,7 @@ describe("SortedList", () => {
     let list;
     beforeEach(() => {
       list = new SortedList();
+
       for (let i = 0; i < 3; i++) {
         list.add(i);
       }
