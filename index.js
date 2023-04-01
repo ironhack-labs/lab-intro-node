@@ -25,9 +25,17 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if (this.items.length === 0) {
+      throw new Error("EmptySortedList");
+    } else {
+      return Math.min(...this.items);
+    }
+  }
 
-  sum() {}
+  sum() {
+    return this.items.reduce((acc, curr) => acc + curr, 0);
+  }
 
   avg() {}
 }
