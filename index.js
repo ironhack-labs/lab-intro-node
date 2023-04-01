@@ -12,10 +12,11 @@ class SortedList {
     } else {
       for (let i = 0; i <= this.length; i++) {
         if (item >= this.items[i] && item <= this.items[i + 1]) {
-          this.items.slice(i + 1, 0, item);
+          this.items.splice(i + 1, 0, item);
         }
       }
     }
+    this.length = this.items.length;
   }
 
   get(pos) {
