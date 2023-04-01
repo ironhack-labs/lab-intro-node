@@ -1,9 +1,27 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.length = this.items.length;
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item);
+    this.items.sort(function (a, b) {
+      return a - b;
+    });
+    this.length++;
+  }
 
-  get(pos) {}
+  get(pos) {
+    for (let index = 0; index < this.items.length; index++) {
+      if (pos <= this.items.length) {
+        let element = this.items[pos];
+        return element;
+      } else if (pos > this.items.length) {
+        throw new Error("OutOfBounds");
+      }
+    }
+  }
 
   max() {}
 
@@ -13,5 +31,4 @@ class SortedList {
 
   avg() {}
 }
-
 module.exports = SortedList;
