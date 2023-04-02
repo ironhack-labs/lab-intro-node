@@ -12,12 +12,10 @@ class SortedList {
       if (a<b) return -1
       if (a>b) return 1
       if (a=b) return 0
-      
-      
-
-    
+  })
+  return this.items, this.length
+  
   }
-    )}
 
   get(pos) {
     if (pos<=this.items.length) {
@@ -32,20 +30,20 @@ class SortedList {
   }
 
   max() {
-    if (this.items = [""]) {
+    if (this.items.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      let maxValue = Math.max.apply(null, this.items)
-      return maxValue
+      return Math.max(...this.items)
+      
     }
   }
 
   min() {
-    if (this.items = [""]) {
+    if (this.items.length === 0) {
       throw new Error('EmptySortedList');
     } else {
-      let minValue = Math.min.apply(null, this.items)
-      return minValue
+      return Math.min(...this.items)
+      
     }
   }
 
