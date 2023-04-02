@@ -5,24 +5,18 @@ class SortedList {
   }
 
   add(item) {
-    if (item < this.items[0]) {
-      this.items.unshift(item);
-    } else if (item > this.items[this.length - 1]) {
-      this.items.push(item);
-    } else {
-      for (let i = 0; i <= this.length; i++) {
-        if (item >= this.items[i] && item <= this.items[i + 1]) {
-          this.items.splice(i + 1, 0, item);
-        }
-      }
-    }
+    this.items.push(item);
+    this.items.sort((a, b) => a - b);
+
     this.length = this.items.length;
   }
 
   get(pos) {
-    if (pos + 1 <= this.length) {
+    if (pos < this.items.length) {
       return this.items[pos];
-    } else throw new Error("EmptySortedList");
+    } else {
+      throw new Error("OutOfBounds");
+    }
   }
 
   max() {
@@ -38,7 +32,7 @@ class SortedList {
   }
 
   min() {
-    let minNum = this.length[0];
+    let minNum = this.items[0];
     if (this.length !== 0) {
       this.items.forEach((num) => {
         if (num < minNum) {
