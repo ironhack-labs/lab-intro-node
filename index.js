@@ -4,12 +4,12 @@ class SortedList {
     this.length = this.items.length;
   }
 
+
   add(item) {
-    this.items.push(item);
-    this.items.sort(function (a, b) {
-      return a - b;
-    });
-    return this.items;
+    this.items.push(item)
+    this.items.sort((a, b) => a - b)
+
+    this.length = this.items.length
   }
 
   get(pos) {
