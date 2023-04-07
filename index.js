@@ -23,25 +23,20 @@ class SortedList {
     }
   }
 
-  max() {}
   max() {
     if (!this.items.length) throw new Error("EmptySortedList");
     return this.items[this.length - 1];
   }
 
-  min() {}
   min() {
     if (!this.items.length) throw new Error("EmptySortedList");
     return this.items[0];
   }
 
-  sum() {}
   sum() {
     return this.items.reduce((accum, curr) => accum + curr, 0);
     if (!this.items.length) throw new Error("EmptySortedList");
   }
-
-  avg() {}
 
   avg() {
     if (!this.length) throw new Error("valio queso");
