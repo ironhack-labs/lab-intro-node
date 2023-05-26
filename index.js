@@ -1,9 +1,18 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = []
+    this.length = 0
+  }
 
-  add(item) {}
+  add(item) {
+    this.items.push(item)
+    this.length += 1
+    if (this.length > 1) return this.items.sort((a, b) => a - b)
+  }
 
-  get(pos) {}
+  get(pos) {
+    
+  }
 
   max() {}
 
@@ -15,3 +24,15 @@ class SortedList {
 }
 
 module.exports = SortedList;
+
+let list = new SortedList()
+console.log(list.items)
+console.log(list.length)
+
+list.add(3)
+console.log(list.items)
+console.log(list.length)
+
+list.add(6)
+console.log(list.items)
+console.log(list.length)
