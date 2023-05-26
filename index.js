@@ -36,16 +36,3 @@ class SortedList {
   }
 }
 
-module.exports = SortedList;
-
-let list = new SortedList()
-console.log(list.items)
-console.log(list.length)
-
-list.add(3)
-console.log(list.items)
-console.log(list.length)
-
-list.add(6)
-console.log(list.items)
-console.log(list.length)
