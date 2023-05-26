@@ -36,3 +36,4 @@ class SortedList {
   }
 }
 
+module.exports = SortedList;
