@@ -16,7 +16,10 @@ class SortedList {
     
   }
 
-  max() {}
+  max() {
+    if(this.items.length === 0) throw new Error('EmptySortedList');
+    return Math.max(...this.items);
+  }
 
   min() {}
 
