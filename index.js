@@ -27,12 +27,8 @@ class SortedList {
   }
 
   sum() {
-    let sum = 0;
     if(this.items.length === 0) return 0;
-    this.items.forEach(element => {
-      console.log(sum += element);
-      return sum += element;
-    });
+    return this.items.reduce( (a, b) => a + b )
   }
 
   avg() {}
