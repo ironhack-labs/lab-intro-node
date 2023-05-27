@@ -21,9 +21,19 @@ class SortedList {
     return Math.max(...this.items);
   }
 
-  min() {}
+  min() {
+    if(this.items.length === 0) throw new Error('EmptySortedList');
+    return Math.min(...this.items);
+  }
 
-  sum() {}
+  sum() {
+    let sum = 0;
+    if(this.items.length === 0) return 0;
+    this.items.forEach(element => {
+      console.log(sum += element);
+      return sum += element;
+    });
+  }
 
   avg() {}
 }
