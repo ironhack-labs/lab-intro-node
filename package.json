@@ -1,7 +1,7 @@
 {
   "name": "lab-intro-node",
-  "version": "2.0.0",
-  "description": "Intro Node Lab for Students",
+  "version": "2.0.1",
+  "description": "Intro Node Lab",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
