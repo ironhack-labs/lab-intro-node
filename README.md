@@ -39,7 +39,7 @@ Today is our first day using Node, so we will practice doing some basic operatio
   git push origin master
   ```
 
-- Create Pull Request so your TAs can check up your work.
+- Create a Pull Request and submit your assignment.
 
 ## Testing - Introduction
 
