@@ -59,13 +59,11 @@ class SortedList {
 
   avg() {
     let avg = 0;
-    let sum = 0;
 
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      sum = this.items.reduce((acc, current) => (acc += current), sum);
-      return (avg = sum / this.items.length);
+      return (avg = this.sum() / this.items.length);
     }
   }
 }
