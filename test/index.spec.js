@@ -73,13 +73,13 @@ describe("SortedList", () => {
       list = new SortedList();
     });
 
-    it("should throw an Empty SortedList error if there are no elements in the list", () => {
+    it("should return an EmptySortedList exception if there are no elements in the list", () => {
       assert.throws(
         () => {
           list.max([]);
         },
         Error,
-        "Empty SortedList"
+        "EmptySortedList"
       );
     });
 
