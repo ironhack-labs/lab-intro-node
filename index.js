@@ -59,21 +59,34 @@ class SortedList {
 
   sum() {
     
+    // this.sum = 0;
 
-    if(this.items.length = 0) {
+    if(this.items.length === 0) {
       return 0;
     } else {
-      const listSum = 0;
+
+      this.sum = 0;
+
       for (let i = 0; i < this.items.length; i++){
-        return listSum += this.items[i];
+
+        this.sum += this.items[i];
       }
     }
+
+    return this.sum
 
   }
 
   // The avg() method should return the average value of the array.
 
-  avg() {}
+  avg() {
+
+    if (this.items.length == 0){
+      throw new Error("EmptySortedList");
+    }
+    
+      return this.sum()/this.items.length;
+  }
 }
 
 module.exports = SortedList;
