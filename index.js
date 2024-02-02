@@ -21,13 +21,43 @@ class SortedList {
     return this.items [pos]
   }
 
-  max() {}
+  max() {
+    if (this.length <= 0){
+      throw new Error("EmptySortedList");
+    }
+    let result = this.items[this.length -1]
+    return result
+  }
 
-  min() {}
+  min() {
+    if (this.length <= 0){
+      throw new Error("EmptySortedList");
+    }
+    let result = this.items[0]
+    return result
+  }
 
-  sum() {}
+  sum() {
+    if (this.length <= 0){
+      return 0
+    }
+    let sumado = 0
+    for (let i = 0; i < this.length; i++ ){
+      let element = this.items[i]
+      
+      sumado += element
+       
+    }
+    return sumado
+  }
 
-  avg() {}
+  avg() {
+    if (this.length <= 0){
+      throw new Error("EmptySortedList");
+    }
+    return this.sum()/this.length
+    
+  }
 }
 
 module.exports = SortedList;
