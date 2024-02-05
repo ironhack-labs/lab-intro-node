@@ -42,9 +42,26 @@ class SortedList {
     }
   }
 
-  sum() {}
+  sum() {
 
-  avg() {}
+    if (this.items.length === 0) {
+      return 0
+    } else {
+      return this.items.reduce((accumulator, currentValue) => accumulator + currentValue)
+    }
+  }
+
+  avg() {
+    
+    if (this.items.length === 0) {
+      throw new Error("Empty SortedList")
+    } else {
+      const total = this.items.reduce((accumulator, currentValue) => accumulator + currentValue)
+
+      return total / this.items.length
+    }
+
+  }
 }
 
 module.exports = SortedList;
