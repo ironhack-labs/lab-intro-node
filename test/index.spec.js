@@ -5,7 +5,7 @@ const SortedList = require("../index.js");
 const assert = require("assert");
 
 describe("SortedList", () => {
-  describe("Constructor", () => {
+  describe("constructor ()", () => {
     it("should have items and length properties", () => {
       const list = new SortedList();
       assert.equal(list instanceof SortedList, true);
