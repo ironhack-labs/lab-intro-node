@@ -22,12 +22,16 @@ Upon completion of this exercise, you will be able to:
 
 ## Introduction
 
-Today is our first day using Node, so we will practice doing some basic operations. **Ready to start?**
+Today is our first day using Node. We will practice using Node and npm to install a testing framework package and run tests. **Ready to start?**
+
+<br>
 
 ## Requirements
 
 - Fork this repo
 - Clone this repo
+
+<br>
 
 ## Submission
 
@@ -141,7 +145,7 @@ Don't worry that none of the tests are passing... you will make them ALL PASS!! 
 
 The task here is to create a class that maintains a **sorted list of numbers in ascending order**.
 
-Go in the `index.js` file and there you will find the bare bones of the _SortedList_ class.
+Go in the `index.js` file and there you will find the bare bones of the `SortedList` class.
 
 The **SortedList** class will have the following methods:
 
@@ -168,11 +172,11 @@ Here you should also make sure that the length property gets updated accordingly
 ### Iteration 3: get(pos)
 
 The `get(pos)` method will get the value at index `pos` in the list. <br>
-_Example_: if an instance of SortedList has elements: [2, 5, 7], when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
+_Example_: if an instance of SortedList has elements: `[2, 5, 7]`, when `get(2)` called, return should be `7` since this is element in that position in the array. Check the tests to see more examples.
 
-In addition, make sure you _throw_ an error with the message _OutOfBounds_ if a user tries to get an element in the non-existing position (e.g. _if the array has 5 elements and we are trying to get the element on the position 7_).
+In addition, make sure you _throw_ an error with the message `"OutOfBounds"` if a user tries to get an element in the non-existing position (e.g. _if the array has 5 elements and we are trying to get the element on the position 7_).
 
-To throw an error, you can do the following:
+To throw the error (aka exception), you should do the following:
 
 ```js
 throw new Error("OutOfBounds");
@@ -189,7 +193,7 @@ What does this mean? Well, if array of items has these elements: [2, 5, 7], if `
 
 The `max()` method should return the highest value of the array.
 
-In case you have an empty `SortedList`, you must throw an error with the message "EmptySortedList". For this, you can use:
+In case you have an empty `SortedList`, you must throw an error with the message `"EmptySortedList"`. For this, you can use:
 
 ```js
 throw new Error("EmptySortedList");
@@ -201,7 +205,7 @@ throw new Error("EmptySortedList");
 
 The `min()` method should return the lowest value of the array.
 
-In case you have an empty `SortedList`, you must throw an error with the message "Empty SortedList".
+In case you have an empty `SortedList`, you must throw an error with the message `"Empty SortedList"`.
 
 <br>
 
