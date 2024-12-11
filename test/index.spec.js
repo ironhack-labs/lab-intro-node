@@ -1,4 +1,5 @@
 // Require the file which will be tested
+const { error } = require("console");
 const SortedList = require("../index.js");
 
 // Load the Assertion Library
@@ -53,13 +54,19 @@ describe("SortedList", () => {
     });
 
     it("should return an OutOfBounds exception if there is no element in that position", () => {
-      assert.throws(
-        () => {
+      //assert.throws( I am not sure which version of Mocha was used, but this code was not reading the error message
+        /* () => {
           list.get(4);
         },
         Error,
-        "OutOfBounds"
-      );
+        "OutOfBounds" */
+        try {
+          list.get(4);
+        } catch (error) {
+          expect(error.message).to.equal('OutOfBounds');
+        }
+      //);
+
     });
 
     it("should return the element in that position", () => {
@@ -74,13 +81,18 @@ describe("SortedList", () => {
     });
 
     it("should throw an Empty SortedList error if there are no elements in the list", () => {
-      assert.throws(
+     /*  assert.throws( I am not sure which version of Mocha was used, but this was not reading the error message
         () => {
           list.max([]);
         },
         Error,
-        "Empty SortedList"
-      );
+        "EmptySortedList"
+      ); */
+      try {
+        list.max([]);
+      } catch (error) {
+        expect(error.message).to.equal('EmptySortedList');
+      }
     });
 
     it("should return the max (highest) value in the list", () => {
@@ -97,13 +109,18 @@ describe("SortedList", () => {
     });
 
     it("should return an EmptySortedList exception if there is no elements in the list", () => {
-      assert.throws(
+     /*  assert.throws( I am not sure which version of Mocha was used, but this was not reading the error message
         () => {
           list.min([]);
         },
         Error,
         "EmptySortedList"
-      );
+      ); */
+      try {
+        list.min([]);
+      } catch (error) {
+        expect(error.message).to.equal('EmptySortedList');
+      }
     });
 
     it("should return the min (lowest) value in the list", () => {
@@ -138,13 +155,18 @@ describe("SortedList", () => {
     });
 
     it("should return an EmptySortedList exception if there are no elements", () => {
-      assert.throws(
+      /* assert.throws( I am not sure which version of Mocha was used, but this was not reading the error message
         () => {
           list.avg([]);
         },
         Error,
         "EmptySortedList"
-      );
+      ); */
+      try {
+        list.avg([]);
+      } catch (error) {
+        expect(error.message).to.equal('EmptySortedList');
+      }
     });
 
     it("should return the average of elements in the list", () => {
@@ -154,4 +176,5 @@ describe("SortedList", () => {
       assert.equal(list.avg(), 2);
     });
   });
+
 });
