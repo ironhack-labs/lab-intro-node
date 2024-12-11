@@ -149,7 +149,7 @@ Go in the `index.js` file and there you will find the bare bones of the `SortedL
 
 The **SortedList** class will have the following methods:
 
-### Iteration 1: constructor()
+### Iteration 1: constructor() 
 
 `new SortedList` should create a new object from the `SortedList` class.
 
