@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ironhack-labs/lab-intro-node.git"
+    "url": "https://github.com/ironhack-labs/lab-intro-node.git"
   },
   "bugs": {
     "url": "https://github.com/ironhack-labs/lab-intro-node/issues"
@@ -21,3 +21,4 @@
   "author": "fer@ironhack.com",
   "license": "MIT"
 }
+
