@@ -179,7 +179,7 @@ In addition, make sure you _throw_ an error with the message `"OutOfBounds"` if 
 To throw the error (aka exception), you should do the following:
 
 ```js
-throw new Error("OutOfBounds");
+ 
 ```
 
 <!-- ### Iteration 4: make that list sorted!
