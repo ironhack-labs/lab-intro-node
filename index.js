@@ -22,7 +22,7 @@ class SortedList {
     if (this.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      return this.items.pop();
+      return this.items[this.items.length -1];
     }
   }
 
