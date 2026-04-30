@@ -1,7 +1,7 @@
 class SortedList {
   constructor() {
     this.items = [];
-    this.lenght = "";
+    this.length = 0;
     this.error =  new Error ("OutOfBounds");
     this.error2 = new Error ("EmptySortedList");
   }
