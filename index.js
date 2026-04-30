@@ -1,13 +1,39 @@
 class SortedList {
-  constructor() {}
+  constructor() {
+    this.items = [];
+    this.lenght = "";
+    this.error =  new Error ("OutOfBounds");
+    this.error2 = new Error ("EmptySortedList");
+  }
 
-  add(item) {}
+  add(item) {
+    const { item, lenght } = this.items;
+  }
 
-  get(pos) {}
+  get(pos) {
+    const {items} = [2];
 
-  max() {}
+    if (items !== [2]){
+      return this.error;
+    }
+  }
 
-  min() {}
+  max() {
+    for (let i = 0; i < [2]; i++) { 
+      if (i > this.items)
+      return this.error
+    }
+
+  }
+
+  min() {
+
+    for (let i = 0; i < [0]; i++) { 
+      if (i > this.items)
+      return this.error2
+    }
+
+  }
 
   sum() {}
 
