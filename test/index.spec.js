@@ -58,7 +58,7 @@ describe("SortedList", () => {
           list.get(4);
         },
         Error,
-        "OutOfBounds"
+        "OutOfBounds",
       );
     });
 
@@ -73,13 +73,13 @@ describe("SortedList", () => {
       list = new SortedList();
     });
 
-    it("should throw an Empty SortedList error if there are no elements in the list", () => {
+    it("should throw an EmptySortedList error if there are no elements in the list", () => {
       assert.throws(
         () => {
           list.max([]);
         },
         Error,
-        "Empty SortedList"
+        "EmptySortedList",
       );
     });
 
@@ -102,7 +102,7 @@ describe("SortedList", () => {
           list.min([]);
         },
         Error,
-        "EmptySortedList"
+        "EmptySortedList",
       );
     });
 
@@ -143,7 +143,7 @@ describe("SortedList", () => {
           list.avg([]);
         },
         Error,
-        "EmptySortedList"
+        "EmptySortedList",
       );
     });
 
