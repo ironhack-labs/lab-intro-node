@@ -22,13 +22,7 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      let max = 0
-      this.items.forEach((item) => {
-        if (max < item) {
-          max = item
-        }
-      })
-    return max
+      return this.get(this.items.length - 1)
     }
   }
 
@@ -36,14 +30,7 @@ class SortedList {
     if (this.items.length === 0) {
       throw new Error("EmptySortedList");
     } else {
-      let min = this.items[0]
-      this.items.forEach((item) => {
-        if (min > item) {
-          min = item
-        }
-      })
-
-    return min
+      return this.get(0)
     }
   }
 
@@ -55,7 +42,6 @@ class SortedList {
       this.items.forEach ((item) => {
         sum += item
       })
-
       return sum
     }
   }
