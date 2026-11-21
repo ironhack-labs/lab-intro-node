@@ -14,14 +14,20 @@ class SortedList {
   }
 
   get(pos) {
-    if(pos >= 0 && pos < this.items.length) {
+    if(pos >= 0 && pos < this.length) {
       return this.items[pos]
     } else {
       throw new Error("OutOfBounds")
     }
   }
 
-  max() {}
+  max() {
+    if(this.items.length > 0) {
+      return this.get(this.length - 1)
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
   min() {}
 
