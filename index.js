@@ -25,7 +25,7 @@ class SortedList {
     if(this.items.length > 0) {
       return this.get(this.length - 1)
     } else {
-      throw new Error("EmptySortedList");
+      throw new Error("EmptySortedList")
     }
   }
 
@@ -33,13 +33,24 @@ class SortedList {
     if(this.items.length > 0) {
       return this.get(0)
     } else {
-      throw new Error("EmptySortedList");
+      throw new Error("EmptySortedList")
     }
   }
 
-  sum() {}
+  sum() {
+    const total = this.items.reduce((acc, item) => { return acc + item; }, 0)
 
-  avg() {}
+    return total
+  }
+
+  avg() {
+    if(this.items.length > 0) {
+      const avg = this.sum() / this.length
+      return avg
+    } else {
+      throw new Error("EmptySortedList")
+    }
+  }
 }
 
 module.exports = SortedList;
