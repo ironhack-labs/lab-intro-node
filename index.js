@@ -29,7 +29,13 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if(this.items.length > 0) {
+      return this.get(0)
+    } else {
+      throw new Error("EmptySortedList");
+    }
+  }
 
   sum() {}
 
