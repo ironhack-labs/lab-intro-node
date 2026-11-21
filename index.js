@@ -5,7 +5,13 @@ class SortedList {
     this.length = this.items.length
   }
 
-  add(item) {}
+  add(item) {
+
+    this.items.push(item)
+    this.length = this.items.length
+
+    this.items.sort((a, b) => a - b)
+  }
 
   get(pos) {}
 
